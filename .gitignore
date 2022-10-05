@@ -1,0 +1,14 @@
+
+# npm package cache
+node_modules
+# dotenv environment variables file
+.env
+.env.test
+
+dev.db
+
+logfile.log
+
+cashreceiptrobotlogs
+#package
+package-lock.json

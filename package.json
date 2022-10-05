@@ -1,0 +1,36 @@
+{
+  "name": "autocatalogs",
+  "version": "1.0.0",
+  "description": "Справочник автомобилей",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilb/autocatalogs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilb/autocatalogs/issues"
+  },
+  "homepage": "https://github.com/ilb/autocatalogs#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.4.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "prisma": "^3.15.2"
+  },
+  "dependencies": {
+    "@ilb/node_context": "^1.0.31",
+    "@ilb/uriaccessorjs": "^1.0.26",
+    "node-fetch": "^3.2.5",
+    "pino": "^8.1.0",
+    "xml2js": "^0.4.23"
+  }
+}
