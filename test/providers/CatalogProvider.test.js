@@ -7,6 +7,5 @@ test('get catalog', async () => {
 	const provider = new CatalogProvider();
 
 	const catalogData = await provider.getData();
-	console.log(catalogData.Catalog.Make);
 	expect(catalogData).toStrictEqual(catalogJs);
 });

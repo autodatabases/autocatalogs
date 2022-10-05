@@ -29,6 +29,7 @@
   "dependencies": {
     "@ilb/node_context": "^1.0.31",
     "@ilb/uriaccessorjs": "^1.0.26",
+    "cyrillic-to-translit-js": "^3.2.1",
     "dotenv": "^16.0.3",
     "node-fetch": "^3.2.5",
     "pino": "^8.1.0",
