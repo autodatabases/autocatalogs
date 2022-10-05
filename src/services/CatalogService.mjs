@@ -4,18 +4,23 @@ import CatalogProvider from '../providers/CatalogProvider.mjs';
 import ManufacturerMapper from '../mappers/ManufacturerMapper.mjs';
 import ModelMapper from '../mappers/ModelMapper.mjs';
 import ModificationMapper from '../mappers/ModificationMapper.mjs';
+import ModelRepository from '../repositories/ModelRepository.mjs';
+import ModificationRepository from '../repositories/ModificationRepository.mjs';
+import ManufacturerRepository from '../repositories/ManufacturerRepository.mjs';
+import BodyRepository from '../repositories/BodyRepository.mjs';
+import TransmissionRepository from '../repositories/TransmissionRepository.mjs';
 
 export default class CatalogService {
-	constructor() {
+	constructor({ prismaService, prisma = null }) {
 		this.catalogProvider = new CatalogProvider();
-		this.manufacturerMapper = new ManufacturerMapper();
-		this.modificationMapper = new ModificationMapper();
-		this.modelMapper = new ModelMapper();
-		// this.modelRepository = modelRepository;
-		// this.manufacturerRepository = manufacturerRepository;
-		// this.modificationRepository = modificationRepository;
-		// this.bodyRepository = bodyRepository;
-		// this.transmissionRepository = transmissionRepository;
+		this.manufacturerMapper = new ManufacturerMapper({ prismaService });
+		this.modificationMapper = new ModificationMapper({ prismaService });
+		this.modelMapper = new ModelMapper({ prismaService });
+		this.modelRepository = new ModelRepository({ prisma, prismaService });
+		this.manufacturerRepository = new ManufacturerRepository({ prisma, prismaService });
+		this.modificationRepository = new ModificationRepository({ prisma, prismaService });
+		this.bodyRepository = new BodyRepository({ prisma, prismaService });
+		this.transmissionRepository = new TransmissionRepository({ prisma, prismaService });
 	}
 
 	async loadData() {
@@ -27,6 +32,7 @@ export default class CatalogService {
 		} catch (err) {
 			console.log(err);
 			logger.error(err.message);
+			throw err;
 		}
 	}
 
