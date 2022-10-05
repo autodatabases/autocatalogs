@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "dependencies": {
     "@ilb/node_context": "^1.0.31",
     "@ilb/uriaccessorjs": "^1.0.26",
+    "dotenv": "^16.0.3",
     "node-fetch": "^3.2.5",
     "pino": "^8.1.0",
     "xml2js": "^0.4.23"
