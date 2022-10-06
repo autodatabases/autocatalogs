@@ -1,5 +1,5 @@
 {
-  "name": "@ilb/autocatalogs",
+  "name": "autocatalogs",
   "version": "1.0.0",
   "description": "Справочник автомобилей",
   "type": "module",
