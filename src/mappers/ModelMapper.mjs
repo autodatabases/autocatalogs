@@ -1,8 +1,9 @@
 import cyrillicToTranslate from '../../libs/cyrillicToTranslate.mjs';
 
 export default class ModelMapper {
-	constructor() {
+	constructor({ prismaService }) {
 		this.cyrillicToTranslate = cyrillicToTranslate;
+		this.prismaService = prismaService;
 	}
 
 	/**
@@ -14,16 +15,17 @@ export default class ModelMapper {
 	 *  сделано чтоб не делать повторные обходы по массиву данных
 	 */
 	map(modelsFromCatalog) {
+		const table = this.prismaService.modelTable;
 		const modificationsFromCatalog = [];
 		const models = modelsFromCatalog.map((item) => {
 			modificationsFromCatalog.push(...item.Generation.flatMap(({ Modification }) => Modification));
 			const name = item.name[0];
 			return {
 				id: Number(item.id[0]),
-				name,
-				code: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
-				avitocode: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
-				carmanufacturerid: item.carManufacturerId
+				[table.name]: name,
+				[table.code]: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
+				[table.avitocode]: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
+				[table.carmanufacturerid]: item.carManufacturerId
 			};
 		});
 		return { models, modificationsFromCatalog };

@@ -1,8 +1,9 @@
 import cyrillicToTranslate from '../../libs/cyrillicToTranslate.mjs';
 
 export default class ManufacturerMapper {
-	constructor() {
+	constructor({ prismaService }) {
 		this.cyrillicToTranslate = cyrillicToTranslate;
+		this.prismaService = prismaService;
 	}
 	/**
 	 *
@@ -12,6 +13,7 @@ export default class ManufacturerMapper {
 	 * modelsFromCatalog - массив моделей из каталога для передачи в маппер моделей
 	 */
 	map(data) {
+		const table = this.prismaService.manufacturerTable;
 		const modelsFromCatalog = [];
 		const manufacturers = data.map((item) => {
 			modelsFromCatalog.push(
@@ -20,9 +22,9 @@ export default class ManufacturerMapper {
 			const name = item.name[0];
 			return {
 				id: Number(item.id[0]),
-				name,
-				code: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
-				avitocode: this.cyrillicToTranslate.transform(name, '_').toLowerCase()
+				[table.name]: name,
+				[table.code]: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
+				[table.avitocode]: this.cyrillicToTranslate.transform(name, '_').toLowerCase()
 			};
 		});
 		return { manufacturers, modelsFromCatalog };

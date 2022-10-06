@@ -1,6 +1,7 @@
 export default class TransmissionRepository {
-	constructor({ prisma }) {
+	constructor({ prisma, prismaService }) {
 		this.prisma = prisma;
+		this.prismaService = prismaService;
 	}
 
 	/**
@@ -8,9 +9,13 @@ export default class TransmissionRepository {
 	 * @param {Array} transmissions типы трансмиссий авто полученные из каталога
 	 */
 	async saveMany(transmissions) {
-		await this.prisma.cartransmission.createMany({
-			data: transmissions,
-			skipDuplicates: true
-		});
+		const table = this.prismaService.transmissionTable.tableName;
+
+		if (this.prisma) {
+			await this.prisma[table].createMany({
+				data: transmissions,
+				skipDuplicates: true
+			});
+		}
 	}
 }

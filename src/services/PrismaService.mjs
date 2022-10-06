@@ -1,87 +1,87 @@
 export default class PrismaService {
 	constructor() {
-		this.manufacturer = {};
-		this.model = {};
-		this.modification = {};
-		this.body = {};
-		this.transmission = {};
+		this.manufacturer;
+		this.model;
+		this.modification;
+		this.body;
+		this.transmission;
 	}
 
 	setManufacturer(manufacturer) {
-		return {
+		this.manufacturer = {
 			tableName: manufacturer.tableName,
-			fields: {
-				name: manufacturer.name,
-				code: manufacturer.code,
-				avitocode: manufacturer.avitocode
-			}
+			name: manufacturer.name,
+			code: manufacturer.code,
+			avitocode: manufacturer.avitocode
 		};
 	}
 
 	setModel(model) {
-		return {
+		this.model = {
 			tableName: model.tableName,
-			fields: {
-				name: model.name,
-				code: model.code,
-				avitocode: model.avitocode,
-				carmanufacturerid: model.carmanufacturerid
-			}
+			name: model.name,
+			code: model.code,
+			avitocode: model.avitocode,
+			carmanufacturerid: model.carmanufacturerid
 		};
 	}
 
 	setModification(modification) {
-		return {
+		this.modification = {
 			tableName: modification.tableName,
-			fields: {
-				name: modification.name,
-				carmodelid: modification.carmodelid,
-				cartransmissionid: modification.cartransmissionid,
-				carbodyid: modification.carbodyid,
-				caryear: modification.caryear,
-				enginecapacity: modification.enginecapacity,
-				enginepower: modification.enginepower
-			}
+			name: modification.name,
+			carmodelid: modification.carmodelid,
+			cartransmissionid: modification.cartransmissionid,
+			carbodyid: modification.carbodyid,
+			caryear: modification.caryear,
+			enginecapacity: modification.enginecapacity,
+			enginepower: modification.enginepower
 		};
 	}
 
 	setBody(body) {
-		return {
+		this.body = {
 			tableName: body.tableName,
-			fields: {
-				name: body.name,
-				code: body.code,
-				avitocode: body.avitocode
-			}
+			name: body.name,
+			code: body.code,
+			avitocode: body.avitocode
 		};
 	}
 
 	setTransmission(transmission) {
-		return {
+		this.transmission = {
 			tableName: transmission.tableName,
-			fields: {
-				name: transmission.name,
-				code: transmission.code,
-				avitocode: transmission.avitocode
-			}
+			name: transmission.name,
+			code: transmission.code,
+			avitocode: transmission.avitocode
 		};
 	}
 
 	setTables(manufacturer, model, modification, body, transmission) {
-		this.manufacturer = this.setManufacturer(manufacturer);
-		this.models = this.setModel(model);
-		this.modification = this.setModification(modification);
-		this.body = this.setBody(body);
-		this.transmission = this.setTransmission(transmission);
+		this.setManufacturer(manufacturer);
+		this.setModel(model);
+		this.setModification(modification);
+		this.setBody(body);
+		this.setTransmission(transmission);
 	}
 
-	get TablesInfo() {
-		return {
-			manufacturer: this.manufacturer,
-			model: this.model,
-			modification: this.modification,
-			body: this.body,
-			transmission: this.transmission
-		};
+	get transmissionTable() {
+		return this.transmission;
+	}
+
+	get bodyTable() {
+		return this.body;
+	}
+
+	get modificationTable() {
+		return this.modification;
+	}
+
+	get modelTable() {
+		return this.model;
+	}
+
+	get manufacturerTable() {
+		return this.manufacturer;
 	}
 }

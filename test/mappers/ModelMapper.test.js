@@ -1,5 +1,6 @@
 import ManufacturerMapper from '../../src/mappers/ManufacturerMapper.mjs';
 import ModelMapper from '../../src/mappers/ModelMapper.mjs';
+import PrismaService from '../../src/services/PrismaService.mjs';
 
 // import { createScope } from '../../libs/usecases/index.mjs';
 
@@ -7,10 +8,24 @@ import data from '../data/catalog';
 
 test('check ModelMapper output data', async () => {
 	// const scope = await createScope({}, false);
+	const prismaService = new PrismaService();
+	prismaService.setModel({
+		tableName: 'carmodel',
+		name: 'name',
+		code: 'code',
+		avitocode: 'avitocode',
+		carmanufacturerid: 'carmanufacturerid'
+	});
+	prismaService.setManufacturer({
+		tableName: 'carmanufacturer',
+		name: 'name',
+		code: 'code',
+		avitocode: 'avitocode'
+	});
 	const makes = data.Catalog.Make;
 
-	const manufacturerMapper = new ManufacturerMapper();
-	const modelMapper = new ModelMapper();
+	const manufacturerMapper = new ManufacturerMapper({ prismaService });
+	const modelMapper = new ModelMapper({ prismaService });
 
 	const { modelsFromCatalog } = manufacturerMapper.map(makes);
 	const { models } = modelMapper.map(modelsFromCatalog);

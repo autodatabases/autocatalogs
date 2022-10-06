@@ -1,11 +1,49 @@
 import ManufacturerMapper from '../../src/mappers/ManufacturerMapper.mjs';
 import ModelMapper from '../../src/mappers/ModelMapper.mjs';
 import ModificationMapper from '../../src/mappers/ModificationMapper.mjs';
+import PrismaService from '../../src/services/PrismaService.mjs';
 
 // import { createScope } from '../../libs/usecases/index.mjs';
 
 test('check ModificationMapper output data', async () => {
 	// const scope = await createScope({}, false);
+	const prismaService = new PrismaService();
+	const manufacturer = {
+		tableName: 'carmanufacturer',
+		name: 'name',
+		code: 'code',
+		avitocode: 'avitocode'
+	};
+	const model = {
+		tableName: 'carmodel',
+		name: 'name',
+		code: 'code',
+		avitocode: 'avitocode',
+		carmanufacturerid: 'carmanufacturerid'
+	};
+	const modification = {
+		tableName: 'carmodification',
+		name: 'name',
+		carmodelid: 'carmodelid',
+		cartransmissionid: 'cartransmissionid',
+		carbodyid: 'carbodyid',
+		caryear: 'caryear',
+		enginecapacity: 'enginecapacity',
+		enginepower: 'enginepower'
+	};
+	const body = {
+		tableName: 'carbody',
+		name: 'name',
+		code: 'code',
+		avitocode: 'avitocode'
+	};
+	const transmission = {
+		tableName: 'cartransmission',
+		name: 'name',
+		code: 'code',
+		avitocode: 'avitocode'
+	};
+	prismaService.setTables(manufacturer, model, modification, body, transmission);
 	// Оставил только одного производителя
 	const makes = [
 		{
@@ -2035,9 +2073,9 @@ test('check ModificationMapper output data', async () => {
 		}
 	];
 
-	const manufacturerMapper = new ManufacturerMapper();
-	const modelMapper = new ModelMapper();
-	const modificationMapper = new ModificationMapper();
+	const manufacturerMapper = new ManufacturerMapper({ prismaService });
+	const modelMapper = new ModelMapper({ prismaService });
+	const modificationMapper = new ModificationMapper({ prismaService });
 
 	const { modelsFromCatalog } = manufacturerMapper.map(makes);
 	const { modificationsFromCatalog } = modelMapper.map(modelsFromCatalog);
