@@ -1,49 +1,11 @@
 import ManufacturerMapper from '../../src/mappers/ManufacturerMapper.mjs';
 import ModelMapper from '../../src/mappers/ModelMapper.mjs';
 import ModificationMapper from '../../src/mappers/ModificationMapper.mjs';
-import PrismaService from '../../src/services/PrismaService.mjs';
 
 // import { createScope } from '../../libs/usecases/index.mjs';
 
 test('check ModificationMapper output data', async () => {
 	// const scope = await createScope({}, false);
-	const prismaService = new PrismaService();
-	const manufacturer = {
-		tableName: 'carmanufacturer',
-		name: 'name',
-		code: 'code',
-		avitocode: 'avitocode'
-	};
-	const model = {
-		tableName: 'carmodel',
-		name: 'name',
-		code: 'code',
-		avitocode: 'avitocode',
-		carmanufacturerid: 'carmanufacturerid'
-	};
-	const modification = {
-		tableName: 'carmodification',
-		name: 'name',
-		carmodelid: 'carmodelid',
-		cartransmissionid: 'cartransmissionid',
-		carbodyid: 'carbodyid',
-		caryear: 'caryear',
-		enginecapacity: 'enginecapacity',
-		enginepower: 'enginepower'
-	};
-	const body = {
-		tableName: 'carbody',
-		name: 'name',
-		code: 'code',
-		avitocode: 'avitocode'
-	};
-	const transmission = {
-		tableName: 'cartransmission',
-		name: 'name',
-		code: 'code',
-		avitocode: 'avitocode'
-	};
-	prismaService.setTables(manufacturer, model, modification, body, transmission);
 	// Оставил только одного производителя
 	const makes = [
 		{
@@ -2073,9 +2035,9 @@ test('check ModificationMapper output data', async () => {
 		}
 	];
 
-	const manufacturerMapper = new ManufacturerMapper({ prismaService });
-	const modelMapper = new ModelMapper({ prismaService });
-	const modificationMapper = new ModificationMapper({ prismaService });
+	const manufacturerMapper = new ManufacturerMapper();
+	const modelMapper = new ModelMapper();
+	const modificationMapper = new ModificationMapper();
 
 	const { modelsFromCatalog } = manufacturerMapper.map(makes);
 	const { modificationsFromCatalog } = modelMapper.map(modelsFromCatalog);
@@ -2084,232 +2046,232 @@ test('check ModificationMapper output data', async () => {
 	const expected = [
 		{
 			id: 421891,
-			carmodelid: 421756,
-			cartransmissionid: 331254,
-			carbodyid: 331233,
-			caryear: 2012,
-			enginecapacity: 6.2,
-			enginepower: 442,
+			vehicleModelId: 421756,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331233,
+			vehicleYear: 2012,
+			engineVolume: 6.2,
+			vehiclePower: 442,
 			name: '6.2 MT (442 л.с.)',
 			code: 'MANUAL__442__6_2'
 		},
 		{
 			id: 360354,
-			carmodelid: 329595,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1992,
-			enginecapacity: 3,
-			enginepower: 223,
+			vehicleModelId: 329595,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1992,
+			engineVolume: 3,
+			vehiclePower: 223,
 			name: '3.0 MT (223 л.с.)',
 			code: 'MANUAL__223__3_0'
 		},
 		{
 			id: 361944,
-			carmodelid: 329595,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1992,
-			enginecapacity: 3.5,
-			enginepower: 354,
+			vehicleModelId: 329595,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1992,
+			engineVolume: 3.5,
+			vehiclePower: 354,
 			name: '3.5 MT (354 л.с.)',
 			code: 'MANUAL__354__3_5'
 		},
 		{
 			id: 363436,
-			carmodelid: 329595,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1992,
-			enginecapacity: 4.6,
-			enginepower: 326,
+			vehicleModelId: 329595,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1992,
+			engineVolume: 4.6,
+			vehiclePower: 326,
 			name: '4.6 MT (326 л.с.)',
 			code: 'MANUAL__326__4_6'
 		},
 		{
 			id: 363631,
-			carmodelid: 329595,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1992,
-			enginecapacity: 4.9,
-			enginepower: 260,
+			vehicleModelId: 329595,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1992,
+			engineVolume: 4.9,
+			vehiclePower: 260,
 			name: '4.9 MT (260 л.с.)',
 			code: 'MANUAL__260__4_9'
 		},
 		{
 			id: 359296,
-			carmodelid: 329595,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1992,
-			enginecapacity: 2.9,
-			enginepower: 195,
+			vehicleModelId: 329595,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1992,
+			engineVolume: 2.9,
+			vehiclePower: 195,
 			name: '2.9 MT (195 л.с.)',
 			code: 'MANUAL__195__2_9'
 		},
 		{
 			id: 359190,
-			carmodelid: 329595,
-			cartransmissionid: 331255,
-			carbodyid: 331232,
-			caryear: 1992,
-			enginecapacity: 2.9,
-			enginepower: 195,
+			vehicleModelId: 329595,
+			vehicleTransmissionId: 331255,
+			vehicleBodyId: 331232,
+			vehicleYear: 1992,
+			engineVolume: 2.9,
+			vehiclePower: 195,
 			name: '2.9 AT (195 л.с.)',
 			code: 'MANUAL__195__2_9'
 		},
 		{
 			id: 361943,
-			carmodelid: 329596,
-			cartransmissionid: 331254,
-			carbodyid: 331233,
-			caryear: 1998,
-			enginecapacity: 3.5,
-			enginepower: 354,
+			vehicleModelId: 329596,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331233,
+			vehicleYear: 1998,
+			engineVolume: 3.5,
+			vehiclePower: 354,
 			name: '3.5 MT (354 л.с.)',
 			code: 'MANUAL__354__3_5'
 		},
 		{
 			id: 363435,
-			carmodelid: 329596,
-			cartransmissionid: 331254,
-			carbodyid: 331233,
-			caryear: 1998,
-			enginecapacity: 4.6,
-			enginepower: 326,
+			vehicleModelId: 329596,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331233,
+			vehicleYear: 1998,
+			engineVolume: 4.6,
+			vehiclePower: 326,
 			name: '4.6 MT (326 л.с.)',
 			code: 'MANUAL__326__4_6'
 		},
 		{
 			id: 363636,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1990,
-			enginecapacity: 4.9,
-			enginepower: 340,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1990,
+			engineVolume: 4.9,
+			vehiclePower: 340,
 			name: '4.9 MT (340 л.с.)',
 			code: 'MANUAL__340__4_9'
 		},
 		{
 			id: 363630,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1990,
-			enginecapacity: 4.9,
-			enginepower: 250,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1990,
+			engineVolume: 4.9,
+			vehiclePower: 250,
 			name: '4.9 MT (250 л.с.)',
 			code: 'MANUAL__250__4_9'
 		},
 		{
 			id: 363634,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1990,
-			enginecapacity: 4.9,
-			enginepower: 326,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1990,
+			engineVolume: 4.9,
+			vehiclePower: 326,
 			name: '4.9 MT (326 л.с.)',
 			code: 'MANUAL__326__4_9'
 		},
 		{
 			id: 363638,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1990,
-			enginecapacity: 4.9,
-			enginepower: 370,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1990,
+			engineVolume: 4.9,
+			vehiclePower: 370,
 			name: '4.9 MT (370 л.с.)',
 			code: 'MANUAL__370__4_9'
 		},
 		{
 			id: 363629,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1990,
-			enginecapacity: 4.9,
-			enginepower: 228,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1990,
+			engineVolume: 4.9,
+			vehiclePower: 228,
 			name: '4.9 MT (228 л.с.)',
 			code: 'MANUAL__228__4_9'
 		},
 		{
 			id: 363635,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1999,
-			enginecapacity: 4.9,
-			enginepower: 340,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1999,
+			engineVolume: 4.9,
+			vehiclePower: 340,
 			name: '4.9 MT (340 л.с.)',
 			code: 'MANUAL__340__4_9'
 		},
 		{
 			id: 363637,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1999,
-			enginecapacity: 4.9,
-			enginepower: 370,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1999,
+			engineVolume: 4.9,
+			vehiclePower: 370,
 			name: '4.9 MT (370 л.с.)',
 			code: 'MANUAL__370__4_9'
 		},
 		{
 			id: 364708,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 2013,
-			enginecapacity: 6.2,
-			enginepower: 437,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 2013,
+			engineVolume: 6.2,
+			vehiclePower: 437,
 			name: '6.2 MT (437 л.с.)',
 			code: 'MANUAL__437__6_2'
 		},
 		{
 			id: 364715,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 2013,
-			enginecapacity: 6.2,
-			enginepower: 637,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 2013,
+			engineVolume: 6.2,
+			vehiclePower: 637,
 			name: '6.2 MT (637 л.с.)',
 			code: 'MANUAL__637__6_2'
 		},
 		{
 			id: 364944,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 2013,
-			enginecapacity: 7.2,
-			enginepower: 640,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 2013,
+			engineVolume: 7.2,
+			vehiclePower: 640,
 			name: '7.2 MT (640 л.с.)',
 			code: 'MANUAL__640__7_2'
 		},
 		{
 			id: 364718,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 2013,
-			enginecapacity: 6.2,
-			enginepower: 780,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 2013,
+			engineVolume: 6.2,
+			vehiclePower: 780,
 			name: '6.2 MT (780 л.с.)',
 			code: 'MANUAL__780__6_2'
 		},
 		{
 			id: 364922,
-			carmodelid: 329852,
-			cartransmissionid: 331254,
-			carbodyid: 331232,
-			caryear: 1965,
-			enginecapacity: 7,
-			enginepower: 416,
+			vehicleModelId: 329852,
+			vehicleTransmissionId: 331254,
+			vehicleBodyId: 331232,
+			vehicleYear: 1965,
+			engineVolume: 7,
+			vehiclePower: 416,
 			name: '7.0 MT (416 л.с.)',
 			code: 'MANUAL__416__7_0'
 		}

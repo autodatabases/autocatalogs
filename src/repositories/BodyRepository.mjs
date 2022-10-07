@@ -1,7 +1,6 @@
 export default class BodyRepository {
-	constructor({ prisma, prismaService }) {
+	constructor({ prisma }) {
 		this.prisma = prisma;
-		this.prismaService = prismaService;
 	}
 
 	/**
@@ -9,9 +8,8 @@ export default class BodyRepository {
 	 * @param {Array} bodies типы кузова авто полученные из каталога
 	 */
 	async saveMany(bodies) {
-		const table = this.prismaService.bodyTable.tableName;
 		if (this.prisma) {
-			await this.prisma[table].createMany({
+			await this.prisma.vehicleBody.createMany({
 				data: bodies,
 				skipDuplicates: true
 			});

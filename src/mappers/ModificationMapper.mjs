@@ -1,9 +1,6 @@
 import { BODIES, TRANSMISSIONS } from '../constants.mjs';
 
 export default class ModificationMapper {
-	constructor({ prismaService }) {
-		this.prismaService = prismaService;
-	}
 	/**
 	 *
 	 * @param {Array} modificationsFromCatalog
@@ -13,7 +10,6 @@ export default class ModificationMapper {
 	 * transmissions - массив отформатированных типов трансмиссий сохранения данных
 	 */
 	map(modificationsFromCatalog) {
-		const table = this.prismaService.modificationTable;
 		const bodies = [];
 		const transmissions = [];
 		// const engines = [];
@@ -27,15 +23,15 @@ export default class ModificationMapper {
 
 			const res = {
 				id: Number(Modification[0].id[0]),
-				[table.carmodelid]: Number(Model[0].id[0]),
-				[table.cartransmissionid]: Number(Transmission[0].id[0]),
-				[table.carbodyid]: Number(BodyType[0].id[0]),
-				[table.caryear]: Number(YearFrom[0]._),
-				[table.enginecapacity]: Number(EngineSize[0]._),
-				[table.enginepower]: Number(Power[0]._),
-				[table.name]: Modification[0]._
+				name: Modification[0]._,
+				vehicleModelId: Number(Model[0].id[0]),
+				vehicleTransmissionId: Number(Transmission[0].id[0]),
+				vehicleBodyId: Number(BodyType[0].id[0]),
+				vehicleYear: Number(YearFrom[0]._),
+				engineVolume: Number(EngineSize[0]._),
+				vehiclePower: Number(Power[0]._)
 			};
-			res.code = this.codeAdapter(res.enginepower, res.enginecapacity);
+			res.code = this.codeAdapter(res.vehiclePower, res.engineVolume);
 
 			return res;
 		});
@@ -45,17 +41,17 @@ export default class ModificationMapper {
 
 	/**
 	 * Метод формирует и возвращает параметр для оценки code
-	 * @param {Number} enginepower мощность двигателя
-	 * @param {Number} enginecapacity обьем в литрах
-	 * @return {String} MANUAL__enginepower__enginecapacity
+	 * @param {Number} vehiclePower мощность двигателя
+	 * @param {Number} engineVolume обьем в литрах
+	 * @return {String} MANUAL__vehiclePower__engineVolume
 	 */
-	codeAdapter(enginepower, enginecapacity) {
+	codeAdapter(vehiclePower, engineVolume) {
 		const format = (value) => {
 			const more = value.replaceAll('.', '_');
 			const less = value + '_0';
 			return value.includes('.') ? more : less;
 		};
-		return `MANUAL__${enginepower}__${format(enginecapacity.toString())}`;
+		return `MANUAL__${vehiclePower}__${format(engineVolume.toString())}`;
 	}
 
 	/**
@@ -67,13 +63,12 @@ export default class ModificationMapper {
 	 *
 	 */
 	bodyMapper(arr, value, types) {
-		const table = this.prismaService.bodyTable;
 		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
 		const formatValue = {
 			id: Number(value[0].id[0]),
-			[table.name]: value[0]._.toLowerCase(),
-			[table.code]: typeCode.code,
-			[table.avitocode]: typeCode.code
+			name: value[0]._.toLowerCase(),
+			code: typeCode.code,
+			avitoCode: typeCode.code
 		};
 		if (!arr.map(({ id }) => id).includes(formatValue.id)) {
 			arr.push(formatValue);
@@ -89,13 +84,12 @@ export default class ModificationMapper {
 	 *
 	 */
 	transmissionMapper(arr, value, types) {
-		const table = this.prismaService.transmissionTable;
 		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
 		const formatValue = {
 			id: Number(value[0].id[0]),
-			[table.name]: value[0]._.toLowerCase(),
-			[table.code]: typeCode.code,
-			[table.avitocode]: typeCode.code
+			name: value[0]._.toLowerCase(),
+			code: typeCode.code,
+			avitoCode: typeCode.code
 		};
 		if (!arr.map(({ id }) => id).includes(formatValue.id)) {
 			arr.push(formatValue);

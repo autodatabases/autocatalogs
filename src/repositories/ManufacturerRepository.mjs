@@ -1,7 +1,6 @@
 export default class ManufacturerRepository {
-	constructor({ prisma, prismaService }) {
+	constructor({ prisma }) {
 		this.prisma = prisma;
-		this.prismaService = prismaService;
 	}
 
 	/**
@@ -9,10 +8,8 @@ export default class ManufacturerRepository {
 	 * @param {Array} manufacturers производители авто полученные из каталога
 	 */
 	async saveMany(manufacturers) {
-		const table = this.prismaService.manufacturerTable.tableName;
-
 		if (this.prisma) {
-			await this.prisma[table].createMany({
+			await this.prisma.vehicleManufacturer.createMany({
 				data: manufacturers,
 				skipDuplicates: true
 			});

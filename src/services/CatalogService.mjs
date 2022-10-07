@@ -11,16 +11,16 @@ import BodyRepository from '../repositories/BodyRepository.mjs';
 import TransmissionRepository from '../repositories/TransmissionRepository.mjs';
 
 export default class CatalogService {
-	constructor({ prismaService, prisma = null }) {
+	constructor({ prisma = null }) {
 		this.catalogProvider = new CatalogProvider();
-		this.manufacturerMapper = new ManufacturerMapper({ prismaService });
-		this.modificationMapper = new ModificationMapper({ prismaService });
-		this.modelMapper = new ModelMapper({ prismaService });
-		this.modelRepository = new ModelRepository({ prisma, prismaService });
-		this.manufacturerRepository = new ManufacturerRepository({ prisma, prismaService });
-		this.modificationRepository = new ModificationRepository({ prisma, prismaService });
-		this.bodyRepository = new BodyRepository({ prisma, prismaService });
-		this.transmissionRepository = new TransmissionRepository({ prisma, prismaService });
+		this.manufacturerMapper = new ManufacturerMapper();
+		this.modificationMapper = new ModificationMapper();
+		this.modelMapper = new ModelMapper();
+		this.modelRepository = new ModelRepository({ prisma });
+		this.manufacturerRepository = new ManufacturerRepository({ prisma });
+		this.modificationRepository = new ModificationRepository({ prisma });
+		this.bodyRepository = new BodyRepository({ prisma });
+		this.transmissionRepository = new TransmissionRepository({ prisma });
 	}
 
 	async loadData() {

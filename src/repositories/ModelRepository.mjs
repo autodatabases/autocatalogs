@@ -1,7 +1,6 @@
 export default class ModelRepository {
-	constructor({ prisma, prismaService }) {
+	constructor({ prisma }) {
 		this.prisma = prisma;
-		this.prismaService = prismaService;
 	}
 
 	/**
@@ -9,10 +8,8 @@ export default class ModelRepository {
 	 * @param {Array} models модели авто полученные из каталога
 	 */
 	async saveMany(models) {
-		const table = this.prismaService.modelTable.tableName;
-
 		if (this.prisma) {
-			await this.prisma[table].createMany({
+			await this.prisma.vehicleModel.createMany({
 				data: models,
 				skipDuplicates: true
 			});
