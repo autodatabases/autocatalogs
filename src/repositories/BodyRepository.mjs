@@ -8,10 +8,12 @@ export default class BodyRepository {
 	 * @param {Array} bodies типы кузова авто полученные из каталога
 	 */
 	async saveMany(bodies) {
-		await this.prisma.vehicleBody.createMany({
+		const savedBodies = await this.prisma.vehicleBody.createMany({
 			data: bodies,
 			skipDuplicates: true
 		});
+
+		console.log({ savedBodies });
 	}
 
 	async deleteMany() {

@@ -8,10 +8,12 @@ export default class ModelRepository {
 	 * @param {Array} models модели авто полученные из каталога
 	 */
 	async saveMany(models) {
-		await this.prisma.vehicleModel.createMany({
+		const savedModels = await this.prisma.vehicleModel.createMany({
 			data: models,
 			skipDuplicates: true
 		});
+
+		console.log({ savedModels });
 	}
 
 	async deleteMany() {

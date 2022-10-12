@@ -61,8 +61,8 @@ export default class CatalogService {
 			modelDrive
 		} = result;
 
-		await this.manufacturerRepository.deleteMany();
 		await this.modelRepository.deleteMany();
+		await this.manufacturerRepository.deleteMany();
 		await this.bodyRepository.deleteMany();
 		await this.transmissionRepository.deleteMany();
 		await this.driveRepository.deleteMany();

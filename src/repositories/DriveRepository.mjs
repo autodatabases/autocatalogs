@@ -8,10 +8,12 @@ export default class DriveRepository {
 	 * @param {Array} data
 	 */
 	async saveMany(data) {
-		await this.prisma.vehicleDrive.createMany({
+		const savedDrives = await this.prisma.vehicleDrive.createMany({
 			data,
 			skipDuplicates: true
 		});
+
+		console.log({ savedDrives });
 	}
 
 	async deleteMany() {
