@@ -1,0 +1,119 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model VehicleBody {
+  ///Идентификатор
+  id                  Int                   @id @default(autoincrement())
+  ///Наименование
+  name                String                @db.VarChar(15)
+  ///Код
+  code                String                @db.VarChar(15)
+  avitoCode           String                @db.VarChar(15)
+  vehicleModelBody    VehicleModelBody[]
+  vehicleModification VehicleModification[]
+}
+
+model VehicleManufacturer {
+  ///Идентификатор
+  id           Int            @id @default(autoincrement())
+  ///Наименование
+  name         String         @unique @db.VarChar(20)
+  ///Код
+  code         String         @unique @db.VarChar(30)
+  avitoCode    String?        @db.VarChar(30)
+  vehicleModel VehicleModel[]
+}
+
+model VehicleModel {
+  ///Идентификатор
+  id                       Int                        @id @default(autoincrement())
+  ///Наименование
+  name                     String                     @unique @db.VarChar(50)
+  ///Код
+  code                     String                     @unique @db.VarChar(70)
+  avitoCode                String?                    @db.VarChar(70)
+  vehicleManufacturerId    Int
+  vehicleBodyId            Int?
+  vehicleTransmissionId    Int?
+  vehicleDriveId           Int?
+  vehicleManufacturer      VehicleManufacturer        @relation(fields: [vehicleManufacturerId], references: [id])
+  vehicleModelBody         VehicleModelBody[]
+  vehicleModelDrive        VehicleModelDrive[]
+  vehicleModelTransmission VehicleModelTransmission[]
+  vehicleEnginePower       Int?
+  vehicleEngineCapacity    Decimal?                   @db.Decimal(2, 1)
+  vehicleModification      VehicleModification[]
+}
+
+model VehicleModelBody {
+  ///Идентификатор
+  id             Int          @id @default(autoincrement())
+  vehicleModelId Int
+  vehicleBodyId  Int
+  vehicleBody    VehicleBody  @relation(fields: [vehicleBodyId], references: [id])
+  vehicleModel   VehicleModel @relation(fields: [vehicleModelId], references: [id])
+}
+
+model VehicleModelTransmission {
+  ///Идентификатор
+  id                    Int                 @id @default(autoincrement())
+  vehicleModelId        Int
+  vehicleTransmissionId Int
+  vehicleModel          VehicleModel        @relation(fields: [vehicleModelId], references: [id])
+  vehicleTransmission   VehicleTransmission @relation(fields: [vehicleTransmissionId], references: [id])
+}
+
+model VehicleTransmission {
+  ///Идентификатор
+  id                       Int                        @id @default(autoincrement())
+  ///Наименование
+  name                     String                     @db.VarChar(10)
+  ///Код
+  code                     String                     @db.VarChar(10)
+  avitoCode                String                     @db.VarChar(10)
+  vehicleModelTransmission VehicleModelTransmission[]
+  vehicleModification      VehicleModification[]
+}
+
+model VehicleDrive {
+  ///Идентификатор
+  id                Int                 @id @default(autoincrement())
+  ///Наименование
+  name              String              @db.VarChar(10)
+  ///Код
+  code              String              @db.VarChar(10)
+  avitoCode         String              @db.VarChar(10)
+  vehicleModelDrive VehicleModelDrive[]
+}
+
+model VehicleModelDrive {
+  id             Int          @id @default(autoincrement())
+  vehicleModelId Int
+  vehicleDriveId Int
+  vehicleDrive   VehicleDrive @relation(fields: [vehicleDriveId], references: [id])
+  vehicleModel   VehicleModel @relation(fields: [vehicleModelId], references: [id])
+}
+
+model VehicleModification {
+  id                    Int                  @id
+  vehicleModel          VehicleModel         @relation(fields: [vehicleModelId], references: [id])
+  vehicleModelId        Int
+  vehicleTransmission   VehicleTransmission? @relation(fields: [vehicleTransmissionId], references: [id])
+  vehicleTransmissionId Int?
+  vehicleBody           VehicleBody?         @relation(fields: [vehicleBodyId], references: [id])
+  vehicleBodyId         Int?
+  vehicleYear           Int                  @db.SmallInt
+  vehicleEnginePower    Int?
+  vehicleEngineCapacity Decimal?             @db.Decimal(2, 1)
+  name                  String               @db.VarChar(150)
+  code                  String               @db.VarChar(100)
+}
