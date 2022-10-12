@@ -18,12 +18,13 @@ export default class ModelMapper {
 		const models = modelsFromCatalog.map((item) => {
 			modificationsFromCatalog.push(...item.Generation.flatMap(({ Modification }) => Modification));
 			const name = item.name[0];
+			// console.log(name, item);
 			return {
 				id: Number(item.id[0]),
 				name,
 				code: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
 				avitoCode: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
-				vehicleManufacturerId: item.carManufacturerId
+				vehicleManufacturerId: item?.carManufacturerId
 			};
 		});
 		return { models, modificationsFromCatalog };

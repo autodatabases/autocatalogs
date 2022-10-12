@@ -9,7 +9,8 @@ const BODIES = [
 	{ name: 'купе', code: 'COUPE' },
 	{ name: 'микроавтобус', code: 'MINIBUS' },
 	{ name: 'кабриолет', code: 'CABRIOLET' },
-	{ name: 'лимузин', code: 'LIMOUSINE' }
+	{ name: 'лимузин', code: 'LIMOUSINE' },
+	{ name: 'лифтбек', code: 'LIFTBACK' }
 ];
 
 const TRANSMISSIONS = [
@@ -19,4 +20,10 @@ const TRANSMISSIONS = [
 	{ name: 'вариатор', code: 'VARIATOR' }
 ];
 
-export { BODIES, TRANSMISSIONS };
+const DRIVES = [
+	{ name: 'передний', code: 'front' },
+	{ name: 'задний', code: 'rear' },
+	{ name: 'полный', code: 'full' }
+];
+
+export { BODIES, TRANSMISSIONS, DRIVES };

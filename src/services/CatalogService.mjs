@@ -1,26 +1,34 @@
-import { getLogger } from '../../libs/logger/logger.mjs';
-const logger = getLogger({ name: 'CatalogService' });
 import CatalogProvider from '../providers/CatalogProvider.mjs';
+
 import ManufacturerMapper from '../mappers/ManufacturerMapper.mjs';
-import ModelMapper from '../mappers/ModelMapper.mjs';
 import ModificationMapper from '../mappers/ModificationMapper.mjs';
-import ModelRepository from '../repositories/ModelRepository.mjs';
+import ModelMapper from '../mappers/ModelMapper.mjs';
+
+import ModelTransmissionRepository from '../repositories/ModelTransmissionRepository.mjs';
 import ModificationRepository from '../repositories/ModificationRepository.mjs';
 import ManufacturerRepository from '../repositories/ManufacturerRepository.mjs';
-import BodyRepository from '../repositories/BodyRepository.mjs';
 import TransmissionRepository from '../repositories/TransmissionRepository.mjs';
+import ModelDriveRepository from '../repositories/ModelDriveRepository.mjs';
+import ModelBodyRepository from '../repositories/ModelBodyRepository.mjs';
+import DriveRepository from '../repositories/DriveRepository.mjs';
+import ModelRepository from '../repositories/ModelRepository.mjs';
+import BodyRepository from '../repositories/BodyRepository.mjs';
 
 export default class CatalogService {
-	constructor({ prisma = null }) {
-		this.catalogProvider = new CatalogProvider();
+	constructor({ prisma = null, url }) {
+		this.catalogProvider = new CatalogProvider({ url });
 		this.manufacturerMapper = new ManufacturerMapper();
 		this.modificationMapper = new ModificationMapper();
 		this.modelMapper = new ModelMapper();
-		this.modelRepository = new ModelRepository({ prisma });
+		this.modelTransmissionRepository = new ModelTransmissionRepository({ prisma });
 		this.manufacturerRepository = new ManufacturerRepository({ prisma });
 		this.modificationRepository = new ModificationRepository({ prisma });
-		this.bodyRepository = new BodyRepository({ prisma });
 		this.transmissionRepository = new TransmissionRepository({ prisma });
+		this.modelDriveRepository = new ModelDriveRepository({ prisma });
+		this.modelBodyRepository = new ModelBodyRepository({ prisma });
+		this.modelRepository = new ModelRepository({ prisma });
+		this.driveRepository = new DriveRepository({ prisma });
+		this.bodyRepository = new BodyRepository({ prisma });
 	}
 
 	async loadData() {
@@ -31,7 +39,6 @@ export default class CatalogService {
 			return result;
 		} catch (err) {
 			console.log(err);
-			logger.error(err.message);
 			throw err;
 		}
 	}
@@ -42,13 +49,33 @@ export default class CatalogService {
 			throw new Error('Данные не загружены');
 		}
 
-		const { manufacturers, models, modifications, transmissions, bodies } = result;
+		const {
+			manufacturers,
+			models,
+			modifications,
+			transmissions,
+			bodies,
+			modelBody,
+			modelTransmission,
+			drives,
+			modelDrive
+		} = result;
+
+		await this.manufacturerRepository.deleteMany();
+		await this.modelRepository.deleteMany();
+		await this.bodyRepository.deleteMany();
+		await this.transmissionRepository.deleteMany();
+		await this.driveRepository.deleteMany();
 
 		await this.manufacturerRepository.saveMany(manufacturers);
-		await this.modelRepository.saveMany(models);
 		await this.bodyRepository.saveMany(bodies);
 		await this.transmissionRepository.saveMany(transmissions);
-		await this.modificationRepository.saveMany(modifications);
+		await this.driveRepository.saveMany(drives);
+		await this.modelRepository.saveMany(models);
+		// await this.modelBodyRepository.saveMany(modelBody);
+		// await this.modelTransmissionRepository.saveMany(modelTransmission);
+		// await this.modelDriveRepository.saveMany(modelDrive);
+		// await this.modificationRepository.saveMany(modifications);
 	}
 
 	getData(data) {
@@ -57,10 +84,28 @@ export default class CatalogService {
 		// Модели и модификации
 		const { models, modificationsFromCatalog } = this.getModels(modelsFromCatalog);
 		// Модификации
-		const { modifications, transmissions, bodies } =
-			this.getModificationParams(modificationsFromCatalog);
+		const {
+			modifications,
+			transmissions,
+			bodies,
+			modelBody,
+			modelTransmission,
+			drives,
+			modelDrive
+		} = this.getModificationParams(modificationsFromCatalog);
+		// console.log({ modelBody, modelTransmission, drives, modelDrive });
 
-		return { manufacturers, models, modifications, transmissions, bodies };
+		return {
+			manufacturers,
+			models,
+			modifications,
+			transmissions,
+			bodies,
+			modelBody,
+			modelTransmission,
+			drives,
+			modelDrive
+		};
 	}
 
 	getManufacturers(data) {

@@ -4,11 +4,9 @@ export default class ModificationRepository {
 	}
 
 	async saveMany(modifications) {
-		if (this.prisma) {
-			await this.prisma.vehicleModification.createMany({
-				data: modifications,
-				skipDuplicates: true
-			});
-		}
+		await this.prisma.vehicleModification.createMany({
+			data: modifications,
+			skipDuplicates: true
+		});
 	}
 }

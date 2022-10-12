@@ -8,11 +8,14 @@ export default class ManufacturerRepository {
 	 * @param {Array} manufacturers производители авто полученные из каталога
 	 */
 	async saveMany(manufacturers) {
-		if (this.prisma) {
-			await this.prisma.vehicleManufacturer.createMany({
-				data: manufacturers,
-				skipDuplicates: true
-			});
-		}
+		await this.prisma.vehicleManufacturer.createMany({
+			data: manufacturers,
+			skipDuplicates: true
+		});
+	}
+
+	async deleteMany() {
+		const vehicleManufacturer = await this.prisma.vehicleManufacturer.deleteMany({});
+		console.log({ vehicleManufacturer });
 	}
 }

@@ -1973,5 +1973,884 @@ export default {
 			code: 'ESTATECAR',
 			avitoCode: 'ESTATECAR'
 		}
+	],
+	drives: [
+		{ id: 331252, name: 'задний', code: 'rear', avitoCode: 'rear' },
+		{ id: 331253, name: 'полный', code: 'full', avitoCode: 'full' },
+		{ id: 331251, name: 'передний', code: 'front', avitoCode: 'front' }
+	],
+	modelBody: [
+		{ vehicleModelId: 421756, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329595, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329595, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329595, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329595, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329595, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329595, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329596, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329596, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleBodyId: 331232 },
+
+		{ vehicleModelId: 331089, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleBodyId: 331240 },
+
+		{ vehicleModelId: 329917, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329917, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329917, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 422565, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331238 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331238 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleBodyId: 331231 },
+
+		{ vehicleModelId: 330665, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleBodyId: 331237 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleBodyId: 331233 }
+	],
+	modelTransmission: [
+		{ vehicleModelId: 421756, vehicleTransmissionId: 331233 },
+		{ vehicleModelId: 329595, vehicleTransmissionId: 331232 },
+		{ vehicleModelId: 329595, vehicleTransmissionId: 331232 },
+		{ vehicleModelId: 329595, vehicleTransmissionId: 331232 },
+		{ vehicleModelId: 329595, vehicleTransmissionId: 331232 },
+		{ vehicleModelId: 329595, vehicleTransmissionId: 331232 },
+		{ vehicleModelId: 329595, vehicleTransmissionId: 331232 },
+		{ vehicleModelId: 329596, vehicleTransmissionId: 331233 },
+		{ vehicleModelId: 329596, vehicleTransmissionId: 331233 },
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleTransmissionId: 331232 },
+
+		{ vehicleModelId: 331089, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleTransmissionId: 331240 },
+
+		{ vehicleModelId: 329917, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329917, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329917, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 422565, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331238 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331238 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleTransmissionId: 331231 },
+
+		{ vehicleModelId: 330665, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleTransmissionId: 331237 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleTransmissionId: 331233 }
+	],
+	modelDrive: [
+		{ vehicleModelId: 421756, vehicleDriveId: 331233 },
+		{ vehicleModelId: 329595, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329595, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329595, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329595, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329595, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329595, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329596, vehicleDriveId: 331233 },
+		{ vehicleModelId: 329596, vehicleDriveId: 331233 },
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 329852, vehicleDriveId: 331232 },
+
+		{ vehicleModelId: 331089, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330645, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 330238, vehicleDriveId: 331240 },
+
+		{ vehicleModelId: 329917, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329917, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329917, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 422565, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 422565, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330897, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329990, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 421299, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330684, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331238 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331238 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330927, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330493, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330406, vehicleDriveId: 331231 },
+
+		{ vehicleModelId: 330665, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330665, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 330898, vehicleDriveId: 331237 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 },
+
+		{ vehicleModelId: 329836, vehicleDriveId: 331233 }
 	]
 };

@@ -1,4 +1,4 @@
-import { BODIES, TRANSMISSIONS } from '../constants.mjs';
+import { BODIES, TRANSMISSIONS, DRIVES } from '../constants.mjs';
 
 export default class ModificationMapper {
 	/**
@@ -7,19 +7,37 @@ export default class ModificationMapper {
 	 * @returns {Object}
 	 * modifications - массив отформатированных моделей для сохранения данных,
 	 * bodies - массив отформатированных типов кузовов сохранения данных
-	 * transmissions - массив отформатированных типов трансмиссий сохранения данных
+	 * drives - массив отформатированных типов приводов сохранения данных
+	 * modelBody - массив id
+	 * modelTransmission - массив id
+	 * modelDrive - массив id
 	 */
 	map(modificationsFromCatalog) {
 		const bodies = [];
 		const transmissions = [];
-		// const engines = [];
+		const modelBody = [];
+		const modelTransmission = [];
+		const drives = [];
+		const modelDrive = [];
 
 		const modifications = modificationsFromCatalog.map((item) => {
-			const { Modification, Model, Transmission, BodyType, YearFrom, EngineSize, Power } = item;
+			const {
+				Modification,
+				Model,
+				Transmission,
+				BodyType,
+				DriveType,
+				YearFrom,
+				EngineSize,
+				Power
+			} = item;
 
 			this.bodyMapper(bodies, BodyType, BODIES);
 			this.transmissionMapper(transmissions, Transmission, TRANSMISSIONS);
-			// this.paramMapper(engines, EngineSize);
+			this.driveMapper(drives, DriveType, DRIVES);
+			this.modelBodyMapper(Model, BodyType, modelBody);
+			this.modelTransmissionMapper(Model, Transmission, modelTransmission);
+			this.modelDriveMapper(Model, DriveType, modelDrive);
 
 			const res = {
 				id: Number(Modification[0].id[0]),
@@ -35,8 +53,17 @@ export default class ModificationMapper {
 
 			return res;
 		});
-		// console.log({ transmissions, bodies });
-		return { modifications, bodies, transmissions };
+
+		// console.log({ modelBody, modelTransmission, drives, modelDrive });
+		return {
+			modifications,
+			bodies,
+			transmissions,
+			modelBody,
+			modelTransmission,
+			drives,
+			modelDrive
+		};
 	}
 
 	/**
@@ -84,6 +111,62 @@ export default class ModificationMapper {
 	 *
 	 */
 	transmissionMapper(arr, value, types) {
+		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
+		const formatValue = {
+			id: Number(value[0].id[0]),
+			name: value[0]._.toLowerCase(),
+			code: typeCode.code,
+			avitoCode: typeCode.code
+		};
+		if (!arr.map(({ id }) => id).includes(formatValue.id)) {
+			arr.push(formatValue);
+		}
+	}
+
+	modelBodyMapper(model, body, vehicleModelBody) {
+		if (
+			!vehicleModelBody.find(
+				({ vehicleModelId, vehicleBodyId }) =>
+					vehicleModelId === Number(model[0].id[0]) && vehicleBodyId === Number(body[0].id[0])
+			)
+		) {
+			vehicleModelBody.push({
+				vehicleModelId: Number(model[0].id[0]),
+				vehicleBodyId: Number(body[0].id[0])
+			});
+		}
+	}
+
+	modelTransmissionMapper(model, transmission, vehicleModelTransmission) {
+		if (
+			!vehicleModelTransmission.find(
+				({ vehicleModelId, vehicleTransmissionId }) =>
+					vehicleModelId === Number(model[0].id[0]) &&
+					vehicleTransmissionId === Number(transmission[0].id[0])
+			)
+		) {
+			vehicleModelTransmission.push({
+				vehicleModelId: Number(model[0].id[0]),
+				vehicleTransmissionId: Number(transmission[0].id[0])
+			});
+		}
+	}
+
+	modelDriveMapper(model, drive, vehicleModelDrive) {
+		if (
+			!vehicleModelDrive.find(
+				({ vehicleModelId, vehicleDriveId }) =>
+					vehicleModelId === Number(model[0].id[0]) && vehicleDriveId === Number(drive[0].id[0])
+			)
+		) {
+			vehicleModelDrive.push({
+				vehicleModelId: Number(model[0].id[0]),
+				vehicleDriveId: Number(drive[0].id[0])
+			});
+		}
+	}
+
+	driveMapper(arr, value, types) {
 		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
 		const formatValue = {
 			id: Number(value[0].id[0]),
