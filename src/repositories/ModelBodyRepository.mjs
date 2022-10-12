@@ -7,10 +7,14 @@ export default class ModelBodyRepository {
 	 * Метод для пакетного сохранения
 	 * @param {Array} data
 	 */
-	async saveMany(data) {
-		await this.prisma.vehicleModelBody.createMany({
+	saveMany(data) {
+		return this.prisma.vehicleModelBody.createMany({
 			data,
 			skipDuplicates: true
 		});
+	}
+
+	deleteMany() {
+		return this.prisma.vehicleModelBody.deleteMany({});
 	}
 }

@@ -7,10 +7,14 @@ export default class ModelTransmissionRepository {
 	 * Метод для пакетного сохранения
 	 * @param {Array} data
 	 */
-	async saveMany(data) {
-		await this.prisma.vehicleModelTransmission.createMany({
+	saveMany(data) {
+		return this.prisma.vehicleModelTransmission.createMany({
 			data,
 			skipDuplicates: true
 		});
+	}
+
+	deleteMany() {
+		return this.prisma.vehicleModelTransmission.deleteMany({});
 	}
 }

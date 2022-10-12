@@ -7,17 +7,14 @@ export default class TransmissionRepository {
 	 * Метод для пакетного сохранения типов трансмиссий авто из каталога
 	 * @param {Array} transmissions типы трансмиссий авто полученные из каталога
 	 */
-	async saveMany(transmissions) {
-		const savedTransmissions = await this.prisma.vehicleTransmission.createMany({
+	saveMany(transmissions) {
+		return this.prisma.vehicleTransmission.createMany({
 			data: transmissions,
 			skipDuplicates: true
 		});
-
-		console.log({ savedTransmissions });
 	}
 
-	async deleteMany() {
-		const vehicleTransmission = await this.prisma.vehicleTransmission.deleteMany({});
-		console.log({ vehicleTransmission });
+	deleteMany() {
+		return this.prisma.vehicleTransmission.deleteMany({});
 	}
 }

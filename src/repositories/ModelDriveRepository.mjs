@@ -7,10 +7,14 @@ export default class ModelDriveRepository {
 	 * Метод для пакетного сохранения
 	 * @param {Array} data
 	 */
-	async saveMany(data) {
-		await this.prisma.vehicleModelDrive.createMany({
+	saveMany(data) {
+		return this.prisma.vehicleModelDrive.createMany({
 			data,
 			skipDuplicates: true
 		});
+	}
+
+	deleteMany() {
+		return this.prisma.vehicleModelDrive.deleteMany({});
 	}
 }
