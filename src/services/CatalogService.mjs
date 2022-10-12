@@ -51,7 +51,7 @@ export default class CatalogService {
 			drives,
 			modelDrive
 		} = this.getModificationParams(modificationsFromCatalog);
-		// console.log({ modelBody, modelTransmission, drives, modelDrive });
+		// console.log({ modelBody, modelTransmission, modelDrive });
 
 		return {
 			manufacturers,
@@ -59,9 +59,9 @@ export default class CatalogService {
 			modifications,
 			transmissions,
 			bodies,
+      drives,
 			modelBody,
 			modelTransmission,
-			drives,
 			modelDrive
 		};
 	}

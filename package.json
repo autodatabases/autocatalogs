@@ -1,14 +1,13 @@
 {
   "name": "@ilb/autocatalogs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Справочник автомобилей",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
     "prisma:push": "npx prisma db push",
     "prisma:generate": "npx prisma generate",
-    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "load": "node --experimental-specifier-resolution=node ${HOME}/projects/autocatalogs/bin/updateCatalogs.mjs"
+    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
