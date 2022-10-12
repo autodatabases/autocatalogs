@@ -46,11 +46,10 @@ export default class ModificationMapper {
 				vehicleTransmissionId: Number(Transmission[0].id[0]),
 				vehicleBodyId: Number(BodyType[0].id[0]),
 				vehicleYear: Number(YearFrom[0]._),
-				engineVolume: Number(EngineSize[0]._),
-				vehiclePower: Number(Power[0]._)
+				vehicleEnginePower: Number(Power[0]._),
+				vehicleEngineCapacity: Number(EngineSize[0]._)
 			};
-			res.code = this.codeAdapter(res.vehiclePower, res.engineVolume);
-
+			res.code = this.codeAdapter(res.vehicleEnginePower, res.vehicleEngineCapacity);
 			return res;
 		});
 
