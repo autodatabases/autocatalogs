@@ -3,6 +3,9 @@ import { BODIES, TRANSMISSIONS, DRIVES } from '../constants.mjs';
 export default class ModificationMapper {
 	/**
 	 *
+	 * Метод отдает несколько маппированных параметров, не только моификации,
+	 * выполнено таким образом чтоб не делать лишних проходов по массиву данных модификаций
+	 *
 	 * @param {Array} modificationsFromCatalog
 	 * @returns {Object}
 	 * modifications - массив отформатированных моделей для сохранения данных,
@@ -32,9 +35,9 @@ export default class ModificationMapper {
 				Power
 			} = item;
 
-			this.bodyMapper(bodies, BodyType, BODIES);
-			this.transmissionMapper(transmissions, Transmission, TRANSMISSIONS);
-			this.driveMapper(drives, DriveType, DRIVES);
+			this.paramsMapper(bodies, BodyType, BODIES);
+			this.paramsMapper(transmissions, Transmission, TRANSMISSIONS);
+			this.paramsMapper(drives, DriveType, DRIVES);
 			this.modelBodyMapper(Model, BodyType, modelBody);
 			this.modelTransmissionMapper(Model, Transmission, modelTransmission);
 			this.modelDriveMapper(Model, DriveType, modelDrive);
@@ -53,7 +56,6 @@ export default class ModificationMapper {
 			return res;
 		});
 
-		// console.log({ modelBody, modelTransmission, drives, modelDrive });
 		return {
 			modifications,
 			bodies,
@@ -88,7 +90,7 @@ export default class ModificationMapper {
 	 * @param {Array} types массив с параметрами модификаций зашитых в платформе
 	 *
 	 */
-	bodyMapper(arr, value, types) {
+	paramsMapper(arr, value, types) {
 		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
 		const formatValue = {
 			id: Number(value[0].id[0]),
@@ -103,25 +105,12 @@ export default class ModificationMapper {
 
 	/**
 	 *  Метод формирует массив с выбранными параметрами убирая повторяющиеся элементы
-	 *  реализован для единоразового обхода по массиву параметров модификации
-	 * @param {Array} arr массив для сохранения выделенных параметров
-	 * @param {Object} value выбранный параметр из обьекта с параметрами модификации
-	 * @param {Array} types массив с параметрами модификаций зашитых в платформе
+	 *  реализован для единоразового обхода по массиву параметров
+	 * @param {Object} model выбранный параметр из обьекта с параметрами модификации Model
+	 * @param {Object} body выбранный параметр из обьекта с параметрами модификации BodyType
+	 * @param {Array} vehicleModelBody массив с результатами работы метода
 	 *
 	 */
-	transmissionMapper(arr, value, types) {
-		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
-		const formatValue = {
-			id: Number(value[0].id[0]),
-			name: value[0]._.toLowerCase(),
-			code: typeCode.code,
-			avitoCode: typeCode.code
-		};
-		if (!arr.map(({ id }) => id).includes(formatValue.id)) {
-			arr.push(formatValue);
-		}
-	}
-
 	modelBodyMapper(model, body, vehicleModelBody) {
 		if (
 			!vehicleModelBody.find(
@@ -136,6 +125,14 @@ export default class ModificationMapper {
 		}
 	}
 
+	/**
+	 *  Метод формирует массив с выбранными параметрами убирая повторяющиеся элементы
+	 *  реализован для единоразового обхода по массиву параметров
+	 * @param {Object} model выбранный параметр из обьекта с параметрами модификации Model
+	 * @param {Object} transmission выбранный параметр из обьекта с параметрами модификации Transmission
+	 * @param {Array} vehicleModelTransmission массив с результатами работы метода
+	 *
+	 */
 	modelTransmissionMapper(model, transmission, vehicleModelTransmission) {
 		if (
 			!vehicleModelTransmission.find(
@@ -151,6 +148,14 @@ export default class ModificationMapper {
 		}
 	}
 
+	/**
+	 *  Метод формирует массив с выбранными параметрами убирая повторяющиеся элементы
+	 *  реализован для единоразового обхода по массиву параметров
+	 * @param {Object} model выбранный параметр из обьекта с параметрами модификации Model
+	 * @param {Object} drive выбранный параметр из обьекта с параметрами модификации DriveType
+	 * @param {Array} vehicleModelDrive массив с результатами работы метода
+	 *
+	 */
 	modelDriveMapper(model, drive, vehicleModelDrive) {
 		if (
 			!vehicleModelDrive.find(
@@ -162,19 +167,6 @@ export default class ModificationMapper {
 				vehicleModelId: Number(model[0].id[0]),
 				vehicleDriveId: Number(drive[0].id[0])
 			});
-		}
-	}
-
-	driveMapper(arr, value, types) {
-		const typeCode = types.find(({ name }) => name === value[0]._.toLowerCase());
-		const formatValue = {
-			id: Number(value[0].id[0]),
-			name: value[0]._.toLowerCase(),
-			code: typeCode.code,
-			avitoCode: typeCode.code
-		};
-		if (!arr.map(({ id }) => id).includes(formatValue.id)) {
-			arr.push(formatValue);
 		}
 	}
 }

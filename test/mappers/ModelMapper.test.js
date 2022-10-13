@@ -1,6 +1,5 @@
 import ManufacturerMapper from '../../src/mappers/ManufacturerMapper.mjs';
 import ModelMapper from '../../src/mappers/ModelMapper.mjs';
-import PrismaService from '../../src/services/PrismaService.mjs';
 
 // import { createScope } from '../../libs/usecases/index.mjs';
 

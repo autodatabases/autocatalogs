@@ -9,7 +9,10 @@ async function update() {
 
 async function main() {
 	try {
+		console.log('start');
+		console.time('end');
 		await update();
+		console.timeEnd('end');
 	} catch (error) {
 		// логирование добавить
 		console.log(error);

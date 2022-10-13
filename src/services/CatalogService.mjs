@@ -14,6 +14,10 @@ export default class CatalogService {
 		this.mainRepository = new MainRepository({ prisma });
 	}
 
+	/**
+	 * Метод получает данные и приводит к нужному формату
+	 * @returns Array
+	 */
 	async loadData() {
 		try {
 			const data = await this.catalogProvider.getData();
@@ -26,21 +30,29 @@ export default class CatalogService {
 		}
 	}
 
+	/**
+	 * Метод очищает таблицы и сохраняет полученные каталоги
+	 */
 	async saveData() {
 		const result = await this.loadData();
-		if (!result) {
-			throw new Error('Данные не загружены');
-		}
-
 		await this.mainRepository.deleteAll();
+		console.log('Удалены старые таблицы');
 		await this.mainRepository.saveAll(result);
+		console.log('Сохранены новые таблицы');
 	}
 
+	/**
+	 * Метод приводит данные к нужному формату
+	 * Возвращает обьект с массивами параметров
+	 *
+	 * @param {Array} data
+	 * @returns Object
+	 */
 	mappedData(data) {
 		// получаем производителей и модели
-		const { manufacturers, modelsFromCatalog } = this.getManufacturers(data);
+		const { manufacturers, modelsFromCatalog } = this.manufacturerMapper.map(data);
 		// Модели и модификации
-		const { models, modificationsFromCatalog } = this.getModels(modelsFromCatalog);
+		const { models, modificationsFromCatalog } = this.modelMapper.map(modelsFromCatalog);
 		// Модификации
 		const {
 			modifications,
@@ -50,8 +62,20 @@ export default class CatalogService {
 			modelTransmission,
 			drives,
 			modelDrive
-		} = this.getModificationParams(modificationsFromCatalog);
+		} = this.modificationMapper.map(modificationsFromCatalog);
 		// console.log({ modelBody, modelTransmission, modelDrive });
+
+		console.log('Данные загружены', {
+			manufacturers: manufacturers.length,
+			models: models.length,
+			modifications: modifications.length,
+			transmissions: transmissions.length,
+			bodies: bodies.length,
+			drives: drives.length,
+			modelBody: modelBody.length,
+			modelTransmission: modelTransmission.length,
+			modelDrive: modelDrive.length
+		});
 
 		return {
 			manufacturers,
@@ -59,22 +83,10 @@ export default class CatalogService {
 			modifications,
 			transmissions,
 			bodies,
-      drives,
+			drives,
 			modelBody,
 			modelTransmission,
 			modelDrive
 		};
-	}
-
-	getManufacturers(data) {
-		return this.manufacturerMapper.map(data);
-	}
-
-	getModels(modelsFromCatalog) {
-		return this.modelMapper.map(modelsFromCatalog);
-	}
-
-	getModificationParams(modificationsFromCatalog) {
-		return this.modificationMapper.map(modificationsFromCatalog);
 	}
 }
