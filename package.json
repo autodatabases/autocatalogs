@@ -7,7 +7,9 @@
   "scripts": {
     "prisma:push": "npx prisma db push",
     "prisma:generate": "npx prisma generate",
-    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "dev": "nodemon server.js",
+    "start": "node --experimental-specifier-resolution=node server.js"
   },
   "repository": {
     "type": "git",
