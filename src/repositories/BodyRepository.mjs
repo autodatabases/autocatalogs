@@ -17,4 +17,17 @@ export default class BodyRepository {
 	deleteMany() {
 		return this.prisma.vehicleBody.deleteMany({});
 	}
+
+	getBody({bodyId}) {
+		return this.prisma.vehicleBody.findMany({
+			where: {
+				id: {in: bodyId}
+			},
+			select: {
+				name: true,
+				code: true,
+				avitoCode: true
+			}
+		})
+	}
 }

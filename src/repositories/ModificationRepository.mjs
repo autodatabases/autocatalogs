@@ -13,4 +13,21 @@ export default class ModificationRepository {
 	deleteMany() {
 		return this.prisma.vehicleModification.deleteMany();
 	}
+
+	getModification({modelId, count}) {
+		return this.prisma.vehicleModification.findMany({
+			where: {
+				vehicleModelId: {in: modelId}
+			},
+			take: count,
+			select: {
+				id: true,
+				vehicleYear: true,
+				vehicleEnginePower: true,
+				vehicleEngineCapacity: true,
+				name: true,
+				code: true
+			}
+		})
+	}
 }

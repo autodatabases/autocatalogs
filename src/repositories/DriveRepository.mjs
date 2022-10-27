@@ -17,4 +17,17 @@ export default class DriveRepository {
 	deleteMany() {
 		return this.prisma.vehicleDrive.deleteMany({});
 	}
+
+	getDrive({driveId}) {
+		return this.prisma.vehicleDrive.findMany({
+			where: {
+				id: {in: driveId}
+			},
+			select: {
+				name: true,
+				code: true,
+				avitoCode: true
+			}
+		})
+	}
 }

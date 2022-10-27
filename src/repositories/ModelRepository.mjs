@@ -17,4 +17,47 @@ export default class ModelRepository {
 	deleteMany() {
 		return this.prisma.vehicleModel.deleteMany({});
 	}
+
+	getModels({query, model, manufacturerId, manufacturerNameId, count}){
+		return this.prisma.vehicleModel.findMany({
+			where: {
+				OR: [
+					{
+						OR: [
+							{
+								name: {
+									contains: query,
+									mode: 'insensitive'
+								},
+							},
+							{
+								name: {
+									equals: model,
+									mode: 'insensitive'
+								},
+							}
+						],
+					},
+					{
+						OR: [
+							{
+								vehicleManufacturerId: manufacturerId
+							},
+							{
+								vehicleManufacturerId: {in: manufacturerNameId}
+							}
+						]
+					}
+				]
+			},
+			take: count,
+			select: {
+				id: true,
+				name: true,
+				code: true,
+				avitoCode: true,
+				vehicleManufacturerId: true
+			}
+		})
+	}
 }

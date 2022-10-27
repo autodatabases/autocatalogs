@@ -18,16 +18,27 @@ export default class ManufacturerRepository {
 		return this.prisma.vehicleManufacturer.deleteMany({});
 	}
 
-	async getManufacturers({query, count}) {
+	async getManufacturers({query, count, manufacturerName}) {
 		return await this.prisma.vehicleManufacturer.findMany({
 			where: {
-				name: {
-					contains: query,
-					mode: 'insensitive'
-				}
+				OR: [
+					{
+						name: {
+							contains: query,
+							mode: 'insensitive'
+						},
+					},
+					{
+						name: {
+							equals: manufacturerName,
+							mode: 'insensitive'
+						}
+					}
+				]
 			},
 			take: count,
 			select: {
+				id: true,
 				name: true,
 				code: true,
 				avitoCode: true,

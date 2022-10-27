@@ -17,4 +17,15 @@ export default class ModelDriveRepository {
 	deleteMany() {
 		return this.prisma.vehicleModelDrive.deleteMany({});
 	}
+
+	getModelDrive({modelId}) {
+		return this.prisma.vehicleModelDrive.findMany({
+			where: {
+				vehicleModelId: {in: modelId}
+			},
+			select: {
+				vehicleDriveId: true
+			}
+		})
+	}
 }
