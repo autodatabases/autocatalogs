@@ -6,7 +6,6 @@ export default class GetManufacturersUsecase {
       const rows = await this.manufacturerRepository.getManufacturers({ query: query ? query : '', count });
       return rows.map(({ name, code, avitoCode }) => ({ code, name, avitoCode }));
     }
-  
+
     async schema() {}
   }
-  

@@ -36,7 +36,7 @@ export default class ManufacturerRepository {
 					}
 				]
 			},
-			take: count,
+			take: parseInt(count),
 			select: {
 				id: true,
 				name: true,
