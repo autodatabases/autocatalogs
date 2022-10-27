@@ -2,13 +2,14 @@ import http from 'http';
 import nc from 'next-connect';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import handle from './handle'
+import handle from './handle.js';
+import GetManufacturersUsecase from './src/usecases/GetManufacturersUsecase.mjs'
 
 dotenv.config({ path: '.env' });
 
 const handler = nc({ attachParams: true })
   .use(bodyParser.json())
-  .get('/api/manufacturers', handle(GetManufacturersUsecase))
+  .get('/autocatalogs/api/manufacturers', handle(GetManufacturersUsecase))
   .post('/sessions', async (req, res) => {
     // any
   });

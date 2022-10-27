@@ -1,8 +1,8 @@
 import awilix from 'awilix';
 const { asValue, asClass } = awilix;
-import prisma from 'libs/prisma';
-import nodeCache from 'libs/nodeCache';
-import container from 'src/container';
+import prisma from '../libs/prisma.mjs';
+import nodeCache from '../libs/nodeCache.mjs';
+import container from './container.mjs';
 
 export default class Application {
   constructor() {
