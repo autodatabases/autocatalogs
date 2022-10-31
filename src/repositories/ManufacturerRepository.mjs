@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class ManufacturerRepository extends Repository {
   setupTable() {
-    this.table = 'vehicleManufacturer';
+    this.table = 'VehicleManufacturer';
   }
 
   /**
@@ -20,7 +20,7 @@ export default class ManufacturerRepository extends Repository {
     return this.model.deleteMany({});
   }
 
-  async getManufacturers({ query, count }) {
+  async getList({ query, count }) {
     return this.model.findMany({
       where: {
         ...(query && {

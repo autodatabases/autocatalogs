@@ -1,33 +1,36 @@
-export default class BodyRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	/**
-	 * Метод для пакетного сохранения типов кузова авто из каталога
-	 * @param {Array} bodies типы кузова авто полученные из каталога
-	 */
-	saveMany(bodies) {
-		return this.prisma.vehicleBody.createMany({
-			data: bodies,
-			skipDuplicates: true
-		});
-	}
+export default class BodyRepository extends Repository {
+  setupTable() {
+    this.table = 'VehicleBody';
+  }
 
-	deleteMany() {
-		return this.prisma.vehicleBody.deleteMany({});
-	}
+  /**
+   * Метод для пакетного сохранения типов кузова авто из каталога
+   * @param {Array} bodies типы кузова авто полученные из каталога
+   */
+  saveMany(bodies) {
+    return this.model.createMany({
+      data: bodies,
+      skipDuplicates: true
+    });
+  }
 
-	getBody({bodyId}) {
-		return this.prisma.vehicleBody.findMany({
-			where: {
-				id: {in: bodyId}
-			},
-			select: {
-				name: true,
-				code: true,
-				avitoCode: true
-			}
-		})
-	}
+  deleteMany() {
+    return this.model.deleteMany({});
+  }
+
+  getList({ query, count }) {
+    return this.model.findMany({
+      where: {
+        ...(query && {
+          name: {
+            contains: query,
+            mode: 'insensitive'
+          }
+        })
+      },
+      ...(count && { take: parseInt(count) })
+    });
+  }
 }

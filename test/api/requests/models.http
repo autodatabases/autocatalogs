@@ -1,0 +1,15 @@
+GET http://127.0.0.1:3000/autocatalogs/api/models
+Content-Type: application/json
+
+{
+  "manufacturerName": "KIA"
+}
+
+<> 2022-10-31T100256.200.json
+<> 2022-10-31T100238.200.json
+<> 2022-10-31T100225.200.json
+<> 2022-10-31T100155.200.json
+<> 2022-10-31T100152.200.json
+<> 2022-10-31T100140.200.json
+<> 2022-10-31T100136.200.json
+<> 2022-10-31T100127.200.json

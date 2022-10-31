@@ -1,10 +1,21 @@
 export default class GetModelsUsecase {
-  constructor({ modelRepository, manufacturerRepository }) {
+  /**
+   * @param {ModelRepository} modelRepository
+   */
+  constructor({ modelRepository }) {
     this.modelRepository = modelRepository;
-    this.manufacturerRepository = manufacturerRepository;
   }
 
+  /**
+   * @param {{
+   *   count: number|string,
+   *   manufacturerId: number,
+   *   manufacturerName: string,
+   *   query: string
+   * }} params
+   * @return {Promise<[]>}
+   */
   async process(params) {
-    return this.modelRepository.getModels(params);
+    return this.modelRepository.getList(params);
   }
 }

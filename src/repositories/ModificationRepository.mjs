@@ -1,33 +1,47 @@
-export default class ModificationRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	saveMany(modifications) {
-		return this.prisma.vehicleModification.createMany({
-			data: modifications,
-			skipDuplicates: true
-		});
-	}
+export default class ModificationRepository extends Repository {
+  setupTable() {
+    this.table = 'VehicleModification'
+  }
 
-	deleteMany() {
-		return this.prisma.vehicleModification.deleteMany();
-	}
+  saveMany(modifications) {
+    return this.model.createMany({
+      data: modifications,
+      skipDuplicates: true
+    });
+  }
 
-	getModification({modelId, count}) {
-		return this.prisma.vehicleModification.findMany({
-			where: {
-				vehicleModelId: {in: modelId}
-			},
-			take: count,
-			select: {
-				id: true,
-				vehicleYear: true,
-				vehicleEnginePower: true,
-				vehicleEngineCapacity: true,
-				name: true,
-				code: true
-			}
-		})
-	}
+  deleteMany() {
+    return this.model.deleteMany();
+  }
+
+  /**
+   * @param {number|string} count
+   * @param {string} query
+   * @param {string} modelName
+   * @param {number} modelId
+   * @return {*}
+   */
+  getList({ count, query, modelName, modelId }) {
+    return this.model.findMany({
+      where: {
+        ...(query && {
+          name: {
+            contains: query,
+            mode: 'insensitive'
+          }
+        }),
+        ...(modelId && {
+          vehicleModelId: modelId
+        }),
+        ...(modelName && {
+          vehicleModel: {
+            name: modelName
+          }
+        }),
+      },
+      ...(count && { take: parseInt(count) })
+    });
+  }
 }

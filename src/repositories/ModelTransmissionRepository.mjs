@@ -1,20 +1,22 @@
-export default class ModelTransmissionRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	/**
+export default class ModelTransmissionRepository extends Repository {
+  setupTable() {
+    this.table = 'VehicleModelTransmission';
+  }
+
+  /**
 	 * Метод для пакетного сохранения
 	 * @param {Array} data
 	 */
 	saveMany(data) {
-		return this.prisma.vehicleModelTransmission.createMany({
+		return this.model.createMany({
 			data,
 			skipDuplicates: true
 		});
 	}
 
 	deleteMany() {
-		return this.prisma.vehicleModelTransmission.deleteMany({});
+		return this.model.deleteMany({});
 	}
 }
