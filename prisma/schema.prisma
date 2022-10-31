@@ -37,9 +37,9 @@ model VehicleModel {
   ///Идентификатор
   id                       Int                        @id @default(autoincrement())
   ///Наименование
-  name                     String                     @unique @db.VarChar(50)
+  name                     String                     @db.VarChar(50)
   ///Код
-  code                     String                     @unique @db.VarChar(70)
+  code                     String                     @db.VarChar(70)
   avitoCode                String?                    @db.VarChar(70)
   vehicleManufacturerId    Int
   vehicleBodyId            Int?
@@ -52,24 +52,27 @@ model VehicleModel {
   vehicleEnginePower       Int?
   vehicleEngineCapacity    Decimal?                   @db.Decimal(2, 1)
   vehicleModification      VehicleModification[]
+
+    @@unique([id, vehicleManufacturerId])
+
 }
 
 model VehicleModelBody {
   ///Идентификатор
   id             Int          @id @default(autoincrement())
-  vehicleModelId Int
-  vehicleBodyId  Int
-  vehicleBody    VehicleBody  @relation(fields: [vehicleBodyId], references: [id])
-  vehicleModel   VehicleModel @relation(fields: [vehicleModelId], references: [id])
+  vehicleModelId Int?
+  vehicleBodyId  Int?
+  vehicleBody    VehicleBody?  @relation(fields: [vehicleBodyId], references: [id])
+  vehicleModel   VehicleModel? @relation(fields: [vehicleModelId], references: [id])
 }
 
 model VehicleModelTransmission {
   ///Идентификатор
   id                    Int                 @id @default(autoincrement())
-  vehicleModelId        Int
-  vehicleTransmissionId Int
-  vehicleModel          VehicleModel        @relation(fields: [vehicleModelId], references: [id])
-  vehicleTransmission   VehicleTransmission @relation(fields: [vehicleTransmissionId], references: [id])
+  vehicleModelId        Int?
+  vehicleTransmissionId Int?
+  vehicleModel          VehicleModel?        @relation(fields: [vehicleModelId], references: [id])
+  vehicleTransmission   VehicleTransmission? @relation(fields: [vehicleTransmissionId], references: [id])
 }
 
 model VehicleTransmission {
@@ -97,16 +100,16 @@ model VehicleDrive {
 
 model VehicleModelDrive {
   id             Int          @id @default(autoincrement())
-  vehicleModelId Int
-  vehicleDriveId Int
-  vehicleDrive   VehicleDrive @relation(fields: [vehicleDriveId], references: [id])
-  vehicleModel   VehicleModel @relation(fields: [vehicleModelId], references: [id])
+  vehicleModelId Int?
+  vehicleDriveId Int?
+  vehicleDrive   VehicleDrive? @relation(fields: [vehicleDriveId], references: [id])
+  vehicleModel   VehicleModel? @relation(fields: [vehicleModelId], references: [id])
 }
 
 model VehicleModification {
   id                    Int                  @id
-  vehicleModel          VehicleModel         @relation(fields: [vehicleModelId], references: [id])
-  vehicleModelId        Int
+  vehicleModel          VehicleModel?         @relation(fields: [vehicleModelId], references: [id])
+  vehicleModelId        Int?
   vehicleTransmission   VehicleTransmission? @relation(fields: [vehicleTransmissionId], references: [id])
   vehicleTransmissionId Int?
   vehicleBody           VehicleBody?         @relation(fields: [vehicleBodyId], references: [id])
