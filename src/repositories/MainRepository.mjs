@@ -34,38 +34,27 @@ export default class MainRepository {
 		drives,
 		modelDrive
 	}) {
-		const savedBodies = await this.bodyRepository.saveMany(bodies);
-		const savedTransmission = await this.transmissionRepository.saveMany(transmissions);
-		const savedDrives = await this.driveRepository.saveMany(drives);
-		const savedManufacturers = await this.manufacturerRepository.saveMany(manufacturers);
+    const savedBodies = this.bodyRepository.saveMany(bodies);
+    const savedTransmission = this.transmissionRepository.saveMany(transmissions);
+    const savedDrives = this.driveRepository.saveMany(drives);
+    const savedManufacturers = this.manufacturerRepository.saveMany(manufacturers);
+    const savedModels = this.modelRepository.saveMany(models);
+    const savedModifications = this.modificationRepository.saveMany(modifications);
+    const savedModelBodies = this.modelBodyRepository.saveMany(modelBody);
+    const savedModelTransmission = this.modelTransmissionRepository.saveMany(modelTransmission);
+    const savedModelDrive = this.modelDriveRepository.saveMany(modelDrive);
 
-		// await this.modelRepository.saveMany(models.slice(0, 1000));
-		// await this.modelRepository.saveMany(models.slice(1001, 2000));
-		// await this.modelRepository.saveMany(models.slice(2001, 3000));
-    // console.log(models[0], modifications[0]);
-    console.log('count ' + models.length);
-    // const model = (models.find(model => model.id === 472580));
-    const savedModels = await this.modelRepository.saveMany(models);
-
-    // for (const modification of modifications) {
-    //   console.log(modification);
-    //   const savedModifications = await this.modificationRepository.saveMany([modification]);
-    // }
-		// const savedModelBodies = await this.modelBodyRepository.saveMany(modelBody);
-		// const savedModelTransmission = await this.modelTransmissionRepository.saveMany(modelTransmission);
-		// const savedModelDrive = await this.modelDriveRepository.saveMany(modelDrive);
-
-		// await this.prisma.$transaction([
-		// 	savedBodies,
-		// 	savedTransmission,
-		// 	savedDrives,
-		// 	savedManufacturers,
-		// 	savedModels,
-		// 	savedModifications,
-		// 	savedModelBodies,
-		// 	savedModelTransmission,
-		// 	savedModelDrive
-		// ]);
+    await this.prisma.$transaction([
+      savedBodies,
+      savedTransmission,
+      savedDrives,
+      savedManufacturers,
+      savedModels,
+      savedModifications,
+      savedModelBodies,
+      savedModelTransmission,
+      savedModelDrive
+    ]);
 	}
 
 	async deleteAll() {
