@@ -75,7 +75,7 @@ export default class ModificationMapper {
 	 */
 	codeAdapter(vehiclePower, engineVolume) {
 		const format = (value) => {
-			const more = value.replaceAll('.', '_');
+			const more = value.replace(/\./g, '_');
 			const less = value + '_0';
 			return value.includes('.') ? more : less;
 		};

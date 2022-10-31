@@ -1,48 +1,36 @@
-export default class ManufacturerRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	/**
-	 * Метод для пакетного сохранения производителей авто из каталога
-	 * @param {Array} manufacturers производители авто полученные из каталога
-	 */
-	saveMany(manufacturers) {
-		return this.prisma.vehicleManufacturer.createMany({
-			data: manufacturers,
-			skipDuplicates: true
-		});
-	}
+export default class ManufacturerRepository extends Repository {
+  setupTable() {
+    this.table = 'vehicleManufacturer';
+  }
 
-	deleteMany() {
-		return this.prisma.vehicleManufacturer.deleteMany({});
-	}
+  /**
+   * Метод для пакетного сохранения производителей авто из каталога
+   * @param {Array} manufacturers производители авто полученные из каталога
+   */
+  saveMany(manufacturers) {
+    return this.model.createMany({
+      data: manufacturers,
+      skipDuplicates: true
+    });
+  }
 
-	async getManufacturers({query, count, manufacturerName}) {
-		return await this.prisma.vehicleManufacturer.findMany({
-			where: {
-				OR: [
-					{
-						name: {
-							contains: query,
-							mode: 'insensitive'
-						},
-					},
-					{
-						name: {
-							equals: manufacturerName,
-							mode: 'insensitive'
-						}
-					}
-				]
-			},
-			take: parseInt(count),
-			select: {
-				id: true,
-				name: true,
-				code: true,
-				avitoCode: true,
-			}
-		})
-	}
+  deleteMany() {
+    return this.model.deleteMany({});
+  }
+
+  async getManufacturers({ query, count }) {
+    return this.model.findMany({
+      where: {
+        ...(query && {
+          name: {
+            contains: query,
+            mode: 'insensitive'
+          }
+        })
+      },
+      ...(count && { take: parseInt(count) })
+    });
+  }
 }

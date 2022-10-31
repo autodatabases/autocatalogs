@@ -1,63 +1,45 @@
-export default class ModelRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	/**
-	 * Метод для пакетного сохранения моделей авто из каталога
-	 * @param {Array} models модели авто полученные из каталога
-	 */
-	saveMany(models) {
-		return this.prisma.vehicleModel.createMany({
-			data: models,
-			skipDuplicates: true
-		});
-	}
+export default class ModelRepository extends Repository{
+  setupTable() {
+    this.table = 'vehicleModel';
+  }
 
-	deleteMany() {
-		return this.prisma.vehicleModel.deleteMany({});
-	}
+  /**
+   * Метод для пакетного сохранения моделей авто из каталога
+   * @param {Array} models модели авто полученные из каталога
+   */
+  saveMany(models) {
+    return this.model.createMany({
+      data: models,
+      skipDuplicates: true
+    });
+  }
 
-	getModels({query, model, manufacturerId, manufacturerNameId, count}){
-		return this.prisma.vehicleModel.findMany({
-			where: {
-				OR: [
-					{
-						OR: [
-							{
-								name: {
-									contains: query,
-									mode: 'insensitive'
-								},
-							},
-							{
-								name: {
-									equals: model,
-									mode: 'insensitive'
-								},
-							}
-						],
-					},
-					{
-						OR: [
-							{
-								vehicleManufacturerId: manufacturerId
-							},
-							{
-								vehicleManufacturerId: {in: manufacturerNameId}
-							}
-						]
-					}
-				]
-			},
-			take: count,
-			select: {
-				id: true,
-				name: true,
-				code: true,
-				avitoCode: true,
-				vehicleManufacturerId: true
-			}
-		})
-	}
+  deleteMany() {
+    return this.model.deleteMany({});
+  }
+
+  getModels({ query, manufacturerId, manufacturerName, count }) {
+    return this.model.findMany({
+      where: {
+        ...(query && {
+          name: {
+            contains: query,
+            mode: 'insensitive'
+          }
+        }),
+        ...(manufacturerId && {
+          vehicleManufacturerId: manufacturerId
+        }),
+        ...(manufacturerName && {
+          vehicleManufacturer: {
+            name: manufacturerName
+          }
+        }),
+
+      },
+      ...(count && { take: parseInt(count) })
+    });
+  }
 }

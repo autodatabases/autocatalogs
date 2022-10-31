@@ -1,6 +1,6 @@
-import { createScope } from './libs/usecases.mjs';
+import application from './libs/application.mjs';
 
-export default function handle(usecase) {
+export function handle(usecase) {
 	return async (req, res) => {
 		try {
 			const scope = await createScope(req, res);
@@ -12,6 +12,12 @@ export default function handle(usecase) {
 			res.end(JSON.stringify(result));
 		} catch (exception) {
 			console.log(exception);
+			res.writeHead(500);
+			res.end(JSON.stringify({ error: exception.message }));
 		}
 	};
+}
+
+export async function createScope(req) {
+	return application.createScope(req);
 }

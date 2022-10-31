@@ -1,8 +1,8 @@
 import awilix from 'awilix';
-const { asValue, asClass } = awilix;
 import prisma from '../libs/prisma.mjs';
-import nodeCache from '../libs/nodeCache.mjs';
 import container from './container.mjs';
+
+const { asValue, asClass } = awilix;
 
 export default class Application {
   constructor() {
@@ -14,17 +14,16 @@ export default class Application {
   async createContainer() {
     this.container = awilix.createContainer();
 
-    // register currentUser, datasource, prisma
     this.container.register({
-      userCode: asValue(process.env.USER),
-      currentUser: asValue(process.env.USER),
       prisma: asValue(prisma),
-      nodeCache: asValue(nodeCache)
     });
+
     const classes = {};
-    for (var [key, value] of container) {
+
+    for (const [key, value] of container) {
       classes[key] = asClass(value);
     }
+
     this.container.register(classes);
   }
 
@@ -32,26 +31,12 @@ export default class Application {
    * create scope for http request
    * @param {*} req
    */
-  async createScope(req, withSession = false, addScope = null) {
+  async createScope(req) {
     if (this.container == null) {
       await this.createContainer();
     }
-    // console.log(this.container);
 
-    const scope = this.container.createScope();
-    if (addScope) {
-      // console.log({ addScope });
-      const addScopeValues = {};
-      for (var [key, value] of addScope) {
-        addScopeValues[key] = asValue(value);
-      }
-      this.container.register(addScopeValues);
-    }
-    // const xRemoteUser = req && req.headers && req.headers['x-remote-user'];
-    // const currentUser = xRemoteUser || process.env.USER;
-    // scope.register({ currentUser: asValue(currentUser) });
-
-    return scope;
+    return this.container.createScope();
   }
 
   /**
