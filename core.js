@@ -18,6 +18,6 @@ export function handle(usecase) {
 	};
 }
 
-export async function createScope(req) {
+export async function createScope(req = null) {
 	return application.createScope(req);
 }

@@ -21,9 +21,11 @@ export default class ModificationRepository extends Repository {
    * @param {string} query
    * @param {string} modelName
    * @param {number} modelId
+   * @param withBody
+   * @param withTransmission
    * @return {*}
    */
-  getList({ count, query, modelName, modelId }) {
+  getList({ count, query, modelName, modelId, withBody = false, withTransmission = false }) {
     return this.model.findMany({
       where: {
         ...(query && {
@@ -40,6 +42,10 @@ export default class ModificationRepository extends Repository {
             name: modelName
           }
         }),
+      },
+      include: {
+        vehicleTransmission: withTransmission,
+        vehicleBody: withBody,
       },
       ...(count && { take: parseInt(count) })
     });

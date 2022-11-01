@@ -1,9 +1,11 @@
 export default class GetModificationsUsecase {
   /**
    * @param {ModificationRepository} modificationRepository
+   * @param {ModificationAdapter} modificationAdapter
    */
-  constructor({ modificationRepository }) {
+  constructor({ modificationRepository, modificationAdapter }) {
     this.modificationRepository = modificationRepository;
+    this.modificationAdapter = modificationAdapter;
   }
 
   /**
@@ -16,6 +18,8 @@ export default class GetModificationsUsecase {
    * @return {Promise<*>}
    */
   async process(params) {
-    return this.modificationRepository.getList(params);
+    const modifications = await this.modificationRepository.getList(params);
+
+    return this.modificationAdapter.mapList(modifications);
   }
 }

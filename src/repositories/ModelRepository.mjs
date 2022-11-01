@@ -44,7 +44,6 @@ export default class ModelRepository extends Repository{
             name: manufacturerName
           }
         }),
-
       },
       ...(count && { take: parseInt(count) })
     });

@@ -23,9 +23,10 @@ export default class TransmissionRepository extends Repository {
   /**
    * @param {string} query
    * @param {number|string} count
+   * @param {string} modelName
    * @return {*}
    */
-  getList({ query, count }) {
+  getList({ query, count, modelName }) {
     return this.model.findMany({
       where: {
         ...(query && {
@@ -33,6 +34,9 @@ export default class TransmissionRepository extends Repository {
             contains: query,
             mode: 'insensitive'
           }
+        }),
+        ...(modelName && {
+
         })
       },
       ...(count && { take: parseInt(count) })
