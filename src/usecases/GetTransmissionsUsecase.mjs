@@ -1,4 +1,4 @@
-export default class GetDrivesUsecase {
+export default class GetTransmissionsUsecase {
   /**
    * @param {TransmissionRepository} transmissionRepository
    */
