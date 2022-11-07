@@ -7,7 +7,9 @@
   "scripts": {
     "prisma:push": "npx prisma db push",
     "prisma:generate": "npx prisma generate",
-    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "ilb-build": "prisma generate",
+    "ilb-deploy": "prisma migrate deploy"
   },
   "repository": {
     "type": "git",
