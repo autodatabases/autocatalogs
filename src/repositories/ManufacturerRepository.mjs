@@ -1,20 +1,36 @@
-export default class ManufacturerRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	/**
-	 * Метод для пакетного сохранения производителей авто из каталога
-	 * @param {Array} manufacturers производители авто полученные из каталога
-	 */
-	saveMany(manufacturers) {
-		return this.prisma.vehicleManufacturer.createMany({
-			data: manufacturers,
-			skipDuplicates: true
-		});
-	}
+export default class ManufacturerRepository extends Repository {
+  setupTable() {
+    this.table = 'VehicleManufacturer';
+  }
 
-	deleteMany() {
-		return this.prisma.vehicleManufacturer.deleteMany({});
-	}
+  /**
+   * Метод для пакетного сохранения производителей авто из каталога
+   * @param {Array} manufacturers производители авто полученные из каталога
+   */
+  saveMany(manufacturers) {
+    return this.model.createMany({
+      data: manufacturers,
+      skipDuplicates: true
+    });
+  }
+
+  deleteMany() {
+    return this.model.deleteMany({});
+  }
+
+  async getList({ query, count }) {
+    return this.model.findMany({
+      where: {
+        ...(query && {
+          name: {
+            contains: query,
+            mode: 'insensitive'
+          }
+        })
+      },
+      ...(count && { take: parseInt(count) })
+    });
+  }
 }

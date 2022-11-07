@@ -1,20 +1,41 @@
-export default class DriveRepository {
-	constructor({ prisma }) {
-		this.prisma = prisma;
-	}
+import Repository from './Repository.mjs';
 
-	/**
-	 * Метод для пакетного сохранения
-	 * @param {Array} data
-	 */
-	saveMany(data) {
-		return this.prisma.vehicleDrive.createMany({
-			data,
-			skipDuplicates: true
-		});
-	}
+export default class DriveRepository extends Repository {
+  setupTable() {
+    this.table = 'VehicleDrive';
+  }
 
-	deleteMany() {
-		return this.prisma.vehicleDrive.deleteMany({});
-	}
+  /**
+   * Метод для пакетного сохранения
+   * @param {Array} data
+   */
+  saveMany(data) {
+    return this.model.createMany({
+      data,
+      skipDuplicates: true
+    });
+  }
+
+  deleteMany() {
+    return this.model.deleteMany({});
+  }
+
+  /**
+   * @param {string} query
+   * @param {number|string} count
+   * @return {*}
+   */
+  getList({ query, count }) {
+    return this.model.findMany({
+      where: {
+        ...(query && {
+          name: {
+            contains: query,
+            mode: 'insensitive'
+          }
+        })
+      },
+      ...(count && { take: parseInt(count) })
+    });
+  }
 }
