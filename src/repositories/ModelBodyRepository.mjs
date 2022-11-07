@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class ModelBodyRepository extends Repository {
   setupTable() {
-    this.table = 'VehicleBody';
+    this.table = 'VehicleModelBody';
   }
 
   /**
