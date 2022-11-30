@@ -1,49 +1,52 @@
 {
-  "name": "@ilb/autocatalogs",
-  "version": "1.0.2",
-  "description": "Справочник автомобилей",
-  "type": "module",
-  "main": "src/index.js",
-  "scripts": {
-    "prisma:push": "npx prisma db push",
-    "prisma:generate": "npx prisma generate",
-    "test": "node -r dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "ilb-build": "prisma generate",
-    "ilb-deploy": "prisma migrate deploy",
-    "dev": "nodemon server.js",
-    "start": "node --experimental-specifier-resolution=node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ilb/autocatalogs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ilb/autocatalogs/issues"
-  },
-  "homepage": "https://github.com/ilb/autocatalogs#readme",
-  "devDependencies": {
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jest": "^26.4.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^28.1.0",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.6.2",
-    "prisma": "^4.4.0"
-  },
-  "dependencies": {
-    "@ilb/node_context": "^1.0.31",
-    "@ilb/uriaccessorjs": "^1.0.26",
-    "@prisma/client": "^4.4.0",
-    "awilix": "^8.0.0",
-    "body-parser": "^1.20.1",
-    "cyrillic-to-translit-js": "^3.2.1",
-    "dotenv": "^16.0.3",
-    "next-connect": "^0.13.0",
-    "node-fetch": "^3.2.5",
-    "pino": "^8.1.0",
-    "xml2js": "^0.4.23"
-  }
+	"name": "@ilb/autocatalogs",
+	"version": "1.0.2",
+	"description": "Справочник автомобилей",
+	"type": "module",
+	"main": "src/index.js",
+	"scripts": {
+		"prisma:push": "ldapenv npx prisma db push",
+		"prisma:migrate": "ldapenv prisma migrate dev",
+		"prisma:generate": "ldapenv prisma generate",
+		"test": "ldapenv node --experimental-vm-modules node_modules/jest/bin/jest.js",
+		"ilb-build": "ldapenv prisma generate",
+		"ilb-deploy": "ldapenv prisma migrate deploy",
+		"catalogs:update": "ldapenv node --experimental-vm-modules bin/updateCatalogs.mjs",
+		"dev": "ldapenv nodemon server.js",
+		"start": "ldapenv node --experimental-specifier-resolution=node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ilb/autocatalogs.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ilb/autocatalogs/issues"
+	},
+	"homepage": "https://github.com/ilb/autocatalogs#readme",
+	"devDependencies": {
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jest": "^26.4.2",
+		"eslint-plugin-prettier": "^4.0.0",
+		"jest": "^28.1.0",
+		"nodemon": "^2.0.20",
+		"prettier": "^2.6.2",
+		"prisma": "^4.7.0"
+	},
+	"dependencies": {
+		"@ilb/ldapenv-cli": "^1.0.4",
+		"@ilb/node_context": "^1.0.31",
+		"@ilb/uriaccessorjs": "^1.0.26",
+		"@prisma/client": "^4.7.0",
+		"awilix": "^8.0.0",
+		"body-parser": "^1.20.1",
+		"cyrillic-to-translit-js": "^3.2.1",
+		"dotenv": "^16.0.3",
+		"next-connect": "^0.13.0",
+		"node-fetch": "^3.2.5",
+		"pino": "^8.1.0",
+		"xml2js": "^0.4.23"
+	}
 }
