@@ -1,17 +1,13 @@
-import CatalogProvider from '../providers/CatalogProvider.mjs';
-
 import ManufacturerMapper from '../mappers/ManufacturerMapper.mjs';
 import ModificationMapper from '../mappers/ModificationMapper.mjs';
 import ModelMapper from '../mappers/ModelMapper.mjs';
-
-import MainRepository from '../repositories/MainRepository.mjs';
 export default class CatalogService {
-	constructor({ prisma = null, url }) {
-		this.catalogProvider = new CatalogProvider({ url });
+	constructor({ catalogProvider, mainRepository }) {
+		this.catalogProvider = catalogProvider;
+		this.mainRepository = mainRepository;
 		this.manufacturerMapper = new ManufacturerMapper();
 		this.modificationMapper = new ModificationMapper();
 		this.modelMapper = new ModelMapper();
-		this.mainRepository = new MainRepository({ prisma });
 	}
 
 	/**

@@ -11,7 +11,7 @@
 		"test": "ldapenv node --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"ilb-build": "ldapenv prisma generate",
 		"ilb-deploy": "ldapenv prisma migrate deploy",
-		"catalogs:update": "ldapenv node --experimental-vm-modules bin/updateCatalogs.mjs",
+		"catalogs:update": "ldapenv node bin/updateCatalogs.mjs",
 		"dev": "ldapenv nodemon server.js",
 		"start": "ldapenv node --experimental-specifier-resolution=node server.js"
 	},
