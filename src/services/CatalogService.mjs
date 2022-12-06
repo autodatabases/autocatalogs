@@ -27,17 +27,6 @@ export default class CatalogService {
 	}
 
 	/**
-	 * Метод очищает таблицы и сохраняет полученные каталоги
-	 */
-	async saveData() {
-		const result = await this.loadData();
-		await this.mainRepository.deleteAll();
-		console.log('Удалены старые таблицы');
-		await this.mainRepository.saveAll(result);
-		console.log('Сохранены новые таблицы');
-	}
-
-	/**
 	 * Метод обновляет существующие таблицы и сохраняет новые записи
 	 */
 	async updateData() {

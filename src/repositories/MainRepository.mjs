@@ -84,28 +84,4 @@ export default class MainRepository {
 			await this.prisma.$transaction(update)
 		})
 	}
-
-	async deleteAll() {
-		const deletedModels = this.modelRepository.deleteMany();
-		const deletedModelBodies = this.modelBodyRepository.deleteMany();
-		const deletedModelTransmissions = this.modelTransmissionRepository.deleteMany();
-		const deletedModelDrives = this.modelDriveRepository.deleteMany();
-		const deletedManufacturers = this.manufacturerRepository.deleteMany();
-		const deletedModifications = this.modificationRepository.deleteMany();
-		const deletedBodies = this.bodyRepository.deleteMany();
-		const deletedTransmissions = this.transmissionRepository.deleteMany();
-		const deletedDrives = this.driveRepository.deleteMany();
-
-		await this.prisma.$transaction([
-			deletedModelBodies,
-			deletedModelTransmissions,
-			deletedModelDrives,
-			deletedBodies,
-			deletedTransmissions,
-			deletedDrives,
-			deletedModifications,
-			deletedModels,
-			deletedManufacturers
-		]);
-	}
 }
