@@ -16,6 +16,7 @@ export default class Application {
 
     this.container.register({
       prisma: asValue(prisma),
+      avitoCatalogsUrl: asValue(process.env['apps.avitocatalogs.ws'])
     });
 
     const classes = {};

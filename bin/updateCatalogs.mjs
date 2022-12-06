@@ -1,9 +1,9 @@
-import UpdateCatalogs from '../src/usecases/UdateCatalogs.mjs';
-import prisma from '../libs/prisma';
-const url = process.env['apps.avitocatalogs.ws'];
+import UpdateCatalogs from '../src/usecases/UpdateCatalogs.mjs';
+import application from '../libs/application.mjs';
 
 async function update() {
-	const usecase = new UpdateCatalogs({ prisma, url });
+  const scope = await application.createScope();
+	const usecase = new UpdateCatalogs(scope.cradle);
 	await usecase.process();
 }
 
@@ -16,8 +16,6 @@ async function main() {
 	} catch (error) {
 		// логирование добавить
 		console.log(error);
-	} finally {
-		await prisma.$disconnect();
 	}
 }
 main().then();

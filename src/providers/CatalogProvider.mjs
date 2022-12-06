@@ -2,13 +2,13 @@ import { UriAccessorFactory } from '@ilb/uriaccessorjs';
 import CatalogAdapter from '../adapters/CatalogAdapter.mjs';
 
 export default class CatalogProvider {
-	constructor({ url }) {
+	constructor({ avitoCatalogsUrl }) {
 		this.uriAccessorFactory = new UriAccessorFactory({
 			currentUser: null,
 			uriAccessorFileEnabled: true
 		});
 		this.catalogsAdapter = new CatalogAdapter();
-		this.url = url;
+		this.url = avitoCatalogsUrl;
 	}
 	/**
 	 *  Метод реализует получение данных из внешнего ресурса с преобразованием к нужному формату

@@ -7,6 +7,9 @@ import ModelBodyRepository from './repositories/ModelBodyRepository.mjs'
 import BodyRepository from './repositories/BodyRepository.mjs'
 import TransmissionRepository from './repositories/TransmissionRepository.mjs';
 import ModificationAdapter from './adapters/ModificationAdapter.mjs';
+import CatalogService from './services/CatalogService.mjs'
+import CatalogProvider from './providers/CatalogProvider.mjs'
+import MainRepository from './repositories/MainRepository.mjs'
 // const production = process.env.ILB_SYSID == 'PRODUCTION';
 const container = new Map();
 
@@ -19,5 +22,8 @@ container.set('modelBodyRepository', ModelBodyRepository)
 container.set('bodyRepository', BodyRepository)
 container.set('transmissionRepository', TransmissionRepository)
 container.set('modificationAdapter', ModificationAdapter)
+container.set('catalogService', CatalogService)
+container.set('catalogProvider', CatalogProvider)
+container.set('mainRepository', MainRepository)
 
 export default container;
