@@ -42,6 +42,17 @@ export default class CatalogService {
 	}
 
 	/**
+	 * Метод обновляет существующие таблицы и сохраняет новые записи
+	 */
+	async updateData() {
+		const result = await this.loadData();
+		await this.mainRepository.updateAll(result);
+		console.log('Таблицы обновлены');
+		await this.mainRepository.saveAll(result);
+		console.log('Сохранены новые записи');
+	}
+
+	/**
 	 * Метод приводит данные к нужному формату
 	 * Возвращает обьект с массивами параметров
 	 *

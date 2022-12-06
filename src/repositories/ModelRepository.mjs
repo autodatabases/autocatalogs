@@ -16,6 +16,22 @@ export default class ModelRepository extends Repository{
     });
   }
 
+  /**
+   * Метод для обновления моделей авто из каталога
+   * @param {Array} models модели авто полученные из каталога
+   */
+  updateMany(models) {
+    return models.map((model) => {
+      const {id, ...overData} = model
+      return this.model.updateMany({
+        where: {
+          id: id
+        },
+        data: overData
+      })
+    })
+  }
+
   deleteMany() {
     return this.model.deleteMany({});
   }

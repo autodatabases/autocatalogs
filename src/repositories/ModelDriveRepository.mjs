@@ -15,6 +15,18 @@ export default class ModelDriveRepository extends Repository {
 			skipDuplicates: true
 		});
 	}
+	
+  /**
+   * Метод для обновления
+   * @param {Array} data 
+   */
+	updateMany(data) {
+		return data.map((item) => {
+		  return this.model.updateMany({
+			data: item
+		  })
+		})
+	}
 
 	deleteMany() {
 		return this.model.deleteMany({});

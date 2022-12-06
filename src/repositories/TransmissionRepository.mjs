@@ -16,6 +16,22 @@ export default class TransmissionRepository extends Repository {
 		});
 	}
 
+  /**
+   * Метод для обновления типов трансмиссий авто из каталога
+   * @param {Array} transmissions типы трансмиссий авто полученные из каталога
+   */
+  updateMany(transmissions) {
+    return transmissions.map((transmission) => {
+      const {id, ...overData} = transmission
+      return this.model.updateMany({
+        where: {
+          id: id
+        },
+        data: overData
+      })
+    })
+  }
+
 	deleteMany() {
 		return this.model.deleteMany({});
 	}

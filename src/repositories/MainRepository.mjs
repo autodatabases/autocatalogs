@@ -57,6 +57,34 @@ export default class MainRepository {
     ]);
 	}
 
+	async updateAll({
+		manufacturers,
+		models,
+		modifications,
+		transmissions,
+		bodies,
+		modelBody,
+		modelTransmission,
+		drives,
+		modelDrive
+	}) {
+		let updates = []
+
+		updates.push(this.bodyRepository.updateMany(bodies));
+		updates.push(this.transmissionRepository.updateMany(transmissions));
+		updates.push(this.driveRepository.updateMany(drives));
+		updates.push(this.manufacturerRepository.updateMany(manufacturers));
+		updates.push(this.modelRepository.updateMany(models));
+		updates.push(this.modificationRepository.updateMany(modifications));
+		updates.push(this.modelBodyRepository.updateMany(modelBody));
+		updates.push(this.modelTransmissionRepository.updateMany(modelTransmission));
+		updates.push(this.modelDriveRepository.updateMany(modelDrive));
+
+		updates.map(async (update) => {
+			await this.prisma.$transaction(update)
+		})
+	}
+
 	async deleteAll() {
 		const deletedModels = this.modelRepository.deleteMany();
 		const deletedModelBodies = this.modelBodyRepository.deleteMany();

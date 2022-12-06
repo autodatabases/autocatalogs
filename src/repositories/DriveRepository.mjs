@@ -16,6 +16,22 @@ export default class DriveRepository extends Repository {
     });
   }
 
+  /**
+   * Метод для обновления
+   * @param {Array} data 
+   */
+  updateMany(data) {
+    return data.map((item) => {
+      const {id, ...overData} = item
+      return this.model.updateMany({
+        where: {
+          id: id
+        },
+        data: overData
+      })
+    })
+  }
+
   deleteMany() {
     return this.model.deleteMany({});
   }

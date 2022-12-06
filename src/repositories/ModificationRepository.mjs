@@ -12,6 +12,18 @@ export default class ModificationRepository extends Repository {
     });
   }
 
+  updateMany(modifications) {
+    return modifications.map((modification) => {
+      const {id, ...overData} = modification
+      return this.model.updateMany({
+        where: {
+          id: id
+        },
+        data: overData
+      })
+    })
+  }
+
   deleteMany() {
     return this.model.deleteMany();
   }

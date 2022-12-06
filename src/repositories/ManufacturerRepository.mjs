@@ -16,6 +16,22 @@ export default class ManufacturerRepository extends Repository {
     });
   }
 
+  /**
+   * Метод для обновления производителей авто из каталога
+   * @param {Array} manufacturers производители авто полученные из каталога
+   */
+  updateMany(manufacturers) {
+    return manufacturers.map((manufacturer) => {
+      const {id, ...overData} = manufacturer
+      return this.model.updateMany({
+        where: {
+          id: id
+        },
+        data: overData
+      })
+    })
+  }
+
   deleteMany() {
     return this.model.deleteMany({});
   }

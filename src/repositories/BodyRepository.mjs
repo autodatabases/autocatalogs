@@ -16,6 +16,22 @@ export default class BodyRepository extends Repository {
     });
   }
 
+  /**
+   * Метод для обновления типов кузова авто из каталога
+   * @param {Array} bodies типы кузова авто полученные из каталога
+   */
+  updateMany(bodies) {
+    return bodies.map((bodie) => {
+      const {id, ...overData} = bodie
+      return this.model.updateMany({
+        where: {
+          id: id
+        },
+        data: overData
+      })
+    })
+  }
+
   deleteMany() {
     return this.model.deleteMany({});
   }
