@@ -21,4 +21,9 @@
     <resource-env-ref-name>.apps.avitocatalogs.ws</resource-env-ref-name>
     <resource-env-ref-type>java.lang.String</resource-env-ref-type>
   </resource-env-ref>
+  <resource-env-ref>
+    <description>Прокси ресурс</description>
+    <resource-env-ref-name>.internet.proxy.http_url</resource-env-ref-name>
+    <resource-env-ref-type>java.lang.String</resource-env-ref-type>
+  </resource-env-ref>
 </web-app>

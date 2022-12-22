@@ -41,6 +41,7 @@
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
 		"awilix": "^8.0.0",
+		"better-https-proxy-agent": "^1.0.9",
 		"body-parser": "^1.20.1",
 		"cyrillic-to-translit-js": "^3.2.1",
 		"dotenv": "^16.0.3",

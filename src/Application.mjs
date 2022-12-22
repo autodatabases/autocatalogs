@@ -1,56 +1,77 @@
 import awilix from 'awilix';
 import prisma from '../libs/prisma.mjs';
 import container from './container.mjs';
+import { Agent as BetterHttpsProxyAgent } from 'better-https-proxy-agent';
+import { configureProxy, UriAgentFactory } from '@ilb/uriaccessorjs';
 
 const { asValue, asClass } = awilix;
 
 export default class Application {
-  constructor() {
-    this.container = null;
-  }
-  /**
-   * initialize application
-   */
-  async createContainer() {
-    this.container = awilix.createContainer();
+	constructor() {
+		this.container = null;
+	}
+	/**
+	 * initialize application
+	 */
 
-    this.container.register({
-      prisma: asValue(prisma),
-      avitoCatalogsUrl: asValue(process.env['apps.avitocatalogs.ws'])
-    });
+	async configureAgent() {
+		return;
+	}
+	async createContainer() {
+		this.container = awilix.createContainer();
 
-    const classes = {};
+		const proxy = process.env['internet.proxy.http_url'];
+		if (proxy) {
+			const httpAgent = new BetterHttpsProxyAgent(
+				{},
+				configureProxy(process.env['internet.proxy.http_url'])
+			);
+			this.container.register({
+				uriAgentFactory: asValue(
+					new UriAgentFactory({
+						uriAgentMap: { [process.env['apps.avitocatalogs.ws']]: httpAgent }
+					})
+				)
+			});
+		}
 
-    for (const [key, value] of container) {
-      classes[key] = asClass(value);
-    }
+		this.container.register({
+			prisma: asValue(prisma),
+			avitoCatalogsUrl: asValue(process.env['apps.avitocatalogs.ws'])
+		});
 
-    this.container.register(classes);
-  }
+		const classes = {};
 
-  /**
-   * create scope for http request
-   * @param {*} req
-   */
-  async createScope(req) {
-    if (this.container == null) {
-      await this.createContainer();
-    }
+		for (const [key, value] of container) {
+			classes[key] = asClass(value);
+		}
 
-    return this.container.createScope();
-  }
+		this.container.register(classes);
+	}
 
-  /**
-   * resolve bean by name
-   * @param {*} name name of bean
-   */
-  resolve(name) {
-    return this.container.resolve(name);
-  }
+	/**
+	 * create scope for http request
+	 * @param {*} req
+	 */
+	async createScope(req) {
+		if (this.container == null) {
+			await this.createContainer();
+		}
 
-  asArray(resolvers) {
-    return {
-      resolve: (container, opts) => resolvers.map((r) => container.build(r, opts))
-    };
-  }
+		return this.container.createScope();
+	}
+
+	/**
+	 * resolve bean by name
+	 * @param {*} name name of bean
+	 */
+	resolve(name) {
+		return this.container.resolve(name);
+	}
+
+	asArray(resolvers) {
+		return {
+			resolve: (container, opts) => resolvers.map((r) => container.build(r, opts))
+		};
+	}
 }
