@@ -2,7 +2,7 @@ import awilix from 'awilix';
 import prisma from '../libs/prisma.mjs';
 import container from './container.mjs';
 import { Agent as BetterHttpsProxyAgent } from 'better-https-proxy-agent';
-import { configureProxy, UriAgentFactory } from '@ilb/uriaccessorjs';
+import { configureCert, configureProxy, UriAgentFactory } from '@ilb/uriaccessorjs';
 
 const { asValue, asClass } = awilix;
 
@@ -14,16 +14,21 @@ export default class Application {
 	 * initialize application
 	 */
 
-	async configureAgent() {
-		return;
+	configureCert(context) {
+		const certfile = context['apps.autocatalogs.certfile'];
+		const passphrase = context['apps.autocatalogs.cert_PASSWORD'];
+		return configureCert(certfile, passphrase);
 	}
+
 	async createContainer() {
 		this.container = awilix.createContainer();
 
 		const proxy = process.env['internet.proxy.http_url'];
+
 		if (proxy) {
+			const certConfig = this.configureCert(process.env);
 			const httpAgent = new BetterHttpsProxyAgent(
-				{},
+				certConfig,
 				configureProxy(process.env['internet.proxy.http_url'])
 			);
 			this.container.register({
