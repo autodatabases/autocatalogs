@@ -33,10 +33,10 @@
 		"jest": "^28.1.0",
 		"nodemon": "^2.0.20",
 		"prettier": "^2.6.2",
-		"prisma": "^4.7.0"
+		"prisma": "^4.7.0",
+		"@ilb/ldapenv-cli": "^1.0.4"
 	},
 	"dependencies": {
-		"@ilb/ldapenv-cli": "^1.0.4",
 		"@ilb/node_context": "^1.0.31",
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
