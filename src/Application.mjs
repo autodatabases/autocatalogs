@@ -23,14 +23,11 @@ export default class Application {
 	async createContainer() {
 		this.container = awilix.createContainer();
 
-		const proxy = process.env['internet.proxy.http_url'];
+		const proxy = process.env['internet.proxy.https_apps'];
 
 		if (proxy) {
 			const certConfig = this.configureCert(process.env);
-			const httpAgent = new BetterHttpsProxyAgent(
-				certConfig,
-				configureProxy(process.env['internet.proxy.http_url'])
-			);
+			const httpAgent = new BetterHttpsProxyAgent(certConfig, configureProxy(proxy));
 			this.container.register({
 				uriAgentFactory: asValue(
 					new UriAgentFactory({
