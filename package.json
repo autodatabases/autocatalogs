@@ -36,7 +36,7 @@
 		"prisma": "^4.7.0"
 	},
 	"dependencies": {
-		"@ilb/ldapenv-cli": "^1.0.4",
+		"@ilb/ldapenv-cli": "^1.0.5",
 		"@ilb/node_context": "^1.0.31",
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
@@ -48,6 +48,7 @@
 		"next-connect": "^0.13.0",
 		"node-fetch": "^3.2.5",
 		"pino": "^8.1.0",
-		"xml2js": "^0.4.23"
+		"xml2js": "^0.4.23",
+		"yargs": "^17.6.2"
 	}
 }

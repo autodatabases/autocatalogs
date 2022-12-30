@@ -9,6 +9,12 @@ import GetDrivesUsecase from './src/usecases/GetDrivesUsecase.mjs';
 import GetBodiesUsecase from './src/usecases/GetBodiesUsecase.mjs';
 import { queryParams } from './libs/middlewares.mjs';
 import GetTransmissionsUsecase from './src/usecases/GetTransmissionsUsecase.mjs';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+
+const argv = yargs(hideBin(process.argv)).argv;
+const port = argv?.p || 3000;
+const host = argv?.H || '127.0.0.1';
 
 const handler = nc({ attachParams: true })
 	.use(bodyParser.json())
@@ -20,6 +26,4 @@ const handler = nc({ attachParams: true })
 	.get('/autocatalogs/api/bodies', handle(GetBodiesUsecase))
 	.get('/autocatalogs/api/transmissions', handle(GetTransmissionsUsecase));
 
-const port = process.env['HTTP_PORT'] || 3000;
-
-http.createServer(handler).listen(port);
+http.createServer(handler).listen(port, host);
