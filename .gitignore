@@ -13,6 +13,7 @@ log
 cashreceiptrobotlogs
 #package
 package-lock.json
+pnpm-lock.yaml
 # IDE folders
 .idea
 .vscode
