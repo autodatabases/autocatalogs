@@ -18,16 +18,17 @@ export default class ModelRepository extends Repository{
 
   /**
    * Метод для обновления моделей авто из каталога
-   * @param {Array} models модели авто полученные из каталога
+   * @param {Array} data модели авто полученные из каталога
    */
-  updateMany(models) {
-    return models.map((model) => {
-      const {id, ...overData} = model
-      return this.model.updateMany({
+  upsert(data) {
+    return data.map((item) => {
+      const {id, ...overData} = item
+      return this.model.upsert({
         where: {
           id: id
         },
-        data: overData
+        update: overData,
+        create: item
       })
     })
   }

@@ -12,14 +12,15 @@ export default class ModificationRepository extends Repository {
     });
   }
 
-  updateMany(modifications) {
-    return modifications.map((modification) => {
-      const {id, ...overData} = modification
-      return this.model.updateMany({
+  upsert(data) {
+    return data.map((item) => {
+      const {id, ...overData} = item
+      return this.model.upsert({
         where: {
           id: id
         },
-        data: overData
+        update: overData,
+        create: item
       })
     })
   }

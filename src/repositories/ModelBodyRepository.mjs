@@ -20,10 +20,14 @@ export default class ModelBodyRepository extends Repository {
 	 * Метод для обновления
 	 * @param {Array} data 
 	 */
-	updateMany(data) {
+	upsert(data) {
 		return data.map((item) => {
-		  return this.model.updateMany({
-			data: item
+		  	return this.model.upsert({
+				where: {
+					vehicleModelId_vehicleBodyId: item
+				},
+				update: item,
+				create: item
 		  })
 		})
 	}

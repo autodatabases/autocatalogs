@@ -20,14 +20,15 @@ export default class DriveRepository extends Repository {
    * Метод для обновления
    * @param {Array} data 
    */
-  updateMany(data) {
+  upsert(data) {
     return data.map((item) => {
       const {id, ...overData} = item
-      return this.model.updateMany({
+      return this.model.upsert({
         where: {
           id: id
         },
-        data: overData
+        update: overData,
+        create: item
       })
     })
   }

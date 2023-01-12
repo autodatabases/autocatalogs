@@ -33,8 +33,6 @@ export default class CatalogService {
 		const result = await this.loadData();
 		await this.mainRepository.updateAll(result);
 		console.log('Таблицы обновлены');
-		await this.mainRepository.saveAll(result);
-		console.log('Сохранены новые записи');
 	}
 
 	/**

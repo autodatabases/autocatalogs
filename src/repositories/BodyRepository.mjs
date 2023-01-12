@@ -18,16 +18,17 @@ export default class BodyRepository extends Repository {
 
   /**
    * Метод для обновления типов кузова авто из каталога
-   * @param {Array} bodies типы кузова авто полученные из каталога
+   * @param {Array} data типы кузова авто полученные из каталога
    */
-  updateMany(bodies) {
-    return bodies.map((bodie) => {
-      const {id, ...overData} = bodie
-      return this.model.updateMany({
+  upsert(data) {
+    return data.map((item) => {
+      const {id, ...overData} = item
+      return this.model.upsert({
         where: {
           id: id
         },
-        data: overData
+        update: overData,
+        create: item
       })
     })
   }

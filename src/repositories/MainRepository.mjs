@@ -23,40 +23,6 @@ export default class MainRepository {
 		this.bodyRepository = new BodyRepository({ prisma });
 	}
 
-	async saveAll({
-		manufacturers,
-		models,
-		modifications,
-		transmissions,
-		bodies,
-		modelBody,
-		modelTransmission,
-		drives,
-		modelDrive
-	}) {
-    const savedBodies = this.bodyRepository.saveMany(bodies);
-    const savedTransmission = this.transmissionRepository.saveMany(transmissions);
-    const savedDrives = this.driveRepository.saveMany(drives);
-    const savedManufacturers = this.manufacturerRepository.saveMany(manufacturers);
-    const savedModels = this.modelRepository.saveMany(models);
-    const savedModifications = this.modificationRepository.saveMany(modifications);
-    const savedModelBodies = this.modelBodyRepository.saveMany(modelBody);
-    const savedModelTransmission = this.modelTransmissionRepository.saveMany(modelTransmission);
-    const savedModelDrive = this.modelDriveRepository.saveMany(modelDrive);
-
-    await this.prisma.$transaction([
-      savedBodies,
-      savedTransmission,
-      savedDrives,
-      savedManufacturers,
-      savedModels,
-      savedModifications,
-      savedModelBodies,
-      savedModelTransmission,
-      savedModelDrive
-    ]);
-	}
-
 	async updateAll({
 		manufacturers,
 		models,
@@ -68,20 +34,25 @@ export default class MainRepository {
 		drives,
 		modelDrive
 	}) {
-		let updates = []
+		const upsertBodies = this.bodyRepository.upsert(bodies);
+		const upsertTransmission = this.transmissionRepository.upsert(transmissions);
+		const upsertDrives = this.driveRepository.upsert(drives);
+		const upsertManufacturers =this.manufacturerRepository.upsert(manufacturers);
+		const upsertModels = this.modelRepository.upsert(models);
+		const upsertModifications = this.modificationRepository.upsert(modifications);
+		const upsertModelBodies = this.modelBodyRepository.upsert(modelBody);
+		const upsertModelTransmission = this.modelTransmissionRepository.upsert(modelTransmission);
+		const upsertModelDrive = this.modelDriveRepository.upsert(modelDrive);
 
-		updates.push(this.bodyRepository.updateMany(bodies));
-		updates.push(this.transmissionRepository.updateMany(transmissions));
-		updates.push(this.driveRepository.updateMany(drives));
-		updates.push(this.manufacturerRepository.updateMany(manufacturers));
-		updates.push(this.modelRepository.updateMany(models));
-		updates.push(this.modificationRepository.updateMany(modifications));
-		updates.push(this.modelBodyRepository.updateMany(modelBody));
-		updates.push(this.modelTransmissionRepository.updateMany(modelTransmission));
-		updates.push(this.modelDriveRepository.updateMany(modelDrive));
-
-		updates.map(async (update) => {
-			await this.prisma.$transaction(update)
-		})
+		await this.prisma.$transaction(
+			upsertBodies.concat(upsertTransmission,
+				upsertDrives,
+				upsertManufacturers,
+				upsertModels,
+				upsertModifications,
+				upsertModelBodies,
+				upsertModelTransmission,
+				upsertModelDrive
+		));
 	}
 }

@@ -18,16 +18,17 @@ export default class TransmissionRepository extends Repository {
 
   /**
    * Метод для обновления типов трансмиссий авто из каталога
-   * @param {Array} transmissions типы трансмиссий авто полученные из каталога
+   * @param {Array} data типы трансмиссий авто полученные из каталога
    */
-  updateMany(transmissions) {
-    return transmissions.map((transmission) => {
-      const {id, ...overData} = transmission
-      return this.model.updateMany({
+  upsert(data) {
+    return data.map((item) => {
+      const {id, ...overData} = item
+      return this.model.upsert({
         where: {
           id: id
         },
-        data: overData
+        update: overData,
+        create: item
       })
     })
   }

@@ -20,13 +20,17 @@ export default class ModelDriveRepository extends Repository {
    * Метод для обновления
    * @param {Array} data 
    */
-	updateMany(data) {
-		return data.map((item) => {
-		  return this.model.updateMany({
-			data: item
-		  })
-		})
-	}
+  upsert(data) {
+	return data.map((item) => {
+		  return this.model.upsert({
+			where: {
+				vehicleModelId_vehicleDriveId: item
+			},
+			update: item,
+			create: item
+	  })
+	})
+}
 
 	deleteMany() {
 		return this.model.deleteMany({});
