@@ -36,7 +36,7 @@
 		"prisma": "^4.7.0"
 	},
 	"dependencies": {
-		"@ilb/ldapenv-cli": "^1.0.5",
+		"@ilb/ldapenv-cli": "^1.0.6",
 		"@ilb/node_context": "^1.0.31",
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
