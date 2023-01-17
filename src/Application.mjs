@@ -31,7 +31,7 @@ export default class Application {
 			this.container.register({
 				uriAgentFactory: asValue(
 					new UriAgentFactory({
-						uriAgentMap: { [process.env['apps.avitocatalogs.ws']]: httpAgent }
+						uriAgentMap: { [process.env['apps.autocatalogs.avitocatalogs_url']]: httpAgent }
 					})
 				)
 			});
@@ -39,7 +39,7 @@ export default class Application {
 
 		this.container.register({
 			prisma: asValue(prisma),
-			avitoCatalogsUrl: asValue(process.env['apps.avitocatalogs.ws'])
+			avitoCatalogsUrl: asValue(process.env['apps.autocatalogs.avitocatalogs_url'])
 		});
 
 		const classes = {};

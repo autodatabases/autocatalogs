@@ -27,11 +27,12 @@
     <env-entry-name>apps.autocatalogs.cert_PASSWORD</env-entry-name>
     <env-entry-type>java.lang.String</env-entry-type>
   </env-entry>
-  <resource-env-ref>
+  <env-entry>
     <description>Ссылка на avitocatalogs</description>
-    <resource-env-ref-name>.apps.avitocatalogs.ws</resource-env-ref-name>
-    <resource-env-ref-type>java.lang.String</resource-env-ref-type>
-  </resource-env-ref>
+    <env-entry-name>apps.autocatalogs.avitocatalogs_url</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>https://autoload.avito.ru/format/Autocatalog.xml</env-entry-value>
+  </env-entry>
   <resource-env-ref>
     <description>Прокси ресурс</description>
     <resource-env-ref-name>.internet.proxy.https_apps</resource-env-ref-name>
