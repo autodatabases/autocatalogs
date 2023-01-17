@@ -23,7 +23,7 @@ export default class MainRepository {
 		this.bodyRepository = new BodyRepository({ prisma });
 	}
 
-	async saveAll({
+	async updateAll({
 		manufacturers,
 		models,
 		modifications,
@@ -34,50 +34,25 @@ export default class MainRepository {
 		drives,
 		modelDrive
 	}) {
-    const savedBodies = this.bodyRepository.saveMany(bodies);
-    const savedTransmission = this.transmissionRepository.saveMany(transmissions);
-    const savedDrives = this.driveRepository.saveMany(drives);
-    const savedManufacturers = this.manufacturerRepository.saveMany(manufacturers);
-    const savedModels = this.modelRepository.saveMany(models);
-    const savedModifications = this.modificationRepository.saveMany(modifications);
-    const savedModelBodies = this.modelBodyRepository.saveMany(modelBody);
-    const savedModelTransmission = this.modelTransmissionRepository.saveMany(modelTransmission);
-    const savedModelDrive = this.modelDriveRepository.saveMany(modelDrive);
+		const upsertBodies = this.bodyRepository.upsert(bodies);
+		const upsertTransmission = this.transmissionRepository.upsert(transmissions);
+		const upsertDrives = this.driveRepository.upsert(drives);
+		const upsertManufacturers =this.manufacturerRepository.upsert(manufacturers);
+		const upsertModels = this.modelRepository.upsert(models);
+		const upsertModifications = this.modificationRepository.upsert(modifications);
+		const upsertModelBodies = this.modelBodyRepository.upsert(modelBody);
+		const upsertModelTransmission = this.modelTransmissionRepository.upsert(modelTransmission);
+		const upsertModelDrive = this.modelDriveRepository.upsert(modelDrive);
 
-    await this.prisma.$transaction([
-      savedBodies,
-      savedTransmission,
-      savedDrives,
-      savedManufacturers,
-      savedModels,
-      savedModifications,
-      savedModelBodies,
-      savedModelTransmission,
-      savedModelDrive
-    ]);
-	}
-
-	async deleteAll() {
-		const deletedModels = this.modelRepository.deleteMany();
-		const deletedModelBodies = this.modelBodyRepository.deleteMany();
-		const deletedModelTransmissions = this.modelTransmissionRepository.deleteMany();
-		const deletedModelDrives = this.modelDriveRepository.deleteMany();
-		const deletedManufacturers = this.manufacturerRepository.deleteMany();
-		const deletedModifications = this.modificationRepository.deleteMany();
-		const deletedBodies = this.bodyRepository.deleteMany();
-		const deletedTransmissions = this.transmissionRepository.deleteMany();
-		const deletedDrives = this.driveRepository.deleteMany();
-
-		await this.prisma.$transaction([
-			deletedModelBodies,
-			deletedModelTransmissions,
-			deletedModelDrives,
-			deletedBodies,
-			deletedTransmissions,
-			deletedDrives,
-			deletedModifications,
-			deletedModels,
-			deletedManufacturers
-		]);
+		await this.prisma.$transaction(
+			upsertBodies.concat(upsertTransmission,
+				upsertDrives,
+				upsertManufacturers,
+				upsertModels,
+				upsertModifications,
+				upsertModelBodies,
+				upsertModelTransmission,
+				upsertModelDrive
+		));
 	}
 }

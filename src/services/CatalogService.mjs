@@ -27,14 +27,12 @@ export default class CatalogService {
 	}
 
 	/**
-	 * Метод очищает таблицы и сохраняет полученные каталоги
+	 * Метод обновляет существующие таблицы и сохраняет новые записи
 	 */
-	async saveData() {
+	async updateData() {
 		const result = await this.loadData();
-		await this.mainRepository.deleteAll();
-		console.log('Удалены старые таблицы');
-		await this.mainRepository.saveAll(result);
-		console.log('Сохранены новые таблицы');
+		await this.mainRepository.updateAll(result);
+		console.log('Таблицы обновлены');
 	}
 
 	/**

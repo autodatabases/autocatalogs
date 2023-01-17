@@ -63,6 +63,7 @@ model VehicleModelBody {
   vehicleBodyId  Int?
   vehicleBody    VehicleBody?  @relation(fields: [vehicleBodyId], references: [id])
   vehicleModel   VehicleModel? @relation(fields: [vehicleModelId], references: [id])
+  @@unique([vehicleModelId, vehicleBodyId])
 }
 
 model VehicleModelTransmission {
@@ -72,6 +73,7 @@ model VehicleModelTransmission {
   vehicleTransmissionId Int?
   vehicleModel          VehicleModel?        @relation(fields: [vehicleModelId], references: [id])
   vehicleTransmission   VehicleTransmission? @relation(fields: [vehicleTransmissionId], references: [id])
+  @@unique([vehicleModelId, vehicleTransmissionId])
 }
 
 model VehicleTransmission {
@@ -103,6 +105,7 @@ model VehicleModelDrive {
   vehicleDriveId Int?
   vehicleDrive   VehicleDrive? @relation(fields: [vehicleDriveId], references: [id])
   vehicleModel   VehicleModel? @relation(fields: [vehicleModelId], references: [id])
+  @@unique([vehicleModelId, vehicleDriveId])
 }
 
 model VehicleModification {

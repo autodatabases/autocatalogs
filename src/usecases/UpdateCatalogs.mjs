@@ -6,6 +6,6 @@ export default class UpdateCatalogs {
 	}
 
 	async process() {
-		await this.catalogService.saveData();
+		await this.catalogService.updateData();
 	}
 }
