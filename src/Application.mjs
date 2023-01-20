@@ -2,7 +2,12 @@ import awilix from 'awilix';
 import prisma from '../libs/prisma.mjs';
 import container from './container.mjs';
 import { Agent as BetterHttpsProxyAgent } from 'better-https-proxy-agent';
-import { configureCert, configureProxy, UriAgentFactory } from '@ilb/uriaccessorjs';
+import {
+	configureCert,
+	configureProxy,
+	UriAccessorFactory,
+	UriAgentFactory
+} from '@ilb/uriaccessorjs';
 
 const { asValue, asClass } = awilix;
 
@@ -22,23 +27,22 @@ export default class Application {
 
 	async createContainer() {
 		this.container = awilix.createContainer();
+		const uriAgentMap = new Map();
 
 		const proxy = process.env['internet.proxy.https_apps'];
-
 		if (proxy) {
 			const certConfig = this.configureCert(process.env);
 			const httpAgent = new BetterHttpsProxyAgent(certConfig, configureProxy(proxy));
-			this.container.register({
-				uriAgentFactory: asValue(
-					new UriAgentFactory({
-						uriAgentMap: { [process.env['apps.autocatalogs.avitocatalogs_url']]: httpAgent }
-					})
-				)
-			});
+			uriAgentMap.set(process.env['apps.autocatalogs.avitocatalogs_url'], httpAgent);
 		}
 
 		this.container.register({
 			prisma: asValue(prisma),
+			currentUser: asValue(process.env.USER),
+			uriAccessorFileEnabled: asValue(false),
+			uriAccessorFactory: asClass(UriAccessorFactory),
+			uriAgentFactory: asClass(UriAgentFactory),
+			uriAgentMap: asValue(uriAgentMap),
 			avitoCatalogsUrl: asValue(process.env['apps.autocatalogs.avitocatalogs_url'])
 		});
 

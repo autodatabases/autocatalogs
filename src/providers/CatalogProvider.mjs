@@ -2,11 +2,8 @@ import { UriAccessorFactory } from '@ilb/uriaccessorjs';
 import CatalogAdapter from '../adapters/CatalogAdapter.mjs';
 
 export default class CatalogProvider {
-	constructor({ avitoCatalogsUrl }) {
-		this.uriAccessorFactory = new UriAccessorFactory({
-			currentUser: null,
-			uriAccessorFileEnabled: true
-		});
+	constructor({ avitoCatalogsUrl, uriAccessorFactory }) {
+		this.uriAccessorFactory = uriAccessorFactory;
 		this.catalogsAdapter = new CatalogAdapter();
 		this.url = avitoCatalogsUrl;
 	}
