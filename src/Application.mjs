@@ -32,7 +32,7 @@ export default class Application {
 		const proxy = process.env['internet.proxy.https_apps'];
 		if (proxy) {
 			const certConfig = this.configureCert(process.env);
-			const httpAgent = new BetterHttpsProxyAgent(certConfig, configureProxy(proxy));
+			const httpAgent = new BetterHttpsProxyAgent({}, { ...certConfig, ...configureProxy(proxy) });
 			uriAgentMap.set(process.env['apps.autocatalogs.avitocatalogs_url'], httpAgent);
 		}
 
