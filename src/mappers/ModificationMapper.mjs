@@ -48,6 +48,7 @@ export default class ModificationMapper {
 				vehicleModelId: Number(Model[0].id[0]),
 				vehicleTransmissionId: Number(Transmission[0].id[0]),
 				vehicleBodyId: Number(BodyType[0].id[0]),
+				vehicleDriveId: Number(DriveType[0].id[0]),
 				vehicleYear: Number(YearFrom[0]._),
 				vehicleEnginePower: Number(Power[0]._),
 				vehicleEngineCapacity: Number(EngineSize[0]._)
