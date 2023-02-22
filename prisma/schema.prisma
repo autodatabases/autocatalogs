@@ -90,13 +90,14 @@ model VehicleTransmission {
 
 model VehicleDrive {
   ///Идентификатор
-  id                Int                 @id @default(autoincrement())
+  id                  Int                   @id @default(autoincrement())
   ///Наименование
-  name              String              @db.VarChar(10)
+  name                String                @db.VarChar(10)
   ///Код
-  code              String              @db.VarChar(10)
-  avitoCode         String              @db.VarChar(10)
-  vehicleModelDrive VehicleModelDrive[]
+  code                String                @db.VarChar(10)
+  avitoCode           String                @db.VarChar(10)
+  vehicleModelDrive   VehicleModelDrive[]
+  vehicleModification VehicleModification[]
 }
 
 model VehicleModelDrive {
@@ -116,6 +117,8 @@ model VehicleModification {
   vehicleTransmissionId Int?
   vehicleBody           VehicleBody?         @relation(fields: [vehicleBodyId], references: [id])
   vehicleBodyId         Int?
+  vehicleDrive          VehicleDrive?        @relation(fields: [vehicleDriveId], references: [id])
+  vehicleDriveId        Int?
   vehicleYear           Int                  @db.SmallInt
   vehicleEnginePower    Int?
   vehicleEngineCapacity Decimal?             @db.Decimal(2, 1)

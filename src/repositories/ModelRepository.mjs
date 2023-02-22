@@ -62,6 +62,9 @@ export default class ModelRepository extends Repository{
           }
         }),
       },
+      include: {
+        vehicleModification: true
+      },
       ...(count && { take: parseInt(count) })
     });
   }
