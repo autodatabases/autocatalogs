@@ -53,7 +53,9 @@ export default class ModificationMapper {
 				vehicleEnginePower: Number(Power[0]._),
 				vehicleEngineCapacity: Number(EngineSize[0]._)
 			};
-			res.code = this.codeAdapter(res.vehicleEnginePower, res.vehicleEngineCapacity);
+			const transmissionCode = TRANSMISSIONS.find(({ name }) =>
+			 name === Transmission[0]._.toLowerCase()).code;
+			res.code = this.codeAdapter(res.vehicleEnginePower, res.vehicleEngineCapacity, transmissionCode);
 			return res;
 		});
 
@@ -72,15 +74,16 @@ export default class ModificationMapper {
 	 * Метод формирует и возвращает параметр для оценки code
 	 * @param {Number} vehiclePower мощность двигателя
 	 * @param {Number} engineVolume обьем в литрах
-	 * @return {String} MANUAL__vehiclePower__engineVolume
+	 * @param {Number} transmissionCode код трансмиссии
+	 * @return {String} transmissionCode__vehiclePower__engineVolume
 	 */
-	codeAdapter(vehiclePower, engineVolume) {
+	codeAdapter(vehiclePower, engineVolume, transmissionCode) {
 		const format = (value) => {
 			const more = value.replace(/\./g, '_');
 			const less = value + '_0';
 			return value.includes('.') ? more : less;
 		};
-		return `MANUAL__${vehiclePower}__${format(engineVolume.toString())}`;
+		return `${transmissionCode}__${vehiclePower}__${format(engineVolume.toString())}`;
 	}
 
 	/**
