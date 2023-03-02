@@ -1,3 +1,5 @@
+import { notify } from '@ilb/errormailer';
+
 /**
  * Express-like middleware for handling errors.
  * @param err error object
@@ -10,6 +12,7 @@ export const onError = (err, req, res, next) => {
   const type = err.type || 'UNHANDLED_ERROR';
   const description = err.description || 'Something went wrong';
   console.error(err.stack);
+  notify(err).catch(console.log);
   res.status(status).json({ error: { type: type, description: description } });
 };
 
