@@ -30,7 +30,8 @@ export default class Application {
 		const uriAgentMap = new Map();
 
 		const proxy = process.env['internet.proxy.https_apps'];
-		if (proxy) {
+
+    if (proxy) {
 			const certConfig = this.configureCert(process.env);
 			const httpAgent = new BetterHttpsProxyAgent({}, { ...certConfig, ...configureProxy(proxy) });
 			uriAgentMap.set(process.env['apps.autocatalogs.avitocatalogs_url'], httpAgent);
@@ -56,10 +57,11 @@ export default class Application {
 	}
 
 	/**
-	 * create scope for http request
-	 * @param {*} req
-	 */
-	async createScope(req) {
+   * create scope for http request
+   * @param {*} req
+   * @param res
+   */
+	async createScope(req, res) {
 		if (this.container == null) {
 			await this.createContainer();
 		}

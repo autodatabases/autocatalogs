@@ -12,12 +12,13 @@ export function handle(usecase) {
 			res.end(JSON.stringify(result));
 		} catch (exception) {
 			console.log(exception);
+			res.setHeader('Content-Type', 'application/json');
 			res.writeHead(500);
 			res.end(JSON.stringify({ error: exception.message }));
 		}
 	};
 }
 
-export async function createScope(req = null) {
-	return application.createScope(req);
+export async function createScope(req, res) {
+	return application.createScope(req, res);
 }
