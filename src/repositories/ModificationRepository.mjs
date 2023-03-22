@@ -14,10 +14,11 @@ export default class ModificationRepository extends Repository {
 
   upsert(data) {
     return data.map((item) => {
-      const {id, ...overData} = item
+      const {id, vehicleModelId, vehicleTransmissionId, vehicleBodyId, vehicleDriveId, vehicleYear, vehicleEnginePower, vehicleEngineCapacity, name, ...overData} = item
+      const unique = {id, vehicleModelId, vehicleTransmissionId, vehicleBodyId, vehicleDriveId, vehicleYear, vehicleEnginePower, vehicleEngineCapacity, name}
       return this.model.upsert({
         where: {
-          id: id
+          id_vehicleModelId_vehicleTransmissionId_vehicleBodyId_vehicleDriveId_vehicleYear_vehicleEnginePower_vehicleEngineCapacity_name: unique
         },
         update: overData,
         create: item

@@ -49,9 +49,9 @@ export default class ModificationMapper {
 				vehicleTransmissionId: Number(Transmission[0].id[0]),
 				vehicleBodyId: Number(BodyType[0].id[0]),
 				vehicleDriveId: Number(DriveType[0].id[0]),
-				vehicleYear: YearFrom ? Number(YearFrom[0]._) : null,
-				vehicleEnginePower: Power ? Number(Power[0]._) : null,
-				vehicleEngineCapacity: EngineSize ? Number(EngineSize[0]._) : null
+				vehicleYear: YearFrom ? Number(YearFrom[0]._) : 0,
+				vehicleEnginePower: Power ? Number(Power[0]._) : 0,
+				vehicleEngineCapacity: EngineSize ? Number(EngineSize[0]._).toFixed(1) : '0'
 			};
 			const transmissionCode = TRANSMISSIONS.find(({ name }) =>
 			 name === Transmission[0]._.toLowerCase()).code;
@@ -78,16 +78,12 @@ export default class ModificationMapper {
 	 * @return {String} transmissionCode__vehiclePower__engineVolume
 	 */
 	codeAdapter(vehiclePower, engineVolume, transmissionCode) {
-		if (engineVolume && vehiclePower) {
-			const format = (value) => {
-				const more = value.replace(/\./g, '_');
-				const less = value + '_0';
-				return value.includes('.') ? more : less;
-			};
-			return `${transmissionCode}__${vehiclePower}__${format(engineVolume.toString())}`;
-		} else {
-			return `${transmissionCode}`;
-		}
+		const format = (value) => {
+			const more = value.replace(/\./g, '_');
+			const less = value + '_0';
+			return value.includes('.') ? more : less;
+		};
+		return `${transmissionCode}__${vehiclePower}__${format(engineVolume.toString())}`;
 	}
 
 	/**
