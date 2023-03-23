@@ -10,6 +10,7 @@ import ModificationAdapter from './adapters/ModificationAdapter.mjs';
 import CatalogService from './services/CatalogService.mjs'
 import CatalogProvider from './providers/CatalogProvider.mjs'
 import MainRepository from './repositories/MainRepository.mjs'
+import HeartbeatRepository from './repositories/HeartbeatRepository.mjs';
 // const production = process.env.ILB_SYSID == 'PRODUCTION';
 const container = new Map();
 
@@ -19,6 +20,7 @@ container.set('modificationRepository', ModificationRepository)
 container.set('modelDriveRepository', ModelDriveRepository)
 container.set('driveRepository', DriveRepository)
 container.set('modelBodyRepository', ModelBodyRepository)
+container.set('heartbeatRepository', HeartbeatRepository)
 container.set('bodyRepository', BodyRepository)
 container.set('transmissionRepository', TransmissionRepository)
 container.set('modificationAdapter', ModificationAdapter)

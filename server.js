@@ -11,9 +11,10 @@ import { onError, onNoMatch, queryParams } from './libs/middlewares.mjs';
 import GetTransmissionsUsecase from './src/usecases/GetTransmissionsUsecase.mjs';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
+import HeartbeatUsecases from './src/usecases/HeartbeatUsecases.mjs';
 
 const argv = yargs(hideBin(process.argv)).argv;
-const port = argv?.p || 3000;
+const port = argv?.p || process.env.HTTP_PORT || 3000;
 const host = argv?.H || '127.0.0.1';
 
 const handler = nc({ onError, onNoMatch, attachParams: true })
@@ -24,6 +25,7 @@ const handler = nc({ onError, onNoMatch, attachParams: true })
 	.get('/autocatalogs/api/modifications', handle(GetModificationsUsecase))
 	.get('/autocatalogs/api/drives', handle(GetDrivesUsecase))
 	.get('/autocatalogs/api/bodies', handle(GetBodiesUsecase))
-	.get('/autocatalogs/api/transmissions', handle(GetTransmissionsUsecase));
+	.get('/autocatalogs/api/transmissions', handle(GetTransmissionsUsecase))
+	.get('/autocatalogs/heartbeat', handle(HeartbeatUsecases));
 
 http.createServer(handler).listen(port, host);

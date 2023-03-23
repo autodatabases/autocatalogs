@@ -110,18 +110,19 @@ model VehicleModelDrive {
 }
 
 model VehicleModification {
-  id                    Int                  @id
+  id                    Int                  
   vehicleModel          VehicleModel?        @relation(fields: [vehicleModelId], references: [id])
-  vehicleModelId        Int?
+  vehicleModelId        Int
   vehicleTransmission   VehicleTransmission? @relation(fields: [vehicleTransmissionId], references: [id])
-  vehicleTransmissionId Int?
+  vehicleTransmissionId Int
   vehicleBody           VehicleBody?         @relation(fields: [vehicleBodyId], references: [id])
-  vehicleBodyId         Int?
+  vehicleBodyId         Int
   vehicleDrive          VehicleDrive?        @relation(fields: [vehicleDriveId], references: [id])
-  vehicleDriveId        Int?
+  vehicleDriveId        Int
   vehicleYear           Int                  @db.SmallInt
-  vehicleEnginePower    Int?
-  vehicleEngineCapacity Decimal?             @db.Decimal(2, 1)
+  vehicleEnginePower    Int
+  vehicleEngineCapacity Decimal              @db.Decimal(2, 1)
   name                  String               @db.VarChar(150)
   code                  String               @db.VarChar(100)
+  @@unique([id, vehicleModelId, vehicleTransmissionId, vehicleBodyId, vehicleDriveId, vehicleYear, vehicleEnginePower, vehicleEngineCapacity, name])
 }
