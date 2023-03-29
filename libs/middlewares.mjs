@@ -13,7 +13,9 @@ export const onError = (err, req, res, next) => {
   const description = err.description || 'Something went wrong';
   console.error(err.stack);
   notify(err).catch(console.log);
-  res.status(status).json({ error: { type: type, description: description } });
+  res.setHeader('Content-Type', 'application/json');
+  res.writeHead(status);
+  res.end(JSON.stringify({ error: { type: type, description: description } }));
 };
 
 /**
@@ -22,7 +24,8 @@ export const onError = (err, req, res, next) => {
  * @param res response
  */
 export const onNoMatch = (req, res) => {
-  res.status(405).end();
+  res.writeHead(405);
+  res.end();
 };
 
 export const queryParams = (req, res, next) => {
