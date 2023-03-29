@@ -1,0 +1,2891 @@
+<?xml version="1.0" ?>
+<Catalog created_at="2023-03-21T12:55:01.007865+03:00">
+	<Make id="329192" name="AC">
+		<Model id="421756" name="378 GT Zagato">
+			<Generation id="421775" name="I (2012—2012)">
+				<Modification id="421891" name="6.2 MT (442 л.с.)">
+					<YearFrom id="331118">2012</YearFrom>
+					<YearTo id="331118" special_id="999999">2012</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="421756">378 GT Zagato</Model>
+					<Generation id="421775">I (2012—2012)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="421891">6.2 MT (442 л.с.)</Modification>
+					<Power id="331754">442</Power>
+					<EngineSize id="331795">6.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="422002" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="329595" name="Ace">
+			<Generation id="332036" name="I (1992—2000)">
+				<Modification id="360354" name="3.0 MT (223 л.с.)">
+					<YearFrom id="331138">1992</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329595">Ace</Model>
+					<Generation id="332036">I (1992—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="360354">3.0 MT (223 л.с.)</Modification>
+					<Power id="331351">223</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391938" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361944" name="3.5 MT (354 л.с.)">
+					<YearFrom id="331138">1992</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329595">Ace</Model>
+					<Generation id="332036">I (1992—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361944">3.5 MT (354 л.с.)</Modification>
+					<Power id="331352">354</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391939" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="359190" name="2.9 AT (195 л.с.)">
+					<YearFrom id="331138">1992</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329595">Ace</Model>
+					<Generation id="332036">I (1992—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="359190">2.9 AT (195 л.с.)</Modification>
+					<Power id="331297">195</Power>
+					<EngineSize id="331781">2.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391937" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363436" name="4.6 MT (326 л.с.)">
+					<YearFrom id="331138">1992</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329595">Ace</Model>
+					<Generation id="332036">I (1992—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363436">4.6 MT (326 л.с.)</Modification>
+					<Power id="331353">326</Power>
+					<EngineSize id="331793">4.6</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391940" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363631" name="4.9 MT (260 л.с.)">
+					<YearFrom id="331138">1992</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329595">Ace</Model>
+					<Generation id="332036">I (1992—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363631">4.9 MT (260 л.с.)</Modification>
+					<Power id="331354">260</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391941" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="359296" name="2.9 MT (195 л.с.)">
+					<YearFrom id="331138">1992</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329595">Ace</Model>
+					<Generation id="332036">I (1992—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="359296">2.9 MT (195 л.с.)</Modification>
+					<Power id="331297">195</Power>
+					<EngineSize id="331781">2.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391936" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="329596" name="Aceca">
+			<Generation id="332037" name="I (1998—2000)">
+				<Modification id="361943" name="3.5 MT (354 л.с.)">
+					<YearFrom id="331132">1998</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329596">Aceca</Model>
+					<Generation id="332037">I (1998—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361943">3.5 MT (354 л.с.)</Modification>
+					<Power id="331352">354</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391942" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363435" name="4.6 MT (326 л.с.)">
+					<YearFrom id="331132">1998</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329596">Aceca</Model>
+					<Generation id="332037">I (1998—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363435">4.6 MT (326 л.с.)</Modification>
+					<Power id="331353">326</Power>
+					<EngineSize id="331793">4.6</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391943" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="329852" name="Cobra">
+			<Generation id="332039" name="Mk IV (1990—2001)">
+				<Modification id="363636" name="4.9 MT (340 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332039">Mk IV (1990—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363636">4.9 MT (340 л.с.)</Modification>
+					<Power id="331358">340</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391948" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363630" name="4.9 MT (250 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332039">Mk IV (1990—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363630">4.9 MT (250 л.с.)</Modification>
+					<Power id="331357">250</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391946" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363634" name="4.9 MT (326 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332039">Mk IV (1990—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363634">4.9 MT (326 л.с.)</Modification>
+					<Power id="331353">326</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391947" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363638" name="4.9 MT (370 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332039">Mk IV (1990—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363638">4.9 MT (370 л.с.)</Modification>
+					<Power id="331359">370</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391949" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363629" name="4.9 MT (228 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332039">Mk IV (1990—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363629">4.9 MT (228 л.с.)</Modification>
+					<Power id="331356">228</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391945" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332041" name="Mk VI (2013—2015)">
+				<Modification id="364708" name="6.2 MT (437 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332041">Mk VI (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="364708">6.2 MT (437 л.с.)</Modification>
+					<Power id="331360">437</Power>
+					<EngineSize id="331795">6.2</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391952" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="364715" name="6.2 MT (637 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332041">Mk VI (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="364715">6.2 MT (637 л.с.)</Modification>
+					<Power id="331361">637</Power>
+					<EngineSize id="331795">6.2</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391953" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="364944" name="7.2 MT (640 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332041">Mk VI (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="364944">7.2 MT (640 л.с.)</Modification>
+					<Power id="331363">640</Power>
+					<EngineSize id="331796">7.2</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391955" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="364718" name="6.2 MT (780 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332041">Mk VI (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="364718">6.2 MT (780 л.с.)</Modification>
+					<Power id="331362">780</Power>
+					<EngineSize id="331795">6.2</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391954" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332040" name="Mk V (1999—2007)">
+				<Modification id="363635" name="4.9 MT (340 л.с.)">
+					<YearFrom id="331131">1999</YearFrom>
+					<YearTo id="331123" special_id="999999">2007</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332040">Mk V (1999—2007)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363635">4.9 MT (340 л.с.)</Modification>
+					<Power id="331358">340</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391950" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="363637" name="4.9 MT (370 л.с.)">
+					<YearFrom id="331131">1999</YearFrom>
+					<YearTo id="331123" special_id="999999">2007</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332040">Mk V (1999—2007)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="363637">4.9 MT (370 л.с.)</Modification>
+					<Power id="331359">370</Power>
+					<EngineSize id="331794">4.9</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391951" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332038" name="Mk III (1965—1967)">
+				<Modification id="364922" name="7.0 MT (416 л.с.)">
+					<YearFrom id="331165">1965</YearFrom>
+					<YearTo id="331163" special_id="999999">1967</YearTo>
+					<Make id="329192">AC</Make>
+					<Model id="329852">Cobra</Model>
+					<Generation id="332038">Mk III (1965—1967)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="364922">7.0 MT (416 л.с.)</Modification>
+					<Power id="331355">416</Power>
+					<EngineSize id="446907">7.0</EngineSize>
+					<BodyType id="331232">Кабриолет</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391944" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+	</Make>
+	<Make id="329193" name="Acura">
+		<Model id="330898" name="TLX">
+			<Generation id="2384772" name="II (2020—2023)">
+				<Modification id="2384839" name="2.0 AT (276 л.с.)">
+					<YearFrom id="431477">2020</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="2384772">II (2020—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="2384839">2.0 AT (276 л.с.)</Modification>
+					<Power id="331532">276</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="2384708" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="2384870" name="3.0 4WD AT (360 л.с.)">
+					<YearFrom id="431477">2020</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="2384772">II (2020—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="2384870">3.0 4WD AT (360 л.с.)</Modification>
+					<Power id="331476">360</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="2384710" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="2384834" name="2.0 4WD AT (276 л.с.)">
+					<YearFrom id="431477">2020</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="2384772">II (2020—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="2384834">2.0 4WD AT (276 л.с.)</Modification>
+					<Power id="331532">276</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="2384709" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332064" name="I (2014—2017)">
+				<Modification id="361799" name="3.5 AT (290 л.с.)">
+					<YearFrom id="331116">2014</YearFrom>
+					<YearTo id="331113" special_id="999999">2017</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="332064">I (2014—2017)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361799">3.5 AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392003" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361556" name="3.5 4WD AT (290 л.с.)">
+					<YearFrom id="331116">2014</YearFrom>
+					<YearTo id="331113" special_id="999999">2017</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="332064">I (2014—2017)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361556">3.5 4WD AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="366934" name="Advance"/>
+					</Complectations>
+				</Modification>
+				<Modification id="355713" name="2.4 AMT (208 л.с.)">
+					<YearFrom id="331116">2014</YearFrom>
+					<YearTo id="331113" special_id="999999">2017</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="332064">I (2014—2017)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331256">Робот</Transmission>
+					<Modification id="355713">2.4 AMT (208 л.с.)</Modification>
+					<Power id="331385">208</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="376184" name="Techno"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="408629" name="I рестайлинг (2017—2020)">
+				<Modification id="408411" name="2.4 AMT (209 л.с.)">
+					<YearFrom id="331113">2017</YearFrom>
+					<YearTo id="431477" special_id="999999">2020</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="408629">I рестайлинг (2017—2020)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331256">Робот</Transmission>
+					<Modification id="408411">2.4 AMT (209 л.с.)</Modification>
+					<Power id="331416">209</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="409505" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="408485" name="3.5 4WD AT (294 л.с.)">
+					<YearFrom id="331113">2017</YearFrom>
+					<YearTo id="431477" special_id="999999">2020</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="408629">I рестайлинг (2017—2020)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="408485">3.5 4WD AT (294 л.с.)</Modification>
+					<Power id="331371">294</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="409507" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="408494" name="3.5 AT (294 л.с.)">
+					<YearFrom id="331113">2017</YearFrom>
+					<YearTo id="431477" special_id="999999">2020</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330898">TLX</Model>
+					<Generation id="408629">I рестайлинг (2017—2020)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="408494">3.5 AT (294 л.с.)</Modification>
+					<Power id="331371">294</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="409506" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="422565" name="SLX">
+			<Generation id="422987" name="I (1995—1999)">
+				<Modification id="422732" name="3.2 AT (190 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="422565">SLX</Model>
+					<Generation id="422987">I (1995—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="422732">3.2 AT (190 л.с.)</Modification>
+					<Power id="331402">190</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="422944" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="422738" name="3.5 AT (215 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="422565">SLX</Model>
+					<Generation id="422987">I (1995—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="422738">3.5 AT (215 л.с.)</Modification>
+					<Power id="331603">215</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="422946" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="422733" name="3.2 MT (190 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="422565">SLX</Model>
+					<Generation id="422987">I (1995—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="422733">3.2 MT (190 л.с.)</Modification>
+					<Power id="331402">190</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="422943" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="422743" name="3.5 MT (215 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="422565">SLX</Model>
+					<Generation id="422987">I (1995—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="422743">3.5 MT (215 л.с.)</Modification>
+					<Power id="331603">215</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="422945" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330684" name="RSX">
+			<Generation id="332056" name="I рестайлинг (2004—2006)">
+				<Modification id="352429" name="2.0 MT (203 л.с.)">
+					<YearFrom id="331126">2004</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332056">I рестайлинг (2004—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352429">2.0 MT (203 л.с.)</Modification>
+					<Power id="331378">203</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391982" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="352461" name="2.0 MT (212 л.с.)">
+					<YearFrom id="331126">2004</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332056">I рестайлинг (2004—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352461">2.0 MT (212 л.с.)</Modification>
+					<Power id="331376">212</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391983" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="349805" name="2.0 AT (162 л.с.)">
+					<YearFrom id="331126">2004</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332056">I рестайлинг (2004—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="349805">2.0 AT (162 л.с.)</Modification>
+					<Power id="331377">162</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391980" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="352212" name="2.0 MT (162 л.с.)">
+					<YearFrom id="331126">2004</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332056">I рестайлинг (2004—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352212">2.0 MT (162 л.с.)</Modification>
+					<Power id="331377">162</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391981" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332055" name="I (2001—2004)">
+				<Modification id="352462" name="2.0 MT (212 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331126" special_id="999999">2004</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332055">I (2001—2004)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352462">2.0 MT (212 л.с.)</Modification>
+					<Power id="331376">212</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391979" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="349775" name="2.0 AT (160 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331126" special_id="999999">2004</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332055">I (2001—2004)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="349775">2.0 AT (160 л.с.)</Modification>
+					<Power id="331374">160</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391976" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="352191" name="2.0 MT (160 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331126" special_id="999999">2004</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332055">I (2001—2004)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352191">2.0 MT (160 л.с.)</Modification>
+					<Power id="331374">160</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391977" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="352393" name="2.0 MT (200 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331126" special_id="999999">2004</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330684">RSX</Model>
+					<Generation id="332055">I (2001—2004)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352393">2.0 MT (200 л.с.)</Modification>
+					<Power id="331375">200</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="391978" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="329836" name="CL">
+			<Generation id="332069" name="II (2000—2003)">
+				<Modification id="361157" name="3.2 Type-S AT (260 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331127" special_id="999999">2003</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332069">II (2000—2003)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361157">3.2 Type-S AT (260 л.с.)</Modification>
+					<Power id="331354">260</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392019" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361100" name="3.2 MT (225 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331127" special_id="999999">2003</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332069">II (2000—2003)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361100">3.2 MT (225 л.с.)</Modification>
+					<Power id="331380">225</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392018" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361158" name="3.2 Type-S MT (260 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331127" special_id="999999">2003</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332069">II (2000—2003)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361158">3.2 Type-S MT (260 л.с.)</Modification>
+					<Power id="331354">260</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392020" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="360984" name="3.2 AT (225 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331127" special_id="999999">2003</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332069">II (2000—2003)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="360984">3.2 AT (225 л.с.)</Modification>
+					<Power id="331380">225</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392017" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332068" name="I (1996—1999)">
+				<Modification id="354966" name="2.3 AT (153 л.с.)">
+					<YearFrom id="331134">1996</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332068">I (1996—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="354966">2.3 AT (153 л.с.)</Modification>
+					<Power id="331389">153</Power>
+					<EngineSize id="331778">2.3</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392015" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="354123" name="2.2 AT (147 л.с.)">
+					<YearFrom id="331134">1996</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332068">I (1996—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="354123">2.2 AT (147 л.с.)</Modification>
+					<Power id="331388">147</Power>
+					<EngineSize id="331791">2.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392013" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="360590" name="3.0 V6 AT (200 л.с.)">
+					<YearFrom id="331134">1996</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332068">I (1996—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="360590">3.0 V6 AT (200 л.с.)</Modification>
+					<Power id="331375">200</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392012" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="354604" name="2.2 MT (147 л.с.)">
+					<YearFrom id="331134">1996</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332068">I (1996—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="354604">2.2 MT (147 л.с.)</Modification>
+					<Power id="331388">147</Power>
+					<EngineSize id="331791">2.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392014" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="355266" name="2.3 MT (153 л.с.)">
+					<YearFrom id="331134">1996</YearFrom>
+					<YearTo id="331131" special_id="999999">1999</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329836">CL</Model>
+					<Generation id="332068">I (1996—1999)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="355266">2.3 MT (153 л.с.)</Modification>
+					<Power id="331389">153</Power>
+					<EngineSize id="331778">2.3</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392016" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="329917" name="CSX">
+			<Generation id="332070" name="I (2005—2011)">
+				<Modification id="349730" name="2.0 AT (155 л.с.)">
+					<YearFrom id="331125">2005</YearFrom>
+					<YearTo id="331119" special_id="999999">2011</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329917">CSX</Model>
+					<Generation id="332070">I (2005—2011)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="349730">2.0 AT (155 л.с.)</Modification>
+					<Power id="331390">155</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392022" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="352386" name="2.0 MT (197 л.с.)">
+					<YearFrom id="331125">2005</YearFrom>
+					<YearTo id="331119" special_id="999999">2011</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329917">CSX</Model>
+					<Generation id="332070">I (2005—2011)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352386">2.0 MT (197 л.с.)</Modification>
+					<Power id="331391">197</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392023" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="352147" name="2.0 MT (155 л.с.)">
+					<YearFrom id="331125">2005</YearFrom>
+					<YearTo id="331119" special_id="999999">2011</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329917">CSX</Model>
+					<Generation id="332070">I (2005—2011)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="352147">2.0 MT (155 л.с.)</Modification>
+					<Power id="331390">155</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392021" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330493" name="NSX">
+			<Generation id="332077" name="I рестайлинг (2002—2005)">
+				<Modification id="361127" name="3.2 MT (294 л.с.)">
+					<YearFrom id="331128">2002</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332077">I рестайлинг (2002—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361127">3.2 MT (294 л.с.)</Modification>
+					<Power id="331371">294</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392044" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="359912" name="3.0 AT (256 л.с.)">
+					<YearFrom id="331128">2002</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332077">I рестайлинг (2002—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="359912">3.0 AT (256 л.с.)</Modification>
+					<Power id="331394">256</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392042" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361125" name="3.2 MT (280 л.с.)">
+					<YearFrom id="331128">2002</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332077">I рестайлинг (2002—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361125">3.2 MT (280 л.с.)</Modification>
+					<Power id="331384">280</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392043" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332076" name="I (1990—2005)">
+				<Modification id="359916" name="3.0 AT (256 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332076">I (1990—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="359916">3.0 AT (256 л.с.)</Modification>
+					<Power id="331394">256</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392039" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="360389" name="3.0 MT (274 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332076">I (1990—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="360389">3.0 MT (274 л.с.)</Modification>
+					<Power id="331395">274</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392040" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361126" name="3.2 MT (280 л.с.)">
+					<YearFrom id="331140">1990</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332076">I (1990—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331252">Задний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361126">3.2 MT (280 л.с.)</Modification>
+					<Power id="331384">280</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392041" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332078" name="II (2015—2023)">
+				<Modification id="361868" name="3.5 Hybrid 4WD AMT (573 л.с.)">
+					<YearFrom id="331115">2015</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330493">NSX</Model>
+					<Generation id="332078">II (2015—2023)</Generation>
+					<FuelType id="331249">Гибрид</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331256">Робот</Transmission>
+					<Modification id="361868">3.5 Hybrid 4WD AMT (573 л.с.)</Modification>
+					<Power id="331396">573</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392045" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="331089" name="ZDX">
+			<Generation id="332067" name="I (2009—2013)">
+				<Modification id="362203" name="3.7 4WD AT (300 л.с.)">
+					<YearFrom id="331121">2009</YearFrom>
+					<YearTo id="331117" special_id="999999">2013</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="331089">ZDX</Model>
+					<Generation id="332067">I (2009—2013)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="362203">3.7 4WD AT (300 л.с.)</Modification>
+					<Power id="331366">300</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392011" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330927" name="TSX">
+			<Generation id="332065" name="I (2003—2008)">
+				<Modification id="356032" name="2.4 AT (205 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332065">I (2003—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="356032">2.4 AT (205 л.с.)</Modification>
+					<Power id="331386">205</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392007" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="356630" name="2.4 MT (205 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332065">I (2003—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="356630">2.4 MT (205 л.с.)</Modification>
+					<Power id="331386">205</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392006" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="356014" name="2.4 AT (200 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332065">I (2003—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="356014">2.4 AT (200 л.с.)</Modification>
+					<Power id="331375">200</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392005" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="356618" name="2.4 MT (200 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332065">I (2003—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="356618">2.4 MT (200 л.с.)</Modification>
+					<Power id="331375">200</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392004" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332066" name="II (2008—2014)">
+				<Modification id="361786" name="3.5 AT (280 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332066">II (2008—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361786">3.5 AT (280 л.с.)</Modification>
+					<Power id="331384">280</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392010" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="356026" name="2.4 AT (201 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332066">II (2008—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="356026">2.4 AT (201 л.с.)</Modification>
+					<Power id="331387">201</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392008" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361786" name="3.5 AT (280 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332066">II (2008—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361786">3.5 AT (280 л.с.)</Modification>
+					<Power id="331384">280</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331238">Универсал</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392010" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="356629" name="2.4 MT (201 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332066">II (2008—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="356629">2.4 MT (201 л.с.)</Modification>
+					<Power id="331387">201</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392009" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="356026" name="2.4 AT (201 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330927">TSX</Model>
+					<Generation id="332066">II (2008—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="356026">2.4 AT (201 л.с.)</Modification>
+					<Power id="331387">201</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331238">Универсал</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392008" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330897" name="TL">
+			<Generation id="332062" name="IV (2008—2011)">
+				<Modification id="361783" name="3.5 AT (280 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331119" special_id="999999">2011</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332062">IV (2008—2011)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361783">3.5 AT (280 л.с.)</Modification>
+					<Power id="331384">280</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391997" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="362206" name="3.7 4WD AT (305 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331119" special_id="999999">2011</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332062">IV (2008—2011)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="362206">3.7 4WD AT (305 л.с.)</Modification>
+					<Power id="331373">305</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391999" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="362237" name="3.7 4WD MT (305 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331119" special_id="999999">2011</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332062">IV (2008—2011)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="362237">3.7 4WD MT (305 л.с.)</Modification>
+					<Power id="331373">305</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391998" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332060" name="III (2003—2006)">
+				<Modification id="361010" name="3.2 AT (270 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332060">III (2003—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361010">3.2 AT (270 л.с.)</Modification>
+					<Power id="331382">270</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391991" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361004" name="3.2 AT (258 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332060">III (2003—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361004">3.2 AT (258 л.с.)</Modification>
+					<Power id="331381">258</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391989" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361115" name="3.2 MT (258 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332060">III (2003—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361115">3.2 MT (258 л.с.)</Modification>
+					<Power id="331381">258</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391990" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361122" name="3.2 MT (270 л.с.)">
+					<YearFrom id="331127">2003</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332060">III (2003—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361122">3.2 MT (270 л.с.)</Modification>
+					<Power id="331382">270</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391992" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332061" name="III рестайлинг (2006—2008)">
+				<Modification id="361794" name="3.5 AT (286 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332061">III рестайлинг (2006—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361794">3.5 AT (286 л.с.)</Modification>
+					<Power id="331383">286</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391995" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361933" name="3.5 MT (286 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332061">III рестайлинг (2006—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361933">3.5 MT (286 л.с.)</Modification>
+					<Power id="331383">286</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391996" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361116" name="3.2 MT (258 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332061">III рестайлинг (2006—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="361116">3.2 MT (258 л.с.)</Modification>
+					<Power id="331381">258</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391994" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361003" name="3.2 AT (258 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332061">III рестайлинг (2006—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361003">3.2 AT (258 л.с.)</Modification>
+					<Power id="331381">258</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391993" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332058" name="II (1998—2001)">
+				<Modification id="360982" name="3.2 AT (225 л.с.)">
+					<YearFrom id="331132">1998</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332058">II (1998—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="360982">3.2 AT (225 л.с.)</Modification>
+					<Power id="331380">225</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391986" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332063" name="IV рестайлинг (2011—2014)">
+				<Modification id="362207" name="3.7 4WD AT (305 л.с.)">
+					<YearFrom id="331119">2011</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332063">IV рестайлинг (2011—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="362207">3.7 4WD AT (305 л.с.)</Modification>
+					<Power id="331373">305</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392002" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="362238" name="3.7 4WD MT (305 л.с.)">
+					<YearFrom id="331119">2011</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332063">IV рестайлинг (2011—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="362238">3.7 4WD MT (305 л.с.)</Modification>
+					<Power id="331373">305</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392001" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361781" name="3.5 AT (280 л.с.)">
+					<YearFrom id="331119">2011</YearFrom>
+					<YearTo id="331116" special_id="999999">2014</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332063">IV рестайлинг (2011—2014)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361781">3.5 AT (280 л.с.)</Modification>
+					<Power id="331384">280</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392000" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332057" name="I (1995—1998)">
+				<Modification id="360952" name="3.2 AT (200 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331132" special_id="999999">1998</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332057">I (1995—1998)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="360952">3.2 AT (200 л.с.)</Modification>
+					<Power id="331375">200</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391985" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="357162" name="2.5 AT (176 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331132" special_id="999999">1998</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332057">I (1995—1998)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="357162">2.5 AT (176 л.с.)</Modification>
+					<Power id="331379">176</Power>
+					<EngineSize id="331779">2.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391984" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332059" name="II рестайлинг (2001—2003)">
+				<Modification id="361007" name="3.2 AT (260 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331127" special_id="999999">2003</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332059">II рестайлинг (2001—2003)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361007">3.2 AT (260 л.с.)</Modification>
+					<Power id="331354">260</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391988" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="360981" name="3.2 AT (225 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331127" special_id="999999">2003</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330897">TL</Model>
+					<Generation id="332059">II рестайлинг (2001—2003)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="360981">3.2 AT (225 л.с.)</Modification>
+					<Power id="331380">225</Power>
+					<EngineSize id="331790">3.2</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391987" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="329990" name="EL">
+			<Generation id="332071" name="I (1997—2000)">
+				<Modification id="342545" name="1.6 AT (127 л.с.)">
+					<YearFrom id="331133">1997</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329990">EL</Model>
+					<Generation id="332071">I (1997—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="342545">1.6 AT (127 л.с.)</Modification>
+					<Power id="331392">127</Power>
+					<EngineSize id="331769">1.6</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392025" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="343953" name="1.6 MT (127 л.с.)">
+					<YearFrom id="331133">1997</YearFrom>
+					<YearTo id="331130" special_id="999999">2000</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329990">EL</Model>
+					<Generation id="332071">I (1997—2000)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="343953">1.6 MT (127 л.с.)</Modification>
+					<Power id="331392">127</Power>
+					<EngineSize id="331769">1.6</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392024" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332072" name="II (2001—2005)">
+				<Modification id="344870" name="1.7 AT (127 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329990">EL</Model>
+					<Generation id="332072">II (2001—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="344870">1.7 AT (127 л.с.)</Modification>
+					<Power id="331392">127</Power>
+					<EngineSize id="331770">1.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392027" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="345024" name="1.7 MT (127 л.с.)">
+					<YearFrom id="331129">2001</YearFrom>
+					<YearTo id="331125" special_id="999999">2005</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="329990">EL</Model>
+					<Generation id="332072">II (2001—2005)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="345024">1.7 MT (127 л.с.)</Modification>
+					<Power id="331392">127</Power>
+					<EngineSize id="331770">1.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392026" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330665" name="RL">
+			<Generation id="332052" name="I рестайлинг (1998—2004)">
+				<Modification id="361667" name="3.5 AT (228 л.с.)">
+					<YearFrom id="331132">1998</YearFrom>
+					<YearTo id="331126" special_id="999999">2004</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330665">RL</Model>
+					<Generation id="332052">I рестайлинг (1998—2004)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361667">3.5 AT (228 л.с.)</Modification>
+					<Power id="331356">228</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391972" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361647" name="3.5 AT (210 л.с.)">
+					<YearFrom id="331132">1998</YearFrom>
+					<YearTo id="331126" special_id="999999">2004</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330665">RL</Model>
+					<Generation id="332052">I рестайлинг (1998—2004)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361647">3.5 AT (210 л.с.)</Modification>
+					<Power id="331370">210</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391971" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332053" name="II (2004—2008)">
+				<Modification id="361560" name="3.5 4WD AT (294 л.с.)">
+					<YearFrom id="331126">2004</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330665">RL</Model>
+					<Generation id="332053">II (2004—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361560">3.5 4WD AT (294 л.с.)</Modification>
+					<Power id="331371">294</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391973" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361568" name="3.5 4WD AT (304 л.с.)">
+					<YearFrom id="331126">2004</YearFrom>
+					<YearTo id="331122" special_id="999999">2008</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330665">RL</Model>
+					<Generation id="332053">II (2004—2008)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361568">3.5 4WD AT (304 л.с.)</Modification>
+					<Power id="331372">304</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391974" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332054" name="II рестайлинг (2008—2012)">
+				<Modification id="362210" name="3.7 4WD AT (305 л.с.)">
+					<YearFrom id="331122">2008</YearFrom>
+					<YearTo id="331118" special_id="999999">2012</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330665">RL</Model>
+					<Generation id="332054">II рестайлинг (2008—2012)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="362210">3.7 4WD AT (305 л.с.)</Modification>
+					<Power id="331373">305</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391975" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332051" name="I (1995—1998)">
+				<Modification id="361646" name="3.5 AT (210 л.с.)">
+					<YearFrom id="331135">1995</YearFrom>
+					<YearTo id="331132" special_id="999999">1998</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330665">RL</Model>
+					<Generation id="332051">I (1995—1998)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361646">3.5 AT (210 л.с.)</Modification>
+					<Power id="331370">210</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="391970" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330406" name="MDX">
+			<Generation id="332045" name="III (2013—2015)">
+				<Modification id="361558" name="3.5 4WD AT (290 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332045">III (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361558">3.5 4WD AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="366937" name="Advance"/>
+						<Complectation id="376183" name="Techno"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361796" name="3.5 AT (290 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332045">III (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361796">3.5 AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391961" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332042" name="I (2000—2006)">
+				<Modification id="361519" name="3.5 4WD AT (265 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332042">I (2000—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361519">3.5 4WD AT (265 л.с.)</Modification>
+					<Power id="331365">265</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391958" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361486" name="3.5 4WD AT (240 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332042">I (2000—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361486">3.5 4WD AT (240 л.с.)</Modification>
+					<Power id="331364">240</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391956" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361512" name="3.5 4WD AT (260 л.с.)">
+					<YearFrom id="331130">2000</YearFrom>
+					<YearTo id="331124" special_id="999999">2006</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332042">I (2000—2006)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361512">3.5 4WD AT (260 л.с.)</Modification>
+					<Power id="331354">260</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391957" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332043" name="II (2006—2010)">
+				<Modification id="362201" name="3.7 4WD AT (300 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331120" special_id="999999">2010</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332043">II (2006—2010)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="362201">3.7 4WD AT (300 л.с.)</Modification>
+					<Power id="331366">300</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391959" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332046" name="III рестайлинг (2015—2016)">
+				<Modification id="361555" name="3.5 4WD AT (290 л.с.)">
+					<YearFrom id="331115">2015</YearFrom>
+					<YearTo id="331114" special_id="999999">2016</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332046">III рестайлинг (2015—2016)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361555">3.5 4WD AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="376186" name="Techno"/>
+						<Complectation id="366945" name="Advance"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332044" name="II рестайлинг (2010—2013)">
+				<Modification id="362202" name="3.7 4WD AT (300 л.с.)">
+					<YearFrom id="331120">2010</YearFrom>
+					<YearTo id="331117" special_id="999999">2013</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332044">II рестайлинг (2010—2013)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="362202">3.7 4WD AT (300 л.с.)</Modification>
+					<Power id="331366">300</Power>
+					<EngineSize id="331797">3.7</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391960" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332047" name="III рестайлинг 2 (2016—2021)">
+				<Modification id="361797" name="3.5 AT (290 л.с.)">
+					<YearFrom id="331114">2016</YearFrom>
+					<YearTo id="505548" special_id="999999">2021</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332047">III рестайлинг 2 (2016—2021)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361797">3.5 AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391963" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361557" name="3.5 4WD AT (290 л.с.)">
+					<YearFrom id="331114">2016</YearFrom>
+					<YearTo id="505548" special_id="999999">2021</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332047">III рестайлинг 2 (2016—2021)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361557">3.5 4WD AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391964" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="360209" name="3.0 Hybrid 4WD AMT (321 л.с.)">
+					<YearFrom id="331114">2016</YearFrom>
+					<YearTo id="505548" special_id="999999">2021</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="332047">III рестайлинг 2 (2016—2021)</Generation>
+					<FuelType id="331249">Гибрид</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331256">Робот</Transmission>
+					<Modification id="360209">3.0 Hybrid 4WD AMT (321 л.с.)</Modification>
+					<Power id="331368">321</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391962" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="2384771" name="IV (2021—2023)">
+				<Modification id="2384884" name="3.5 4WD AT (290 л.с.)">
+					<YearFrom id="505548">2021</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="2384771">IV (2021—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="2384884">3.5 4WD AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="2384707" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="2384886" name="3.5 AT (290 л.с.)">
+					<YearFrom id="505548">2021</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="2384771">IV (2021—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="2384886">3.5 AT (290 л.с.)</Modification>
+					<Power id="331367">290</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="2384706" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="18191119" name="3.0 4WD AT (355 л.с.)">
+					<YearFrom id="505548">2021</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330406">MDX</Model>
+					<Generation id="2384771">IV (2021—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="18191119">3.0 4WD AT (355 л.с.)</Modification>
+					<Power id="331502">355</Power>
+					<EngineSize id="331806">3.0</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="18191120" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330645" name="RDX">
+			<Generation id="332048" name="I (2006—2009)">
+				<Modification id="355061" name="2.3 AT (240 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331121" special_id="999999">2009</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="332048">I (2006—2009)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="355061">2.3 AT (240 л.с.)</Modification>
+					<Power id="331364">240</Power>
+					<EngineSize id="331778">2.3</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391966" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="354836" name="2.3 4WD AT (240 л.с.)">
+					<YearFrom id="331124">2006</YearFrom>
+					<YearTo id="331121" special_id="999999">2009</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="332048">I (2006—2009)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="354836">2.3 4WD AT (240 л.с.)</Modification>
+					<Power id="331364">240</Power>
+					<EngineSize id="331778">2.3</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391965" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="408628" name="III (2018—2023)">
+				<Modification id="408308" name="2.0 4WD AT (272 л.с.)">
+					<YearFrom id="331112">2018</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="408628">III (2018—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="408308">2.0 4WD AT (272 л.с.)</Modification>
+					<Power id="331489">272</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="409504" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="408329" name="2.0 AT (272 л.с.)">
+					<YearFrom id="331112">2018</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="408628">III (2018—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="408329">2.0 AT (272 л.с.)</Modification>
+					<Power id="331489">272</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="409503" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="408627" name="II рестайлинг (2015—2018)">
+				<Modification id="408492" name="3.5 AT (283 л.с.)">
+					<YearFrom id="331115">2015</YearFrom>
+					<YearTo id="331112" special_id="999999">2018</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="408627">II рестайлинг (2015—2018)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="408492">3.5 AT (283 л.с.)</Modification>
+					<Power id="331596">283</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="409501" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="408483" name="3.5 4WD AT (283 л.с.)">
+					<YearFrom id="331115">2015</YearFrom>
+					<YearTo id="331112" special_id="999999">2018</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="408627">II рестайлинг (2015—2018)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="408483">3.5 4WD AT (283 л.с.)</Modification>
+					<Power id="331596">283</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="409502" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332050" name="II (2013—2015)">
+				<Modification id="361530" name="3.5 4WD AT (273 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="332050">II (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361530">3.5 4WD AT (273 л.с.)</Modification>
+					<Power id="331369">273</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="376185" name="Techno"/>
+					</Complectations>
+				</Modification>
+				<Modification id="361756" name="3.5 AT (273 л.с.)">
+					<YearFrom id="331117">2013</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="332050">II (2013—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="361756">3.5 AT (273 л.с.)</Modification>
+					<Power id="331369">273</Power>
+					<EngineSize id="331780">3.5</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391969" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332049" name="I рестайлинг (2009—2012)">
+				<Modification id="355065" name="2.3 AT (240 л.с.)">
+					<YearFrom id="331121">2009</YearFrom>
+					<YearTo id="331118" special_id="999999">2012</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="332049">I рестайлинг (2009—2012)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="355065">2.3 AT (240 л.с.)</Modification>
+					<Power id="331364">240</Power>
+					<EngineSize id="331778">2.3</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391968" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="354837" name="2.3 4WD AT (240 л.с.)">
+					<YearFrom id="331121">2009</YearFrom>
+					<YearTo id="331118" special_id="999999">2012</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330645">RDX</Model>
+					<Generation id="332049">I рестайлинг (2009—2012)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331253">Полный</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="354837">2.3 4WD AT (240 л.с.)</Modification>
+					<Power id="331364">240</Power>
+					<EngineSize id="331778">2.3</EngineSize>
+					<BodyType id="331231">Внедорожник</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="391967" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="421299" name="ILX">
+			<Generation id="421321" name="I (2012—2015)">
+				<Modification id="421446" name="2.4 MT (101 л.с.)">
+					<YearFrom id="331118">2012</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="421299">ILX</Model>
+					<Generation id="421321">I (2012—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="421446">2.4 MT (101 л.с.)</Modification>
+					<Power id="331324">101</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="421669" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="421374" name="1.5 hyb CVT (111 л.с.)">
+					<YearFrom id="331118">2012</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="421299">ILX</Model>
+					<Generation id="421321">I (2012—2015)</Generation>
+					<FuelType id="331249">Гибрид</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331257">Вариатор</Transmission>
+					<Modification id="421374">1.5 hyb CVT (111 л.с.)</Modification>
+					<Power id="331580">111</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="421670" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="421425" name="2.0 AT (150 л.с.)">
+					<YearFrom id="331118">2012</YearFrom>
+					<YearTo id="331115" special_id="999999">2015</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="421299">ILX</Model>
+					<Generation id="421321">I (2012—2015)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="421425">2.0 AT (150 л.с.)</Modification>
+					<Power id="331289">150</Power>
+					<EngineSize id="331805">2.0</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="421668" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="421323" name="I рестайлинг 2 (2018—2023)">
+				<Modification id="421441" name="2.4 AMT (201 л.с.)">
+					<YearFrom id="331112">2018</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="421299">ILX</Model>
+					<Generation id="421323">I рестайлинг 2 (2018—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331256">Робот</Transmission>
+					<Modification id="421441">2.4 AMT (201 л.с.)</Modification>
+					<Power id="331387">201</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="421672" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="421322" name="I рестайлинг (2015—2018)">
+				<Modification id="421442" name="2.4 AMT (201 л.с.)">
+					<YearFrom id="331115">2015</YearFrom>
+					<YearTo id="331112" special_id="999999">2018</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="421299">ILX</Model>
+					<Generation id="421322">I рестайлинг (2015—2018)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331256">Робот</Transmission>
+					<Modification id="421442">2.4 AMT (201 л.с.)</Modification>
+					<Power id="331387">201</Power>
+					<EngineSize id="331775">2.4</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="421671" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+		<Model id="330238" name="Integra">
+			<Generation id="18377108" name="IV (2022—2023)">
+				<Modification id="18377111" name="1.5 CVT (203 л.с.)">
+					<YearFrom id="2385556">2022</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="18377108">IV (2022—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331257">Вариатор</Transmission>
+					<Modification id="18377111">1.5 CVT (203 л.с.)</Modification>
+					<Power id="331378">203</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="18377112" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="18377109" name="1.5 MT (203 л.с.)">
+					<YearFrom id="2385556">2022</YearFrom>
+					<YearTo id="18356084" special_id="999999">2023</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="18377108">IV (2022—2023)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="18377109">1.5 MT (203 л.с.)</Modification>
+					<Power id="331378">203</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="18377110" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332075" name="III (1993—2001)">
+				<Modification id="345851" name="1.8 AT (170 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="345851">1.8 AT (170 л.с.)</Modification>
+					<Power id="331393">170</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392038" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346723" name="1.8 MT (170 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346723">1.8 MT (170 л.с.)</Modification>
+					<Power id="331393">170</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392036" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346763" name="1.8 MT (197 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346763">1.8 MT (197 л.с.)</Modification>
+					<Power id="331391">197</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392037" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="345804" name="1.8 AT (142 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="345804">1.8 AT (142 л.с.)</Modification>
+					<Power id="331350">142</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392035" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346649" name="1.8 MT (142 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346649">1.8 MT (142 л.с.)</Modification>
+					<Power id="331350">142</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392034" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346723" name="1.8 MT (170 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346723">1.8 MT (170 л.с.)</Modification>
+					<Power id="331393">170</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392036" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346763" name="1.8 MT (197 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346763">1.8 MT (197 л.с.)</Modification>
+					<Power id="331391">197</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331233">Купе</BodyType>
+					<Doors id="331242">2</Doors>
+					<Complectations>
+						<Complectation id="392037" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="345804" name="1.8 AT (142 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="345804">1.8 AT (142 л.с.)</Modification>
+					<Power id="331350">142</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392035" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346649" name="1.8 MT (142 л.с.)">
+					<YearFrom id="331137">1993</YearFrom>
+					<YearTo id="331129" special_id="999999">2001</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332075">III (1993—2001)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346649">1.8 MT (142 л.с.)</Modification>
+					<Power id="331350">142</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392034" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332073" name="I (1985—1990)">
+				<Modification id="340928" name="1.5 AT (85 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="340928">1.5 AT (85 л.с.)</Modification>
+					<Power id="331296">85</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331243">3</Doors>
+					<Complectations>
+						<Complectation id="392029" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="340928" name="1.5 AT (85 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="340928">1.5 AT (85 л.с.)</Modification>
+					<Power id="331296">85</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392029" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="341751" name="1.5 MT (85 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="341751">1.5 MT (85 л.с.)</Modification>
+					<Power id="331296">85</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392028" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="343850" name="1.6 MT (120 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="343850">1.6 MT (120 л.с.)</Modification>
+					<Power id="331316">120</Power>
+					<EngineSize id="331769">1.6</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392031" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="342501" name="1.6 AT (120 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="342501">1.6 AT (120 л.с.)</Modification>
+					<Power id="331316">120</Power>
+					<EngineSize id="331769">1.6</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331245">5</Doors>
+					<Complectations>
+						<Complectation id="392030" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="341751" name="1.5 MT (85 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="341751">1.5 MT (85 л.с.)</Modification>
+					<Power id="331296">85</Power>
+					<EngineSize id="331768">1.5</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331243">3</Doors>
+					<Complectations>
+						<Complectation id="392028" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="343850" name="1.6 MT (120 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="343850">1.6 MT (120 л.с.)</Modification>
+					<Power id="331316">120</Power>
+					<EngineSize id="331769">1.6</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331243">3</Doors>
+					<Complectations>
+						<Complectation id="392031" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="342501" name="1.6 AT (120 л.с.)">
+					<YearFrom id="331145">1985</YearFrom>
+					<YearTo id="331140" special_id="999999">1990</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332073">I (1985—1990)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="342501">1.6 AT (120 л.с.)</Modification>
+					<Power id="331316">120</Power>
+					<EngineSize id="331769">1.6</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331243">3</Doors>
+					<Complectations>
+						<Complectation id="392030" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+			<Generation id="332074" name="II (1989—1993)">
+				<Modification id="345770" name="1.8 AT (140 л.с.)">
+					<YearFrom id="331141">1989</YearFrom>
+					<YearTo id="331137" special_id="999999">1993</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332074">II (1989—1993)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="345770">1.8 AT (140 л.с.)</Modification>
+					<Power id="331271">140</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392033" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346601" name="1.8 MT (140 л.с.)">
+					<YearFrom id="331141">1989</YearFrom>
+					<YearTo id="331137" special_id="999999">1993</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332074">II (1989—1993)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346601">1.8 MT (140 л.с.)</Modification>
+					<Power id="331271">140</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331243">3</Doors>
+					<Complectations>
+						<Complectation id="392032" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="345770" name="1.8 AT (140 л.с.)">
+					<YearFrom id="331141">1989</YearFrom>
+					<YearTo id="331137" special_id="999999">1993</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332074">II (1989—1993)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331255">Автомат</Transmission>
+					<Modification id="345770">1.8 AT (140 л.с.)</Modification>
+					<Power id="331271">140</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331240">Хетчбэк</BodyType>
+					<Doors id="331243">3</Doors>
+					<Complectations>
+						<Complectation id="392033" name="Базовая"/>
+					</Complectations>
+				</Modification>
+				<Modification id="346601" name="1.8 MT (140 л.с.)">
+					<YearFrom id="331141">1989</YearFrom>
+					<YearTo id="331137" special_id="999999">1993</YearTo>
+					<Make id="329193">Acura</Make>
+					<Model id="330238">Integra</Model>
+					<Generation id="332074">II (1989—1993)</Generation>
+					<FuelType id="331247">Бензин</FuelType>
+					<DriveType id="331251">Передний</DriveType>
+					<Transmission id="331254">Механика</Transmission>
+					<Modification id="346601">1.8 MT (140 л.с.)</Modification>
+					<Power id="331271">140</Power>
+					<EngineSize id="331771">1.8</EngineSize>
+					<BodyType id="331237">Седан</BodyType>
+					<Doors id="331244">4</Doors>
+					<Complectations>
+						<Complectation id="392032" name="Базовая"/>
+					</Complectations>
+				</Modification>
+			</Generation>
+		</Model>
+	</Make>
+</Catalog>
