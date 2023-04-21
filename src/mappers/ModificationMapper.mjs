@@ -31,6 +31,7 @@ export default class ModificationMapper {
 				BodyType,
 				DriveType,
 				YearFrom,
+				YearTo,
 				EngineSize,
 				Power
 			} = item;
@@ -49,7 +50,8 @@ export default class ModificationMapper {
 				vehicleTransmissionId: Number(Transmission[0].id[0]),
 				vehicleBodyId: Number(BodyType[0].id[0]),
 				vehicleDriveId: Number(DriveType[0].id[0]),
-				vehicleYear: YearFrom ? Number(YearFrom[0]._) : 0,
+				vehicleYearFrom: YearFrom ? Number(YearFrom[0]._) : 0,
+				vehicleYearTo: YearTo ? Number(YearTo[0]._) : 0,
 				vehicleEnginePower: Power ? Number(Power[0]._) : 0,
 				vehicleEngineCapacity: EngineSize ? Number(EngineSize[0]._).toFixed(1) : '0'
 			};
