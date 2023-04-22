@@ -24,9 +24,9 @@ export default class ModificationMapper {
 		const modelTransmission = [];
 		const drives = [];
 		const modelDrive = [];
-		const modifications = []
+		const modifications = new Map();
 
-		modificationsFromCatalog.map((item, index) => {
+		modificationsFromCatalog.forEach((item) => {
 			const {
 				Modification,
 				Model,
@@ -63,21 +63,23 @@ export default class ModificationMapper {
 			 name === Transmission[0]._.toLowerCase()).code;
 			res.code = this.codeAdapter(res.vehicleEnginePower, res.vehicleEngineCapacity, transmissionCode);
 
-			if (!this.objectFinder(modifications, res)) {
-				res.id = modifications.length + 1;
-				modifications.push(res)
+			const key = this.objectStringificator(res);
+			if (!modifications.has(key)) {
+				res.id = modifications.size + 1;
+				modifications.set(key, res)
 			}
 		});
 
-		savedModifications.map((item) => {
-			if (!this.objectFinder(modifications, item)) {
-				item.id = modifications.length + 1;
-				modifications.push(item);
+		savedModifications.forEach((item) => {
+			const key = this.objectStringificator(item);
+			if (!modifications.has(key)) {
+				item.id = modifications.size + 1;
+				modifications.set(key, item);
 			}
 		})
 
 		return {
-			modifications,
+			modifications: [...modifications.values()],
 			bodies,
 			transmissions,
 			modelBody,
@@ -88,22 +90,12 @@ export default class ModificationMapper {
 	}
 
 	/**
-	 * Метод проверяет нахождение объекта в массиве
-	 * @param {Array} arr 
-	 * @param {Object} obj
-	 * @returns {Boolean} 
-	 */
-	objectFinder(arr, obj) {
-		return arr.some((item) => this.objectStringificator(item) === this.objectStringificator(obj))
-	}
-
-	/**
 	 * Метод принимает модификацию, приводит к общему виду и возвращает в формате JSON
 	 * @param {Object} obj 
 	 * @returns {JSON}
 	 */
 	objectStringificator(obj) {
-		obj = {
+		return JSON.stringify({
 			'avitoModificationId': obj.avitoModificationId,
 			'name': obj.name,
 			'vehicleModelId': obj.vehicleModelId,
@@ -115,9 +107,7 @@ export default class ModificationMapper {
 			'vehicleEnginePower': obj.vehicleEnginePower, 
 			'vehicleEngineCapacity': obj.vehicleEngineCapacity,
 			'code': obj.code
-		}
-
-		return JSON.stringify(obj)
+		})
 	}
 
 	/**
