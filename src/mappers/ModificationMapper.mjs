@@ -4,9 +4,11 @@ export default class ModificationMapper {
 	/**
 	 *
 	 * Метод отдает несколько маппированных параметров, не только моификации,
-	 * выполнено таким образом чтоб не делать лишних проходов по массиву данных модификаций
+	 * выполнено таким образом чтоб не делать лишних проходов по массиву данных модификаций,
+	 * есть проверка на удаление модификации с Авито
 	 *
 	 * @param {Array} modificationsFromCatalog
+	 * @param {Array} savedModifications массив модификаций, сохраненных в базе ранее
 	 * @returns {Object}
 	 * modifications - массив отформатированных моделей для сохранения данных,
 	 * bodies - массив отформатированных типов кузовов сохранения данных
@@ -15,15 +17,16 @@ export default class ModificationMapper {
 	 * modelTransmission - массив id
 	 * modelDrive - массив id
 	 */
-	map(modificationsFromCatalog) {
+	map(modificationsFromCatalog, savedModifications) {
 		const bodies = [];
 		const transmissions = [];
 		const modelBody = [];
 		const modelTransmission = [];
 		const drives = [];
 		const modelDrive = [];
+		const modifications = []
 
-		const modifications = modificationsFromCatalog.map((item) => {
+		modificationsFromCatalog.map((item, index) => {
 			const {
 				Modification,
 				Model,
@@ -44,12 +47,13 @@ export default class ModificationMapper {
 			this.modelDriveMapper(Model, DriveType, modelDrive);
 
 			const res = {
-				id: Number(Modification[0].id[0]),
+				avitoModificationId: Number(Modification[0].id[0]),
 				name: Modification[0]._,
 				vehicleModelId: Number(Model[0].id[0]),
 				vehicleTransmissionId: Number(Transmission[0].id[0]),
 				vehicleBodyId: Number(BodyType[0].id[0]),
 				vehicleDriveId: Number(DriveType[0].id[0]),
+				vehicleYear: YearFrom ? Number(YearFrom[0]._) : 0,
 				vehicleYearFrom: YearFrom ? Number(YearFrom[0]._) : 0,
 				vehicleYearTo: YearTo ? Number(YearTo[0]._) : 0,
 				vehicleEnginePower: Power ? Number(Power[0]._) : 0,
@@ -58,8 +62,19 @@ export default class ModificationMapper {
 			const transmissionCode = TRANSMISSIONS.find(({ name }) =>
 			 name === Transmission[0]._.toLowerCase()).code;
 			res.code = this.codeAdapter(res.vehicleEnginePower, res.vehicleEngineCapacity, transmissionCode);
-			return res;
+
+			if (!this.objectFinder(modifications, res)) {
+				res.id = modifications.length + 1;
+				modifications.push(res)
+			}
 		});
+
+		savedModifications.map((item) => {
+			if (!this.objectFinder(modifications, item)) {
+				item.id = modifications.length + 1;
+				modifications.push(item);
+			}
+		})
 
 		return {
 			modifications,
@@ -70,6 +85,39 @@ export default class ModificationMapper {
 			drives,
 			modelDrive
 		};
+	}
+
+	/**
+	 * Метод проверяет нахождение объекта в массиве
+	 * @param {Array} arr 
+	 * @param {Object} obj
+	 * @returns {Boolean} 
+	 */
+	objectFinder(arr, obj) {
+		return arr.some((item) => this.objectStringificator(item) === this.objectStringificator(obj))
+	}
+
+	/**
+	 * Метод принимает модификацию, приводит к общему виду и возвращает в формате JSON
+	 * @param {Object} obj 
+	 * @returns {JSON}
+	 */
+	objectStringificator(obj) {
+		obj = {
+			'avitoModificationId': obj.avitoModificationId,
+			'name': obj.name,
+			'vehicleModelId': obj.vehicleModelId,
+			'vehicleTransmissionId': obj.vehicleTransmissionId,
+			'vehicleDriveId': obj.vehicleDriveId,
+			'vehicleYear': obj.vehicleYear,
+			'vehicleYearFrom': obj.vehicleYearFrom,
+			'vehicleYearTo': obj.vehicleYearTo,
+			'vehicleEnginePower': obj.vehicleEnginePower, 
+			'vehicleEngineCapacity': obj.vehicleEngineCapacity,
+			'code': obj.code
+		}
+
+		return JSON.stringify(obj)
 	}
 
 	/**

@@ -18,7 +18,8 @@ export default class CatalogService {
 		try {
 			const data = await this.catalogProvider.getData();
 			const makes = data.Catalog.Make;
-			const result = this.mappedData(makes);
+			const savedModifications = await this.mainRepository.getModificationList();
+			const result = this.mappedData(makes, savedModifications);
 			return result;
 		} catch (err) {
 			console.log(err);
@@ -42,7 +43,7 @@ export default class CatalogService {
 	 * @param {Array} data
 	 * @returns Object
 	 */
-	mappedData(data) {
+	mappedData(data, savedModifications) {
 		// получаем производителей и модели
 		const { manufacturers, modelsFromCatalog } = this.manufacturerMapper.map(data);
 		// Модели и модификации
@@ -56,7 +57,7 @@ export default class CatalogService {
 			modelTransmission,
 			drives,
 			modelDrive
-		} = this.modificationMapper.map(modificationsFromCatalog);
+		} = this.modificationMapper.map(modificationsFromCatalog, savedModifications);
 		// console.log({ modelBody, modelTransmission, modelDrive });
 
 		console.log('Данные загружены', {

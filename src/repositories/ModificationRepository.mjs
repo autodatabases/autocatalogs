@@ -14,36 +14,11 @@ export default class ModificationRepository extends Repository {
 
   upsert(data) {
     return data.map((item) => {
-      const {
-        id,
-        vehicleModelId, 
-        vehicleTransmissionId, 
-        vehicleBodyId, 
-        vehicleDriveId, 
-        vehicleYearFrom, 
-        vehicleYearTo, 
-        vehicleEnginePower, 
-        vehicleEngineCapacity, 
-        name, 
-        ...overData
-      } = item
-      const unique = {
-        id, 
-        vehicleModelId, 
-        vehicleTransmissionId, 
-        vehicleBodyId, 
-        vehicleDriveId, 
-        vehicleYearFrom, 
-        vehicleYearTo, 
-        vehicleEnginePower, 
-        vehicleEngineCapacity, 
-        name
-      }
       return this.model.upsert({
         where: {
-          id_vehicleModelId_vehicleTransmissionId_vehicleBodyId_vehicleDriveId_vehicleYearFrom_vehicleYearTo_vehicleEnginePower_vehicleEngineCapacity_name: unique
+          id: item.id
         },
-        update: overData,
+        update: item,
         create: item
       })
     })
@@ -51,6 +26,10 @@ export default class ModificationRepository extends Repository {
 
   deleteMany() {
     return this.model.deleteMany();
+  }
+
+  getAll() {
+    return this.model.findMany();
   }
 
   /**
