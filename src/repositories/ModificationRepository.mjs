@@ -41,7 +41,7 @@ export default class ModificationRepository extends Repository {
    * @param withTransmission
    * @return {*}
    */
-  getList({ count, query, modelName, modelId, withBody = false, withTransmission = false }) {
+  getList({ count, query, modelName, bodyName, vehicleYear, modelId, withBody = false, withTransmission = false }) {
     return this.model.findMany({
       where: {
         ...(query && {
@@ -58,6 +58,19 @@ export default class ModificationRepository extends Repository {
             name: modelName
           }
         }),
+        ...(bodyName && {
+          vehicleBody: {
+            name: bodyName
+          }
+        }),
+        ...(vehicleYear && {
+          vehicleYearFrom: {
+            lte: Number(vehicleYear)
+          },
+          vehicleYearTo: {
+            gte: Number(vehicleYear)
+          }
+        })
       },
       include: {
         vehicleTransmission: withTransmission,
