@@ -13,6 +13,8 @@ export default class GetModificationsUsecase {
    *   count: number|string,
    *   modelId: number,
    *   modelName: string,
+   *   bodyName: string,
+   *   vehicleYear: string,
    *   query: string
    * }} params
    * @return {Promise<*>}

@@ -23,6 +23,10 @@ export default class MainRepository {
 		this.bodyRepository = new BodyRepository({ prisma });
 	}
 
+	async getModificationList() {
+		return this.modificationRepository.getAll();
+	}
+
 	async updateAll({
 		manufacturers,
 		models,
