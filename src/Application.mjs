@@ -33,7 +33,7 @@ export default class Application {
 
 		const proxy = process.env['internet.proxy.https_apps'];
 
-    if (proxy) {
+    if (proxy && proxy !== 'undefined') {
 			const certConfig = this.configureCert(process.env);
 			const httpAgent = new BetterHttpsProxyAgent({}, { ...certConfig, ...configureProxy(proxy) });
 			uriAgentMap.set(process.env['apps.autocatalogs.avitocatalogs_url'], httpAgent);
@@ -46,7 +46,7 @@ export default class Application {
 			uriAccessorFactory: asClass(UriAccessorFactory),
 			uriAgentFactory: asClass(UriAgentFactory),
 			uriAgentMap: asValue(uriAgentMap),
-			avitoCatalogsUrl: asValue(mocksEnabled ? process.env['apps.autocatalogs.avitocatalogs_file']
+			avitoCatalogsUrl: asValue(mocksEnabled && mocksEnabled !== 'false' ? process.env['apps.autocatalogs.avitocatalogs_file']
 			 : process.env['apps.autocatalogs.avitocatalogs_url'])
 		});
 

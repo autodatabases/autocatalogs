@@ -37,8 +37,7 @@
 	},
 	"dependencies": {
 		"@ilb/errormailer": "^1.0.0",
-		"@ilb/ldapenv-cli": "^1.0.6",
-		"@ilb/node_context": "^1.0.31",
+		"@ilb/ldapenv-cli": "^1.0.10",
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
 		"awilix": "^8.0.0",
@@ -49,7 +48,6 @@
 		"next-connect": "^0.13.0",
 		"node-fetch": "^3.2.5",
 		"pino": "^8.1.0",
-		"xml2js": "^0.4.23",
 		"yargs": "^17.6.2"
 	}
 }
