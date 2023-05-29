@@ -105,7 +105,7 @@ export default class ModificationMapper {
 			'vehicleYearFrom': obj.vehicleYearFrom,
 			'vehicleYearTo': obj.vehicleYearTo,
 			'vehicleEnginePower': obj.vehicleEnginePower, 
-			'vehicleEngineCapacity': obj.vehicleEngineCapacity,
+			'vehicleEngineCapacity': Number(obj.vehicleEngineCapacity).toFixed(1),
 			'code': obj.code
 		})
 	}
