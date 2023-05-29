@@ -5,15 +5,15 @@
 	"type": "module",
 	"main": "src/index.js",
 	"scripts": {
-		"prisma:push": "./node_modules/.bin/ldapenv npx prisma db push",
-		"prisma:migrate": "./node_modules/.bin/ldapenv prisma migrate dev",
-		"prisma:generate": "./node_modules/.bin/ldapenv prisma generate",
-		"test": "./node_modules/.bin/ldapenv node --experimental-vm-modules node_modules/jest/bin/jest.js",
-		"ilb-build": "./node_modules/.bin/ldapenv prisma generate",
-		"ilb-deploy": "./node_modules/.bin/ldapenv prisma migrate deploy",
-		"catalogs:update": "./node_modules/.bin/ldapenv node bin/updateCatalogs.mjs",
-		"dev": "./node_modules/.bin/ldapenv nodemon server.js",
-		"start": "./node_modules/.bin/ldapenv node --experimental-specifier-resolution=node server.js"
+		"prisma:push": "ldapenv npx prisma db push",
+		"prisma:migrate": "ldapenv prisma migrate dev",
+		"prisma:generate": "ldapenv prisma generate",
+		"test": "ldapenv node --experimental-vm-modules node_modules/jest/bin/jest.js",
+		"ilb-build": "ldapenv prisma generate",
+		"ilb-deploy": "ldapenv prisma migrate deploy",
+		"catalogs:update": "ldapenv node bin/updateCatalogs.mjs",
+		"dev": "ldapenv nodemon server.js",
+		"start": "ldapenv node --experimental-specifier-resolution=node server.js"
 	},
 	"repository": {
 		"type": "git",
@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@ilb/errormailer": "^1.0.0",
-		"@ilb/ldapenv-cli": "^1.0.10",
+		"@ilb/ldapenv-cli": "^2.0.0",
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
 		"awilix": "^8.0.0",
