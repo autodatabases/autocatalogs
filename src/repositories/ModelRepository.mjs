@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class ModelRepository extends Repository{
   setupTable() {
-    this.table = 'VehicleModel';
+    this.table = 'Model';
   }
 
   /**
@@ -54,16 +54,16 @@ export default class ModelRepository extends Repository{
           }
         }),
         ...(manufacturerId && {
-          vehicleManufacturerId: manufacturerId
+          manufacturerId: manufacturerId
         }),
         ...(manufacturerName && {
-          vehicleManufacturer: {
+          manufacturer: {
             name: manufacturerName
           }
         }),
       },
       include: {
-        vehicleModification: true
+        modification: true
       },
       ...(count && { take: parseInt(count) })
     });

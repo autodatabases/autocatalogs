@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class ModelDriveRepository extends Repository {
     setupTable() {
-      this.table = 'VehicleModelDrive';
+      this.table = 'ModelDrive';
     }
 
   /**
@@ -24,7 +24,7 @@ export default class ModelDriveRepository extends Repository {
 	return data.map((item) => {
 		  return this.model.upsert({
 			where: {
-				vehicleModelId_vehicleDriveId: item
+				modelId_driveId: item
 			},
 			update: item,
 			create: item

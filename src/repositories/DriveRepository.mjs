@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class DriveRepository extends Repository {
   setupTable() {
-    this.table = 'VehicleDrive';
+    this.table = 'Drive';
   }
 
   /**

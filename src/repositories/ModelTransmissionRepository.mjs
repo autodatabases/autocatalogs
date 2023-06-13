@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class ModelTransmissionRepository extends Repository {
   setupTable() {
-    this.table = 'VehicleModelTransmission';
+    this.table = 'ModelTransmission';
   }
 
   /**
@@ -24,7 +24,7 @@ export default class ModelTransmissionRepository extends Repository {
 	return data.map((item) => {
 		  return this.model.upsert({
 			where: {
-				vehicleModelId_vehicleTransmissionId: item
+				modelId_transmissionId: item
 			},
 			update: item,
 			create: item

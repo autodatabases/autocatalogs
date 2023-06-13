@@ -2,7 +2,7 @@ import Repository from './Repository.mjs';
 
 export default class TransmissionRepository extends Repository {
   setupTable() {
-    this.table = 'VehicleTransmission';
+    this.table = 'transmission';
   }
 
   /**

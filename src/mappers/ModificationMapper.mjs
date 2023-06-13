@@ -49,19 +49,18 @@ export default class ModificationMapper {
 			const res = {
 				avitoModificationId: Number(Modification[0].id[0]),
 				name: Modification[0]._,
-				vehicleModelId: Number(Model[0].id[0]),
-				vehicleTransmissionId: Number(Transmission[0].id[0]),
-				vehicleBodyId: Number(BodyType[0].id[0]),
-				vehicleDriveId: Number(DriveType[0].id[0]),
-				vehicleYear: YearFrom ? Number(YearFrom[0]._) : 0,
-				vehicleYearFrom: YearFrom ? Number(YearFrom[0]._) : 0,
-				vehicleYearTo: YearTo ? Number(YearTo[0]._) : 0,
-				vehicleEnginePower: Power ? Number(Power[0]._) : 0,
-				vehicleEngineCapacity: EngineSize ? Number(EngineSize[0]._).toFixed(1) : '0'
+				modelId: Number(Model[0].id[0]),
+				transmissionId: Number(Transmission[0].id[0]),
+				bodyId: Number(BodyType[0].id[0]),
+				driveId: Number(DriveType[0].id[0]),
+				yearFrom: YearFrom ? Number(YearFrom[0]._) : 0,
+				yearTo: YearTo ? Number(YearTo[0]._) : 0,
+				enginePower: Power ? Number(Power[0]._) : 0,
+				engineCapacity: EngineSize ? Number(EngineSize[0]._).toFixed(1) : '0'
 			};
 			const transmissionCode = TRANSMISSIONS.find(({ name }) =>
 			 name === Transmission[0]._.toLowerCase()).code;
-			res.code = this.codeAdapter(res.vehicleEnginePower, res.vehicleEngineCapacity, transmissionCode);
+			res.code = this.codeAdapter(res.enginePower, res.engineCapacity, transmissionCode);
 
 			const key = this.objectStringificator(res);
 			if (!modifications.has(key)) {
@@ -98,32 +97,31 @@ export default class ModificationMapper {
 		return JSON.stringify({
 			'avitoModificationId': obj.avitoModificationId,
 			'name': obj.name,
-			'vehicleModelId': obj.vehicleModelId,
-			'vehicleTransmissionId': obj.vehicleTransmissionId,
-			'vehicleDriveId': obj.vehicleDriveId,
-			'vehicleYear': obj.vehicleYear,
-			'vehicleYearFrom': obj.vehicleYearFrom,
-			'vehicleYearTo': obj.vehicleYearTo,
-			'vehicleEnginePower': obj.vehicleEnginePower, 
-			'vehicleEngineCapacity': Number(obj.vehicleEngineCapacity).toFixed(1),
+			'modelId': obj.modelId,
+			'transmissionId': obj.transmissionId,
+			'driveId': obj.driveId,
+			'yearFrom': obj.yearFrom,
+			'yearTo': obj.yearTo,
+			'enginePower': obj.enginePower, 
+			'engineCapacity': Number(obj.engineCapacity).toFixed(1),
 			'code': obj.code
 		})
 	}
 
 	/**
 	 * Метод формирует и возвращает параметр для оценки code
-	 * @param {Number} vehiclePower мощность двигателя
+	 * @param {Number} power мощность двигателя
 	 * @param {Number} engineVolume обьем в литрах
 	 * @param {Number} transmissionCode код трансмиссии
-	 * @return {String} transmissionCode__vehiclePower__engineVolume
+	 * @return {String} transmissionCode__power__engineVolume
 	 */
-	codeAdapter(vehiclePower, engineVolume, transmissionCode) {
+	codeAdapter(power, engineVolume, transmissionCode) {
 		const format = (value) => {
 			const more = value.replace(/\./g, '_');
 			const less = value + '_0';
 			return value.includes('.') ? more : less;
 		};
-		return `${transmissionCode}__${vehiclePower}__${format(engineVolume.toString())}`;
+		return `${transmissionCode}__${power}__${format(engineVolume.toString())}`;
 	}
 
 	/**
@@ -152,19 +150,19 @@ export default class ModificationMapper {
 	 *  реализован для единоразового обхода по массиву параметров
 	 * @param {Object} model выбранный параметр из обьекта с параметрами модификации Model
 	 * @param {Object} body выбранный параметр из обьекта с параметрами модификации BodyType
-	 * @param {Array} vehicleModelBody массив с результатами работы метода
+	 * @param {Array} modelBody массив с результатами работы метода
 	 *
 	 */
-	modelBodyMapper(model, body, vehicleModelBody) {
+	modelBodyMapper(model, body, modelBody) {
 		if (
-			!vehicleModelBody.find(
-				({ vehicleModelId, vehicleBodyId }) =>
-					vehicleModelId === Number(model[0].id[0]) && vehicleBodyId === Number(body[0].id[0])
+			!modelBody.find(
+				({ modelId, bodyId }) =>
+					modelId === Number(model[0].id[0]) && bodyId === Number(body[0].id[0])
 			)
 		) {
-			vehicleModelBody.push({
-				vehicleModelId: Number(model[0].id[0]),
-				vehicleBodyId: Number(body[0].id[0])
+			modelBody.push({
+				modelId: Number(model[0].id[0]),
+				bodyId: Number(body[0].id[0])
 			});
 		}
 	}
@@ -174,20 +172,20 @@ export default class ModificationMapper {
 	 *  реализован для единоразового обхода по массиву параметров
 	 * @param {Object} model выбранный параметр из обьекта с параметрами модификации Model
 	 * @param {Object} transmission выбранный параметр из обьекта с параметрами модификации Transmission
-	 * @param {Array} vehicleModelTransmission массив с результатами работы метода
+	 * @param {Array} modelTransmission массив с результатами работы метода
 	 *
 	 */
-	modelTransmissionMapper(model, transmission, vehicleModelTransmission) {
+	modelTransmissionMapper(model, transmission, modelTransmission) {
 		if (
-			!vehicleModelTransmission.find(
-				({ vehicleModelId, vehicleTransmissionId }) =>
-					vehicleModelId === Number(model[0].id[0]) &&
-					vehicleTransmissionId === Number(transmission[0].id[0])
+			!modelTransmission.find(
+				({ modelId, transmissionId }) =>
+					modelId === Number(model[0].id[0]) &&
+					transmissionId === Number(transmission[0].id[0])
 			)
 		) {
-			vehicleModelTransmission.push({
-				vehicleModelId: Number(model[0].id[0]),
-				vehicleTransmissionId: Number(transmission[0].id[0])
+			modelTransmission.push({
+				modelId: Number(model[0].id[0]),
+				transmissionId: Number(transmission[0].id[0])
 			});
 		}
 	}
@@ -197,19 +195,19 @@ export default class ModificationMapper {
 	 *  реализован для единоразового обхода по массиву параметров
 	 * @param {Object} model выбранный параметр из обьекта с параметрами модификации Model
 	 * @param {Object} drive выбранный параметр из обьекта с параметрами модификации DriveType
-	 * @param {Array} vehicleModelDrive массив с результатами работы метода
+	 * @param {Array} modelDrive массив с результатами работы метода
 	 *
 	 */
-	modelDriveMapper(model, drive, vehicleModelDrive) {
+	modelDriveMapper(model, drive, modelDrive) {
 		if (
-			!vehicleModelDrive.find(
-				({ vehicleModelId, vehicleDriveId }) =>
-					vehicleModelId === Number(model[0].id[0]) && vehicleDriveId === Number(drive[0].id[0])
+			!modelDrive.find(
+				({ modelId, driveId }) =>
+					modelId === Number(model[0].id[0]) && driveId === Number(drive[0].id[0])
 			)
 		) {
-			vehicleModelDrive.push({
-				vehicleModelId: Number(model[0].id[0]),
-				vehicleDriveId: Number(drive[0].id[0])
+			modelDrive.push({
+				modelId: Number(model[0].id[0]),
+				driveId: Number(drive[0].id[0])
 			});
 		}
 	}
