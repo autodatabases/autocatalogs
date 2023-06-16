@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ModelDriveRepository extends Repository {
-    setupTable() {
-      this.table = 'ModelDrive';
-    }
-
   /**
 	 * Метод для пакетного сохранения
 	 * @param {Array} data

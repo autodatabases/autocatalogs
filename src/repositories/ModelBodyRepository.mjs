@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ModelBodyRepository extends Repository {
-  setupTable() {
-    this.table = 'ModelBody';
-  }
-
   /**
 	 * Метод для пакетного сохранения
 	 * @param {Array} data

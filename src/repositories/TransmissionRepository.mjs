@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class TransmissionRepository extends Repository {
-  setupTable() {
-    this.table = 'transmission';
-  }
-
   /**
 	 * Метод для пакетного сохранения типов трансмиссий авто из каталога
 	 * @param {Array} transmissions типы трансмиссий авто полученные из каталога

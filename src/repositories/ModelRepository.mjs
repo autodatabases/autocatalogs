@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ModelRepository extends Repository{
-  setupTable() {
-    this.table = 'Model';
-  }
-
   /**
    * Метод для пакетного сохранения моделей авто из каталога
    * @param {Array} models модели авто полученные из каталога

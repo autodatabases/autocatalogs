@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ModelTransmissionRepository extends Repository {
-  setupTable() {
-    this.table = 'ModelTransmission';
-  }
-
   /**
 	 * Метод для пакетного сохранения
 	 * @param {Array} data

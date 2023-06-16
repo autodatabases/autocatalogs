@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ModificationRepository extends Repository {
-  setupTable() {
-    this.table = 'Modification'
-  }
-
   saveMany(modifications) {
     return this.model.createMany({
       data: modifications,
