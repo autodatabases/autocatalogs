@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ManufacturerRepository extends Repository {
-  setupTable() {
-    this.table = 'VehicleManufacturer';
-  }
-
   /**
    * Метод для пакетного сохранения производителей авто из каталога
    * @param {Array} manufacturers производители авто полученные из каталога

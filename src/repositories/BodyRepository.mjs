@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class BodyRepository extends Repository {
-  setupTable() {
-    this.table = 'VehicleBody';
-  }
-
   /**
    * Метод для пакетного сохранения типов кузова авто из каталога
    * @param {Array} bodies типы кузова авто полученные из каталога

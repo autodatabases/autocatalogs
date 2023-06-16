@@ -1,10 +1,6 @@
 import Repository from './Repository.mjs';
 
 export default class ModelDriveRepository extends Repository {
-    setupTable() {
-      this.table = 'VehicleModelDrive';
-    }
-
   /**
 	 * Метод для пакетного сохранения
 	 * @param {Array} data
@@ -24,7 +20,7 @@ export default class ModelDriveRepository extends Repository {
 	return data.map((item) => {
 		  return this.model.upsert({
 			where: {
-				vehicleModelId_vehicleDriveId: item
+				modelId_driveId: item
 			},
 			update: item,
 			create: item

@@ -14,7 +14,7 @@ export default class GetModificationsUsecase {
    *   modelId: number,
    *   modelName: string,
    *   bodyName: string,
-   *   vehicleYear: string,
+   *   year: string,
    *   query: string
    * }} params
    * @return {Promise<*>}

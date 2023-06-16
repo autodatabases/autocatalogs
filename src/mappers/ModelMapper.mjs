@@ -24,7 +24,7 @@ export default class ModelMapper {
 				name,
 				code: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
 				avitoCode: this.cyrillicToTranslate.transform(name, '_').toLowerCase(),
-				vehicleManufacturerId: item?.carManufacturerId
+				manufacturerId: item?.carManufacturerId
 			};
 		});
 		return { models, modificationsFromCatalog };
