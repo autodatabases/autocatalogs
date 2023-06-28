@@ -1,3 +1,4 @@
+import { notify } from '@ilb/errormailer';
 import application from './libs/application.mjs';
 
 export function handle(usecase) {
@@ -15,6 +16,7 @@ export function handle(usecase) {
 			res.setHeader('Content-Type', 'application/json');
 			res.writeHead(500);
 			res.end(JSON.stringify({ error: exception.message }));
+			notify(exception).catch(console.log);
 		}
 	};
 }

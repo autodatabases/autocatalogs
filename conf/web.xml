@@ -50,4 +50,9 @@
     <env-entry-type>java.lang.Boolean</env-entry-type>
     <env-entry-value>false</env-entry-value>
   </env-entry>
+  <env-entry>
+    <description>Путь до тестового ответа Авито</description>
+    <env-entry-name>apps.autocatalogs.avitocatalogs_file</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+  </env-entry>
 </web-app>
