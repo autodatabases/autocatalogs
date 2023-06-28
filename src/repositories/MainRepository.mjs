@@ -41,7 +41,7 @@ export default class MainRepository {
 		const upsertBodies = this.bodyRepository.upsert(bodies);
 		const upsertTransmission = this.transmissionRepository.upsert(transmissions);
 		const upsertDrives = this.driveRepository.upsert(drives);
-		const upsertManufacturers =this.manufacturerRepository.upsert(manufacturers);
+		const upsertManufacturers = this.manufacturerRepository.upsert(manufacturers);
 		const upsertModels = this.modelRepository.upsert(models);
 		const upsertModifications = this.modificationRepository.upsert(modifications);
 		const upsertModelBodies = this.modelBodyRepository.upsert(modelBody);
@@ -49,7 +49,8 @@ export default class MainRepository {
 		const upsertModelDrive = this.modelDriveRepository.upsert(modelDrive);
 
 		await this.prisma.$transaction(
-			upsertBodies.concat(upsertTransmission,
+			upsertBodies.concat(
+				upsertTransmission,
 				upsertDrives,
 				upsertManufacturers,
 				upsertModels,
@@ -57,6 +58,7 @@ export default class MainRepository {
 				upsertModelBodies,
 				upsertModelTransmission,
 				upsertModelDrive
-		));
+			)
+		);
 	}
 }

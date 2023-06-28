@@ -1,7 +1,7 @@
 import Repository from './Repository.mjs';
 
 export default class ModelBodyRepository extends Repository {
-  /**
+	/**
 	 * Метод для пакетного сохранения
 	 * @param {Array} data
 	 */
@@ -14,18 +14,18 @@ export default class ModelBodyRepository extends Repository {
 
 	/**
 	 * Метод для обновления
-	 * @param {Array} data 
+	 * @param {Array} data
 	 */
 	upsert(data) {
 		return data.map((item) => {
-		  	return this.model.upsert({
+			return this.model.upsert({
 				where: {
 					modelId_bodyId: item
 				},
 				update: item,
 				create: item
-		  })
-		})
+			});
+		});
 	}
 
 	deleteMany() {

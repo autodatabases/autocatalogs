@@ -58,14 +58,15 @@ export default class ModificationMapper {
 				enginePower: Power ? Number(Power[0]._) : 0,
 				engineCapacity: EngineSize ? Number(EngineSize[0]._).toFixed(1) : '0'
 			};
-			const transmissionCode = TRANSMISSIONS.find(({ name }) =>
-			 name === Transmission[0]._.toLowerCase()).code;
+			const transmissionCode = TRANSMISSIONS.find(
+				({ name }) => name === Transmission[0]._.toLowerCase()
+			).code;
 			res.code = this.codeAdapter(res.enginePower, res.engineCapacity, transmissionCode);
 
 			const key = this.objectStringificator(res);
 			if (!modifications.has(key)) {
 				res.id = modifications.size + 1;
-				modifications.set(key, res)
+				modifications.set(key, res);
 			}
 		});
 
@@ -75,7 +76,7 @@ export default class ModificationMapper {
 				item.id = modifications.size + 1;
 				modifications.set(key, item);
 			}
-		})
+		});
 
 		return {
 			modifications: [...modifications.values()],
@@ -90,22 +91,22 @@ export default class ModificationMapper {
 
 	/**
 	 * Метод принимает модификацию, приводит к общему виду и возвращает в формате JSON
-	 * @param {Object} obj 
+	 * @param {Object} obj
 	 * @returns {JSON}
 	 */
 	objectStringificator(obj) {
 		return JSON.stringify({
-			'avitoModificationId': obj.avitoModificationId,
-			'name': obj.name,
-			'modelId': obj.modelId,
-			'transmissionId': obj.transmissionId,
-			'driveId': obj.driveId,
-			'yearFrom': obj.yearFrom,
-			'yearTo': obj.yearTo,
-			'enginePower': obj.enginePower, 
-			'engineCapacity': Number(obj.engineCapacity).toFixed(1),
-			'code': obj.code
-		})
+			avitoModificationId: obj.avitoModificationId,
+			name: obj.name,
+			modelId: obj.modelId,
+			transmissionId: obj.transmissionId,
+			driveId: obj.driveId,
+			yearFrom: obj.yearFrom,
+			yearTo: obj.yearTo,
+			enginePower: obj.enginePower,
+			engineCapacity: Number(obj.engineCapacity).toFixed(1),
+			code: obj.code
+		});
 	}
 
 	/**
@@ -179,8 +180,7 @@ export default class ModificationMapper {
 		if (
 			!modelTransmission.find(
 				({ modelId, transmissionId }) =>
-					modelId === Number(model[0].id[0]) &&
-					transmissionId === Number(transmission[0].id[0])
+					modelId === Number(model[0].id[0]) && transmissionId === Number(transmission[0].id[0])
 			)
 		) {
 			modelTransmission.push({

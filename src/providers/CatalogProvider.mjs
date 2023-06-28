@@ -1,4 +1,3 @@
-import { UriAccessorFactory } from '@ilb/uriaccessorjs';
 import CatalogAdapter from '../adapters/CatalogAdapter.mjs';
 
 export default class CatalogProvider {
