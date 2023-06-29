@@ -7,7 +7,7 @@ import GetModelsUsecase from './src/usecases/GetModelsUsecase.mjs';
 import GetModificationsUsecase from './src/usecases/GetModificationsUsecase.mjs';
 import GetDrivesUsecase from './src/usecases/GetDrivesUsecase.mjs';
 import GetBodiesUsecase from './src/usecases/GetBodiesUsecase.mjs';
-import { onError, onNoMatch, queryParams } from './libs/middlewares.mjs';
+import { onError, onNoMatch, queryParams, xforwardCheck } from './libs/middlewares.mjs';
 import GetTransmissionsUsecase from './src/usecases/GetTransmissionsUsecase.mjs';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
@@ -20,6 +20,7 @@ const host = argv?.H || '127.0.0.1';
 const handler = nc({ onError, onNoMatch, attachParams: true })
 	.use(bodyParser.json())
 	.use(queryParams)
+	.use(xforwardCheck)
 	.get('/autocatalogs', (req, res) => {
 		res.setHeader('Content-Type', 'text/plain');
 		res.writeHead(200);

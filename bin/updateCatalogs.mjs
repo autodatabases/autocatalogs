@@ -3,7 +3,7 @@ import application from '../libs/application.mjs';
 import { notify } from '@ilb/errormailer';
 
 async function update() {
-  const scope = await application.createScope();
+	const scope = await application.createScope();
 	const usecase = new UpdateCatalogs(scope.cradle);
 	await usecase.process();
 }
