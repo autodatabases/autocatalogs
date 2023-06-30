@@ -18,9 +18,9 @@ const port = argv?.p || process.env.HTTP_PORT || 3000;
 const host = argv?.H || '127.0.0.1';
 
 const handler = nc({ onError, onNoMatch, attachParams: true })
+	.use(xforwardCheck)
 	.use(bodyParser.json())
 	.use(queryParams)
-	.use(xforwardCheck)
 	.get('/autocatalogs', (req, res) => {
 		res.setHeader('Content-Type', 'text/plain');
 		res.writeHead(200);

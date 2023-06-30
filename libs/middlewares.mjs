@@ -49,4 +49,5 @@ export const xforwardCheck = (req, res, next) => {
 	) {
 		throw Errors.forbidden('Rejected by x-forward-secret');
 	}
+	next();
 };
