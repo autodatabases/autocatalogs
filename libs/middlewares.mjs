@@ -48,11 +48,11 @@ export const queryParams = (req, res, next) => {
 };
 
 export const xforwardCheck = (req, res, next) => {
-	// if (
-	// 	req.headers['x-forward-secret'] == undefined ||
-	// 	req.headers['x-forward-secret'] !== X_FORWARD_SECRET
-	// ) {
-	// 	throw Errors.forbidden('Rejected by x-forward-secret');
-	// }
+	if (
+		req.headers['x-forward-secret'] == undefined ||
+		req.headers['x-forward-secret'] !== X_FORWARD_SECRET
+	) {
+		throw Errors.forbidden('Rejected by x-forward-secret');
+	}
 	next();
 };
