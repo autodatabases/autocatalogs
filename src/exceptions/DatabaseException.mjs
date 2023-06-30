@@ -1,5 +1,3 @@
-import Exception from "./Exception.mjs";
+import Exception from './Exception.mjs';
 
-export default class DatabaseException extends Exception {
-
-}
+export default class DatabaseException extends Exception {}
