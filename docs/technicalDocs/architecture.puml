@@ -1,0 +1,30 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+System_Boundary(https, "Сторонние сайты 'iframe'") {
+System(avitoCatalog, "Авито", "Сайт Авито")
+}
+
+System_Boundary(autocatalogs, "Сервис автокаталог") {
+ContainerDb(autocatalogsdb, "База данных", "MySQL", "Содержит данные о марках, моделях, модификациях, типах кузовов, рулей, трансмиссии автомобилей", $sprite="msql_server")
+
+Rel(autocatalogs, autocatalogsdb, "")
+
+Rel(autocatalogs, GIBDD,"")
+Rel(autocatalogs, pledgeRegister,"")
+Rel(autocatalogs, LPTS,"")
+Rel(autocatalogs, filedossier,"")
+Rel(autocatalogs, autoteka,"")
+Rel(autocatalogs, FSSP,"")
+Rel(autocatalogs, docspotjs,"")
+Rel(autocatalogs, autocheck,"")
+Rel(autocatalogs, autocatalog,"")
+Rel(autocatalogs, crm,"")
+Rel(autocatalogs, loanCalculator,"")
+Rel(docspotjs, docspot, "")
+Rel(docspotjs, poppler, "")
+
+}
+
+@enduml

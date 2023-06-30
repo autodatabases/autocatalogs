@@ -1,6 +1,10 @@
 import { notify } from '@ilb/errormailer';
+
 import Errors from '../src/utils/Errors.mjs';
+import getLogger from '../libs/logger.mjs';
+
 const X_FORWARD_SECRET = process.env.X_FORWARD_SECRET;
+const logger = getLogger({ name: 'errors' });
 /**
  * Express-like middleware for handling errors.
  * @param err error object
@@ -9,6 +13,7 @@ const X_FORWARD_SECRET = process.env.X_FORWARD_SECRET;
  * @param next callback for next middleware
  */
 export const onError = (err, req, res, next) => {
+	logger.info(err);
 	const status = err.status || 500;
 	const type = err.type || 'UNHANDLED_ERROR';
 	const description = err.description || 'Something went wrong';
@@ -43,11 +48,11 @@ export const queryParams = (req, res, next) => {
 };
 
 export const xforwardCheck = (req, res, next) => {
-	if (
-		req.headers['x-forward-secret'] == undefined ||
-		req.headers['x-forward-secret'] !== X_FORWARD_SECRET
-	) {
-		throw Errors.forbidden('Rejected by x-forward-secret');
-	}
+	// if (
+	// 	req.headers['x-forward-secret'] == undefined ||
+	// 	req.headers['x-forward-secret'] !== X_FORWARD_SECRET
+	// ) {
+	// 	throw Errors.forbidden('Rejected by x-forward-secret');
+	// }
 	next();
 };

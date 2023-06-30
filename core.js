@@ -1,6 +1,9 @@
 import { notify } from '@ilb/errormailer';
 import application from './libs/application.mjs';
 
+import getLogger from './libs/logger.mjs';
+
+const logger = getLogger({ name: 'handler' });
 export function handle(usecase) {
 	return async (req, res) => {
 		try {
@@ -12,6 +15,7 @@ export function handle(usecase) {
 			res.writeHead(200);
 			res.end(JSON.stringify(result));
 		} catch (exception) {
+			logger.info(exception);
 			console.log(exception);
 			res.setHeader('Content-Type', 'application/json');
 			res.writeHead(500);
