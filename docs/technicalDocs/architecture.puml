@@ -1,29 +1,33 @@
-@startuml
+@startuml autocatalogs
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 
-System_Boundary(https, "Сторонние сайты 'iframe'") {
-System(avitoCatalog, "Авито", "Сайт Авито")
+System_Boundary(https, "Сторонние сайты") {
+System(avitoCatalog, "Авито", "сайт обьявлений")
 }
 
-System_Boundary(autocatalogs, "Сервис автокаталог") {
-ContainerDb(autocatalogsdb, "База данных", "MySQL", "Содержит данные о марках, моделях, модификациях, типах кузовов, рулей, трансмиссии автомобилей", $sprite="msql_server")
+System_Boundary(Autocatalogs, "Автокаталог") {
+
+System(autocatalogs, "autocatalogs", "Автокаталог")
+System(service1, "service1", "service1")
+System(service2, "service2", "service2")
+System(service3, "service3", "service3")
+System(service4, "service4", "service4")
+System(service5, "service5", "service5")
+System(service6, "service6", "service6")
+
+ContainerDb(autocatalogsdb, "База данных", "MySQL/Postgres SQL", "Содержит данные о авто(марка, модель, кузов, руль, трансмиссия)", $sprite="msql_server")
+
 
 Rel(autocatalogs, autocatalogsdb, "")
 
-Rel(autocatalogs, GIBDD,"")
-Rel(autocatalogs, pledgeRegister,"")
-Rel(autocatalogs, LPTS,"")
-Rel(autocatalogs, filedossier,"")
-Rel(autocatalogs, autoteka,"")
-Rel(autocatalogs, FSSP,"")
-Rel(autocatalogs, docspotjs,"")
-Rel(autocatalogs, autocheck,"")
-Rel(autocatalogs, autocatalog,"")
-Rel(autocatalogs, crm,"")
-Rel(autocatalogs, loanCalculator,"")
-Rel(docspotjs, docspot, "")
-Rel(docspotjs, poppler, "")
+Rel(autocatalogs, avitoCatalog,"")
+Rel(autocatalogs, service1,"")
+Rel(autocatalogs, service2,"")
+Rel(autocatalogs, service3,"")
+Rel(autocatalogs, service4,"")
+Rel(autocatalogs, service5,"")
+Rel(autocatalogs, service6,"")
 
 }
 
