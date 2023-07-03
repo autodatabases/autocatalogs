@@ -9,12 +9,8 @@ System(avitoCatalog, "Авито", "сайт обьявлений")
 System_Boundary(Autocatalogs, "Автокаталог") {
 
 System(autocatalogs, "autocatalogs", "Автокаталог")
-System(service1, "service1", "service1")
-System(service2, "service2", "service2")
-System(service3, "service3", "service3")
-System(service4, "service4", "service4")
-System(service5, "service5", "service5")
-System(service6, "service6", "service6")
+System(bailverification2, "bailverification2", "Проверка залога")
+System(loanbroker, "loanbroker", "АРМ агента")
 
 ContainerDb(autocatalogsdb, "База данных", "MySQL/Postgres SQL", "Содержит данные о авто(марка, модель, кузов, руль, трансмиссия)", $sprite="msql_server")
 
@@ -22,12 +18,8 @@ ContainerDb(autocatalogsdb, "База данных", "MySQL/Postgres SQL", "Со
 Rel(autocatalogs, autocatalogsdb, "")
 
 Rel(autocatalogs, avitoCatalog,"")
-Rel(autocatalogs, service1,"")
-Rel(autocatalogs, service2,"")
-Rel(autocatalogs, service3,"")
-Rel(autocatalogs, service4,"")
-Rel(autocatalogs, service5,"")
-Rel(autocatalogs, service6,"")
+Rel(autocatalogs, bailverification2,"")
+Rel(autocatalogs, loanbroker,"")
 
 }
 
