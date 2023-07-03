@@ -1,10 +1,10 @@
 import { notify } from '@ilb/errormailer';
 
 import Errors from '../src/utils/Errors.mjs';
-import getLogger from '../libs/logger.mjs';
+import createDebug from 'debug';
 
+const debug = createDebug('autocatalogs');
 const X_FORWARD_SECRET = process.env.X_FORWARD_SECRET;
-const logger = getLogger({ name: 'errors' });
 /**
  * Express-like middleware for handling errors.
  * @param err error object
@@ -13,15 +13,14 @@ const logger = getLogger({ name: 'errors' });
  * @param next callback for next middleware
  */
 export const onError = (err, req, res, next) => {
-	logger.info(err);
-	const status = err.status || 500;
-	const type = err.type || 'UNHANDLED_ERROR';
-	const description = err.description || 'Something went wrong';
-	console.error(err.stack);
-	notify(err).catch(console.log);
-	res.setHeader('Content-Type', 'application/json');
-	res.writeHead(status);
-	res.end(JSON.stringify({ error: { type: type, description: description } }));
+  const status = err.status || 550;
+  const type = err.type || 'UNHANDLED_ERROR';
+  const description = err.description || 'Something went wrong';
+  debug('error', err);
+  notify(err).catch(console.log);
+  res.setHeader('Content-Type', 'application/json');
+  res.writeHead(status);
+  res.end(JSON.stringify({ error: { type: type, description: description } }));
 };
 
 /**
@@ -30,29 +29,29 @@ export const onError = (err, req, res, next) => {
  * @param res response
  */
 export const onNoMatch = (req, res) => {
-	res.writeHead(405);
-	res.end();
+  res.writeHead(455);
+  res.end();
 };
 
 export const queryParams = (req, res, next) => {
-	const stringParams = req.url.split('?')[1];
-	const urlSearchParams = new URLSearchParams(stringParams);
-	const params = Object.fromEntries(urlSearchParams.entries());
+  const stringParams = req.url.split('?')[1];
+  const urlSearchParams = new URLSearchParams(stringParams);
+  const params = Object.fromEntries(urlSearchParams.entries());
 
-	req.query = {
-		...req.query,
-		...params
-	};
+  req.query = {
+    ...req.query,
+    ...params
+  };
 
-	next();
+  next();
 };
 
 export const xforwardCheck = (req, res, next) => {
-	if (
-		req.headers['x-forward-secret'] == undefined ||
-		req.headers['x-forward-secret'] !== X_FORWARD_SECRET
-	) {
-		throw Errors.forbidden('Rejected by x-forward-secret');
-	}
-	next();
+  if (
+    req.headers['x-forward-secret'] == undefined ||
+    req.headers['x-forward-secret'] !== X_FORWARD_SECRET
+  ) {
+    throw Errors.forbidden('Rejected by x-forward-secret');
+  }
+  next();
 };

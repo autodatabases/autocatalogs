@@ -15,7 +15,6 @@ export default class HeartbeatUsecases {
     try {
       await this.heartbeatRepository.test();
     } catch (err) {
-      console.log(err);
       throw new DatabaseException('Нет доступа к базе данных.');
     }
   }

@@ -1,9 +1,10 @@
 import ManufacturerMapper from '../mappers/ManufacturerMapper.mjs';
 import ModificationMapper from '../mappers/ModificationMapper.mjs';
 import ModelMapper from '../mappers/ModelMapper.mjs';
-import getLogger from '../../libs/logger.mjs';
 
-const logger = getLogger({ name: 'catalogService-upload' });
+import createDebug from 'debug';
+const debug = createDebug('autocatalogs');
+
 export default class CatalogService {
   constructor({ catalogProvider, mainRepository }) {
     this.catalogProvider = catalogProvider;
@@ -25,8 +26,7 @@ export default class CatalogService {
       const result = this.mappedData(makes, savedModifications);
       return result;
     } catch (err) {
-      logger.info(err);
-      console.log(err);
+      debug('loaddata_error', err);
       throw err;
     }
   }
