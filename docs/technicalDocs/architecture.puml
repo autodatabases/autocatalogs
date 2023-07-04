@@ -18,8 +18,8 @@ ContainerDb(autocatalogsdb, "База данных", "MySQL/Postgres SQL", "Со
 Rel(autocatalogs, autocatalogsdb, "")
 
 Rel(autocatalogs, avitoCatalog,"")
-Rel(autocatalogs, bailverification2,"")
-Rel(autocatalogs, loanbroker,"")
+Rel(bailverification2, autocatalogs,"")
+Rel(loanbroker, autocatalogs,"")
 
 }
 
