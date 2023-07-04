@@ -45,15 +45,10 @@ model Model {
   code              String              @db.VarChar(70)
   avitoCode         String?             @db.VarChar(70)
   manufacturerId    Int
-  bodyId            Int?
-  transmissionId    Int?
-  driveId           Int?
   manufacturer      Manufacturer        @relation(fields: [manufacturerId], references: [id])
   modelBody         ModelBody[]
   modelDrive        ModelDrive[]
   modelTransmission ModelTransmission[]
-  enginePower       Int?
-  engineCapacity    Decimal?            @db.Decimal(2, 1)
   modification      Modification[]
 
   @@unique([id, manufacturerId])
