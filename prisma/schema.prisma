@@ -118,6 +118,8 @@ model ModelDrive {
 // Таблица модификаций авто
 model Modification {
   id                  Int           @id
+  name                String?       @db.VarChar(150)
+  code                String?       @db.VarChar(100)
   avitoModificationId Int?
   model               Model?        @relation(fields: [modelId], references: [id])
   modelId             Int?
@@ -127,10 +129,11 @@ model Modification {
   bodyId              Int?
   drive               Drive?        @relation(fields: [driveId], references: [id])
   driveId             Int?
+  // гг в которые модификация произврдилась
   yearFrom            Int?          @db.SmallInt
   yearTo              Int?          @db.SmallInt
+  // мощность двигателя
   enginePower         Int?
+  // Обьем двигателя
   engineCapacity      Decimal?      @db.Decimal(2, 1)
-  name                String?       @db.VarChar(150)
-  code                String?       @db.VarChar(100)
 }
