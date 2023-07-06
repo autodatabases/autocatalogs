@@ -37,7 +37,7 @@ export default class CatalogService {
   async updateData() {
     const result = await this.loadData();
     await this.mainRepository.updateAll(result);
-    console.log('Таблицы обновлены');
+    debug('Таблицы обновлены');
   }
 
   /**
@@ -64,7 +64,7 @@ export default class CatalogService {
     } = this.modificationMapper.map(modificationsFromCatalog, savedModifications);
     // console.log({ modelBody, modelTransmission, modelDrive });
 
-    console.log('Данные загружены', {
+    debug('Данные загружены', {
       manufacturers: manufacturers.length,
       models: models.length,
       modifications: modifications.length,

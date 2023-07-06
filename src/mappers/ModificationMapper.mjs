@@ -18,7 +18,7 @@ export default class ModificationMapper {
    * modelTransmission - массив id
    * modelDrive - массив id
    */
-  map(modificationsFromCatalog, savedModificastions) {
+  map(modificationsFromCatalog, savedModifications) {
     const bodies = [];
     const transmissions = [];
     const modelBody = [];
