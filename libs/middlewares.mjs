@@ -1,4 +1,4 @@
-import { notify } from '@ilb/errormailer';
+import { notify } from '@ilb/mailer/src/errormailer.js';
 
 /**
  * Express-like middleware for handling errors.
