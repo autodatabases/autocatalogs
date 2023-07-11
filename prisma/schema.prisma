@@ -1,5 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+//  This is your Prisma schema file,
+//  learn more about it in the docs: https:// pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
@@ -10,130 +10,177 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Таблица кузовов авто
+// кузов авто
 model Body {
-  ///Идентификатор
+  // идентификатор
   id           Int            @id @default(autoincrement())
-  ///Наименование
+  // наименование
   name         String         @db.VarChar(15)
-  ///Код
+  // код
   code         String         @db.VarChar(15)
+  //  код авито
   avitoCode    String         @db.VarChar(15)
+  // таблица связи модель-кузов
   modelBody    ModelBody[]
+  // модификации
   modification Modification[]
 }
 
-// Таблица производителей авто
+// производитель авто
 model Manufacturer {
-  ///Идентификатор
+  // идентификатор
   id        Int     @id @default(autoincrement())
-  ///Наименование
+  // наименование
   name      String  @unique @db.VarChar(20)
-  ///Код
+  // код
   code      String  @unique @db.VarChar(30)
+  //  код авито
   avitoCode String? @db.VarChar(30)
+  // модель
   model     Model[]
 }
 
-// Таблица моделей авто
+// модель авто
 model Model {
-  ///Идентификатор
+  // идентификатор
   id                Int                 @id @default(autoincrement())
-  ///Наименование
+  // наименование
   name              String              @db.VarChar(50)
-  ///Код
+  // код
   code              String              @db.VarChar(70)
+  //  код авито
   avitoCode         String?             @db.VarChar(70)
+  // код производителя
   manufacturerId    Int
+  // производитель
   manufacturer      Manufacturer        @relation(fields: [manufacturerId], references: [id])
+  // таблица связи модель-кузов
   modelBody         ModelBody[]
+  // таблица связи модель-руль
   modelDrive        ModelDrive[]
+  // таблица связи модель-трансмиссия
   modelTransmission ModelTransmission[]
+  // модификация
   modification      Modification[]
 
+  // уникальный идентификатор
   @@unique([id, manufacturerId])
 }
 
-// Таблица связи модели и кузова авто
+// таблица связывающая модель и кузов авто
 model ModelBody {
-  ///Идентификатор
+  // идентификатор
   id      Int    @id @default(autoincrement())
+  // код модели
   modelId Int?
+  // код кузов
   bodyId  Int?
+  // кузов
   body    Body?  @relation(fields: [bodyId], references: [id])
+  // модель
   model   Model? @relation(fields: [modelId], references: [id])
 
+  // уникальный идентификатор
   @@unique([modelId, bodyId])
 }
 
-// Таблица связи модели и трансмиссии авто
+// таблица связывающая модель и трансмиссию авто
 model ModelTransmission {
-  ///Идентификатор
+  // идентификатор
   id             Int           @id @default(autoincrement())
+  // код модели
   modelId        Int?
+  // код трансмиссии
   transmissionId Int?
+  // модель
   model          Model?        @relation(fields: [modelId], references: [id])
+  // трансмиссия
   transmission   Transmission? @relation(fields: [transmissionId], references: [id])
 
+  // уникальный идентификатор
   @@unique([modelId, transmissionId])
 }
 
-// Таблица трансмиссий авто
+// трансмиссия авто
 model Transmission {
-  ///Идентификатор
+  // идентификатор
   id                Int                 @id @default(autoincrement())
-  ///Наименование
+  // наименование
   name              String              @db.VarChar(10)
-  ///Код
+  // код
   code              String              @db.VarChar(10)
+  // код авито
   avitoCode         String              @db.VarChar(10)
+  // таблица связи модель-трансмисся
   modelTransmission ModelTransmission[]
+  // модификация
   modification      Modification[]
 }
 
-// Таблица руля(праворульный, леворульный) авто
+// руль(праворульный, леворульный) авто
 model Drive {
-  ///Идентификатор
+  // идентификатор
   id           Int            @id @default(autoincrement())
-  ///Наименование
+  // наименование
   name         String         @db.VarChar(10)
-  ///Код
+  // код
   code         String         @db.VarChar(10)
+  // код авито
   avitoCode    String         @db.VarChar(10)
+  // таблица связи модель-руль
   modelDrive   ModelDrive[]
+  // модификация
   modification Modification[]
 }
 
-// Таблица связи модели и руля авто
+// таблица связывающая модель и кузов авто
 model ModelDrive {
+  // идентификатор
   id      Int    @id @default(autoincrement())
+  // код модели
   modelId Int?
+  // код руля
   driveId Int?
+  // руль
   drive   Drive? @relation(fields: [driveId], references: [id])
+  // модель
   model   Model? @relation(fields: [modelId], references: [id])
 
+  // уникальный можификатор
   @@unique([modelId, driveId])
 }
 
-// Таблица модификаций авто
+// таблица модификаций авто
 model Modification {
+  // модификатор
   id                  Int           @id
+  // наименование
   name                String?       @db.VarChar(150)
+  // код
   code                String?       @db.VarChar(100)
+  // код модификации авито
   avitoModificationId Int?
+  // модель
   model               Model?        @relation(fields: [modelId], references: [id])
+  // код модели
   modelId             Int?
+  // код трансмиссии
   transmission        Transmission? @relation(fields: [transmissionId], references: [id])
+  // трансмиссия
   transmissionId      Int?
+  // кузов
   body                Body?         @relation(fields: [bodyId], references: [id])
+  // код кузова
   bodyId              Int?
+  // руль
   drive               Drive?        @relation(fields: [driveId], references: [id])
+  // код руля
   driveId             Int?
-  // гг в которые модификация произврдилась
+  // гг в которые модификация производилась
   yearFrom            Int?          @db.SmallInt
   yearTo              Int?          @db.SmallInt
-  // мощность двигателя
+  //  мощность двигателя
   enginePower         Int?
-  // Обьем двигателя
+  //  Обьем двигателя
   engineCapacity      Decimal?      @db.Decimal(2, 1)
 }
