@@ -51,6 +51,10 @@ export const xforwardCheck = (req, res, next) => {
     req.headers['x-forward-secret'] == undefined ||
     req.headers['x-forward-secret'] !== X_FORWARD_SECRET
   ) {
+    debug(
+      `X-FORWARD-SECRET rejected: header ${req.headers['x-forward-secret']}, env ${X_FORWARD_SECRET}`
+    );
+
     throw Errors.forbidden('Rejected by x-forward-secret');
   }
   next();
