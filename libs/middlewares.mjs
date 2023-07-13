@@ -1,10 +1,13 @@
+const debug = createDebug('autocatalogs');
+
 import { notify } from '@ilb/errormailer';
 
 import Errors from '../src/utils/Errors.mjs';
 import createDebug from 'debug';
 
-const debug = createDebug('autocatalogs');
 const X_FORWARD_SECRET = process.env.X_FORWARD_SECRET;
+const xForwardEnabled = process.env['apps.autocatalogs.xforward.enabled'];
+
 /**
  * Express-like middleware for handling errors.
  * @param err error object
@@ -48,13 +51,13 @@ export const queryParams = (req, res, next) => {
 
 export const xforwardCheck = (req, res, next) => {
   if (
-    req.headers['x-forward-secret'] == undefined ||
-    req.headers['x-forward-secret'] !== X_FORWARD_SECRET
+    xForwardEnabled &&
+    (req.headers['x-forward-secret'] == undefined ||
+      req.headers['x-forward-secret'] !== X_FORWARD_SECRET)
   ) {
     debug(
       `X-FORWARD-SECRET rejected: header ${req.headers['x-forward-secret']}, env ${X_FORWARD_SECRET}`
     );
-
     throw Errors.forbidden('Rejected by x-forward-secret');
   }
   next();
