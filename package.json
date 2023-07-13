@@ -36,8 +36,8 @@
 		"prisma": "^4.7.0"
 	},
 	"dependencies": {
-		"@ilb/errormailer": "^1.0.0",
 		"@ilb/ldapenv-cli": "^2.0.0",
+		"@ilb/mailer": "^1.0.7",
 		"@ilb/uriaccessorjs": "^1.0.26",
 		"@prisma/client": "^4.7.0",
 		"awilix": "^8.0.0",
