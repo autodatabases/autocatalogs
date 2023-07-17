@@ -56,7 +56,7 @@ model Model {
   manufacturer      Manufacturer        @relation(fields: [manufacturerId], references: [id])
   // Таблица связи модель-кузов
   modelBody         ModelBody[]
-  // Таблица связи модель-руль
+  // Таблица связи модель-привод
   modelDrive        ModelDrive[]
   // Таблица связи модель-трансмиссия
   modelTransmission ModelTransmission[]
@@ -117,7 +117,7 @@ model Transmission {
   modification      Modification[]
 }
 
-// Руль(праворульный, леворульный) авто
+// Привод авто
 model Drive {
   // Идентификатор
   id           Int            @id @default(autoincrement())
@@ -127,13 +127,13 @@ model Drive {
   code         String         @db.VarChar(10)
   // Код авито
   avitoCode    String         @db.VarChar(10)
-  // Таблица связи модель-руль
+  // Таблица связи модель-привод
   modelDrive   ModelDrive[]
   // Модификация
   modification Modification[]
 }
 
-// Таблица связывающая модель и кузов авто
+// Таблица связывающая модель и привод
 model ModelDrive {
   // Идентификатор
   id      Int    @id @default(autoincrement())
@@ -141,7 +141,7 @@ model ModelDrive {
   modelId Int?
   // Код руля
   driveId Int?
-  // Руль
+  // Привод
   drive   Drive? @relation(fields: [driveId], references: [id])
   // Модель
   model   Model? @relation(fields: [modelId], references: [id])
@@ -172,7 +172,7 @@ model Modification {
   body                Body?         @relation(fields: [bodyId], references: [id])
   // Код кузова
   bodyId              Int?
-  // Руль
+  // Привод
   drive               Drive?        @relation(fields: [driveId], references: [id])
   // Код руля
   driveId             Int?
