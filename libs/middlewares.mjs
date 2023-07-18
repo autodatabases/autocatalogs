@@ -6,7 +6,7 @@ import Errors from '../src/utils/Errors.mjs';
 
 const debug = createDebug('autocatalogs');
 const X_FORWARD_SECRET = process.env['X-FORWARD-SECRET'];
-const xForwardEnabled = process.env['apps.autocatalogs.xforward.enabled'];
+const production = process.env.ILB_SYSID == 'PRODUCTION';
 
 /**
  * Express-like middleware for handling errors.
@@ -51,7 +51,7 @@ export const queryParams = (req, res, next) => {
 
 export const xforwardCheck = (req, res, next) => {
   if (
-    xForwardEnabled &&
+    production &&
     (req.headers['x-forward-secret'] == undefined ||
       req.headers['x-forward-secret'] !== X_FORWARD_SECRET)
   ) {
