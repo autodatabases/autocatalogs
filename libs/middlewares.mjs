@@ -1,6 +1,6 @@
 const debug = createDebug('autocatalogs');
 
-import { notify } from '@ilb/errormailer';
+import { notify } from '@ilb/mailer/src/errormailer.js';
 
 import Errors from '../src/utils/Errors.mjs';
 import createDebug from 'debug';

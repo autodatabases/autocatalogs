@@ -1,6 +1,6 @@
 import UpdateCatalogs from '../src/usecases/UpdateCatalogs.mjs';
 import application from '../libs/application.mjs';
-import { notify } from '@ilb/errormailer';
+import { notify } from '@ilb/mailer/src/errormailer.js';
 
 import createDebug from 'debug';
 const debug = createDebug('autocatalogs');
