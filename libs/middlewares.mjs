@@ -5,7 +5,7 @@ import { notify } from '@ilb/mailer/src/errormailer.js';
 import Errors from '../src/utils/Errors.mjs';
 import createDebug from 'debug';
 
-const X_FORWARD_SECRET = process.env.X_FORWARD_SECRET;
+const X_FORWARD_SECRET = process.env['X-FORWARD-SECRET'];
 const xForwardEnabled = process.env['apps.autocatalogs.xforward.enabled'];
 
 /**

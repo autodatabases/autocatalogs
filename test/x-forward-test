@@ -1,3 +1,3 @@
-В .env должна быть указана переменная X_FORWARD_SECRET=x-forward-secret, если переменная не указана будет выдаваться ошибка
+В .env должна быть указана переменная X-FORWARD-SECRET=x-forward-secret, если переменная не указана будет выдаваться ошибка
 пример запроса
 curl -H "x-forward-secret: x-forward-secret" -X GET http://127.0.0.1:3000/autocatalogs/api/drives
