@@ -1,8 +1,6 @@
 import { notify } from '@ilb/mailer/src/errormailer.js';
 import application from './libs/application.mjs';
 
-import createDebug from 'debug';
-const debug = createDebug('autocatalogs');
 export function handle(usecase) {
   return async (req, res) => {
     try {
@@ -14,7 +12,7 @@ export function handle(usecase) {
       res.writeHead(200);
       res.end(JSON.stringify(result));
     } catch (exception) {
-      debug('handler', exception);
+      console.error(exception);
       res.setHeader('Content-Type', 'application/json');
       res.writeHead(550);
       res.end(JSON.stringify({ error: exception.message }));

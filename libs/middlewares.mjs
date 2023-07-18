@@ -1,10 +1,10 @@
-const debug = createDebug('autocatalogs');
+import createDebug from 'debug';
 
 import { notify } from '@ilb/mailer/src/errormailer.js';
 
 import Errors from '../src/utils/Errors.mjs';
-import createDebug from 'debug';
 
+const debug = createDebug('autocatalogs');
 const X_FORWARD_SECRET = process.env['X-FORWARD-SECRET'];
 const xForwardEnabled = process.env['apps.autocatalogs.xforward.enabled'];
 
@@ -19,7 +19,7 @@ export const onError = (err, req, res, next) => {
   const status = err.status || 550;
   const type = err.type || 'UNHANDLED_ERROR';
   const description = err.description || 'Something went wrong';
-  debug('error', err);
+  console.error(err);
   notify(err).catch(console.log);
   res.setHeader('Content-Type', 'application/json');
   res.writeHead(status);

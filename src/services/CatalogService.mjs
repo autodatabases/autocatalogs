@@ -26,7 +26,7 @@ export default class CatalogService {
       const result = this.mappedData(makes, savedModifications);
       return result;
     } catch (err) {
-      debug('loaddata_error', err);
+      console.error(err);
       throw err;
     }
   }
