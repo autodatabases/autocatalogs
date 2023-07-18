@@ -1,4 +1,12 @@
+import createDebug from 'debug';
+
 import { notify } from '@ilb/mailer/src/errormailer.js';
+
+import Errors from '../src/utils/Errors.mjs';
+
+const debug = createDebug('autocatalogs');
+const X_FORWARD_SECRET = process.env['X-FORWARD-SECRET'];
+const xForwardEnabled = process.env['apps.autocatalogs.xforward.enabled'];
 
 /**
  * Express-like middleware for handling errors.
@@ -8,10 +16,10 @@ import { notify } from '@ilb/mailer/src/errormailer.js';
  * @param next callback for next middleware
  */
 export const onError = (err, req, res, next) => {
-  const status = err.status || 500;
+  const status = err.status || 550;
   const type = err.type || 'UNHANDLED_ERROR';
   const description = err.description || 'Something went wrong';
-  console.error(err.stack);
+  console.error(err);
   notify(err).catch(console.log);
   res.setHeader('Content-Type', 'application/json');
   res.writeHead(status);
@@ -24,7 +32,7 @@ export const onError = (err, req, res, next) => {
  * @param res response
  */
 export const onNoMatch = (req, res) => {
-  res.writeHead(405);
+  res.writeHead(455);
   res.end();
 };
 
@@ -38,5 +46,19 @@ export const queryParams = (req, res, next) => {
     ...params
   };
 
+  next();
+};
+
+export const xforwardCheck = (req, res, next) => {
+  if (
+    xForwardEnabled &&
+    (req.headers['x-forward-secret'] == undefined ||
+      req.headers['x-forward-secret'] !== X_FORWARD_SECRET)
+  ) {
+    debug(
+      `X-FORWARD-SECRET rejected: header ${req.headers['x-forward-secret']}, env ${X_FORWARD_SECRET}`
+    );
+    throw Errors.forbidden('Rejected by x-forward-secret');
+  }
   next();
 };

@@ -6,7 +6,7 @@ test('get catalog', async () => {
 	// // const scope = await createScope({}, false);
 	// const url = process.env['apps.avitocatalogs.ws'];
 	// const provider = new CatalogProvider({ url });
-  //
+	//
 	// const catalogData = await provider.getData();
 	// expect(catalogData).toStrictEqual(catalogJs);
 });

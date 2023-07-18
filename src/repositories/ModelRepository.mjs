@@ -1,6 +1,6 @@
 import Repository from './Repository.mjs';
 
-export default class ModelRepository extends Repository{
+export default class ModelRepository extends Repository {
   /**
    * Метод для пакетного сохранения моделей авто из каталога
    * @param {Array} models модели авто полученные из каталога
@@ -18,15 +18,15 @@ export default class ModelRepository extends Repository{
    */
   upsert(data) {
     return data.map((item) => {
-      const {id, ...overData} = item
+      const { id, ...overData } = item;
       return this.model.upsert({
         where: {
           id: id
         },
         update: overData,
         create: item
-      })
-    })
+      });
+    });
   }
 
   deleteMany() {
@@ -56,7 +56,7 @@ export default class ModelRepository extends Repository{
           manufacturer: {
             name: manufacturerName
           }
-        }),
+        })
       },
       include: {
         modification: true

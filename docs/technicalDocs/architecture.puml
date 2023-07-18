@@ -1,0 +1,23 @@
+@startuml autocatalogs
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+System_Boundary(https, "Сторонние сайты") {
+System(avitoCatalog, "Авито", "сайт обьявлений")
+}
+
+System_Boundary(Autocatalogs, "Автокаталог") {
+
+System(autocatalogs, "autocatalogs", "Автокаталог")
+
+
+ContainerDb(autocatalogsdb, "База данных", "MySQL/Postgres SQL", "Содержит данные о авто(марка, модель, кузов, руль, трансмиссия)", $sprite="msql_server")
+
+
+Rel(autocatalogs, autocatalogsdb, "")
+
+Rel(autocatalogs, avitoCatalog,"")
+
+}
+
+@enduml

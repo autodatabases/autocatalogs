@@ -16,8 +16,8 @@ export default class ModificationRepository extends Repository {
         },
         update: item,
         create: item
-      })
-    })
+      });
+    });
   }
 
   deleteMany() {
@@ -37,7 +37,16 @@ export default class ModificationRepository extends Repository {
    * @param withTransmission
    * @return {*}
    */
-  getList({ count, query, modelName, bodyName, year, modelId, withBody = false, withTransmission = false }) {
+  getList({
+    count,
+    query,
+    modelName,
+    bodyName,
+    year,
+    modelId,
+    withBody = false,
+    withTransmission = false
+  }) {
     return this.model.findMany({
       where: {
         ...(query && {
@@ -70,7 +79,7 @@ export default class ModificationRepository extends Repository {
       },
       include: {
         transmission: withTransmission,
-        body: withBody,
+        body: withBody
       },
       ...(count && { take: parseInt(count) })
     });

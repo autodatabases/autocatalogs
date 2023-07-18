@@ -18,15 +18,15 @@ export default class ManufacturerRepository extends Repository {
    */
   upsert(data) {
     return data.map((item) => {
-      const {id, ...overData} = item
+      const { id, ...overData } = item;
       return this.model.upsert({
         where: {
           id: id
         },
         update: overData,
         create: item
-      })
-    })
+      });
+    });
   }
 
   deleteMany() {

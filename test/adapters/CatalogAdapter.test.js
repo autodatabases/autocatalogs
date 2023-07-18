@@ -1,17 +1,18 @@
 import CatalogAdapter from '../../src/adapters/CatalogAdapter.mjs';
-
 import { promises as fs } from 'fs';
-import catalogJs from '../data/catalog.js';
 
-const XML_FILE_WRITER = 'test/data/catalog.xml';
+const XML_FILE_WRITER = 'conf/Autocatalog.xml';
+const JSON_RESULT = 'test/adapters/data.json';
 let xmlDataMock;
+let jsonResultDataMock;
 
 beforeAll(async () => {
-	xmlDataMock = await fs.readFile(XML_FILE_WRITER);
+  xmlDataMock = await fs.readFile(XML_FILE_WRITER);
+  jsonResultDataMock = await fs.readFile(JSON_RESULT, { encoding: 'utf8' });
 });
 
 test('get catalog', async () => {
-	const adapter = new CatalogAdapter();
-	const convertedData = await adapter.convert(xmlDataMock);
-	expect(convertedData).toStrictEqual(catalogJs);
+  const adapter = new CatalogAdapter();
+  const convertedData = await adapter.convert(xmlDataMock);
+  expect(JSON.stringify(convertedData)).toStrictEqual(jsonResultDataMock);
 });

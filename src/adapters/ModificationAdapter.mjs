@@ -1,20 +1,21 @@
 export default class ModificationAdapter {
   mapList(modifications) {
     return modifications.reduce((acc, modification) => {
-      const existsModification = acc.find((accModification) => accModification.name === modification.name)
+      const existsModification = acc.find(
+        (accModification) => accModification.name === modification.name
+      );
 
       if (existsModification) {
-        existsModification.vehicleYears.push(modification.vehicleYear)
-        delete modification.vehicleYear
+        existsModification.vehicleYears.push(modification.yearFrom);
+        existsModification.vehicleYears.sort();
       }
 
       if (!existsModification) {
-        modification.vehicleYears = [modification.vehicleYear];
-        delete modification.vehicleYear
+        modification.vehicleYears = [modification.yearFrom];
         acc.push(modification);
       }
 
       return acc;
-    }, [])
+    }, []);
   }
 }

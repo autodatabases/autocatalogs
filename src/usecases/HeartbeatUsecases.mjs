@@ -1,7 +1,6 @@
-import DatabaseException from "../exceptions/DatabaseException.mjs";
+import DatabaseException from '../exceptions/DatabaseException.mjs';
 
 export default class HeartbeatUsecases {
-
   /**
    * @param {HeartbeatRepository} heartbeatRepository
    */
@@ -15,9 +14,9 @@ export default class HeartbeatUsecases {
   async process() {
     try {
       await this.heartbeatRepository.test();
+      return 'OK';
     } catch (err) {
-      console.log(err)
-      throw new DatabaseException("Нет доступа к базе данных.");
+      throw new DatabaseException('Нет доступа к базе данных.');
     }
   }
 }

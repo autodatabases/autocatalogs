@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app
+  version="3.1"
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
   <env-entry>
     <description>Настройка БД для prisma</description>
     <env-entry-name>DATABASE_URL</env-entry-name>
@@ -55,4 +60,5 @@
     <env-entry-name>apps.autocatalogs.avitocatalogs_file</env-entry-name>
     <env-entry-type>java.lang.String</env-entry-type>
   </env-entry>
+
 </web-app>
