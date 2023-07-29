@@ -3,9 +3,7 @@ import nc from 'next-connect';
 import bodyParser from 'body-parser';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
-import { setupServer } from 'msw/node';
 import { handle } from './core.js';
-import handlers from './src/stubs/server/index.mjs';
 import GetManufacturersUsecase from './src/usecases/GetManufacturersUsecase.mjs';
 import GetModificationsUsecase from './src/usecases/GetModificationsUsecase.mjs';
 import GetTransmissionsUsecase from './src/usecases/GetTransmissionsUsecase.mjs';
@@ -20,9 +18,6 @@ import HeartbeatResponse from './src/responses/HeartbeatResponse.mjs';
 const argv = yargs(hideBin(process.argv)).argv;
 const port = argv?.p || process.env.HTTP_PORT || 3000;
 const host = argv?.H || '127.0.0.1';
-
-const server = setupServer(...handlers);
-server.listen({ onUnhandledRequest: 'bypass' });
 
 const handler = nc({ onError, onNoMatch, attachParams: true })
   .use(xforwardCheck)
