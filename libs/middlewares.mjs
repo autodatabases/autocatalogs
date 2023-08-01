@@ -62,3 +62,14 @@ export const xforwardCheck = (req, res, next) => {
   }
   next();
 };
+
+export const expressPolyfills = (req, res, next) => {
+  req.protocol = req.connection.encrypted ? 'https' : 'http';
+  req.host = req.headers.host;
+  req.get = (header) => req.headers[header.toLowerCase()];
+  res.send = (buffer) => {
+    res.write(buffer);
+    res.end();
+  };
+  next();
+}

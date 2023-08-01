@@ -3,7 +3,6 @@ import nc from 'next-connect';
 import bodyParser from 'body-parser';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
-import { setupServer } from 'msw/node';
 import { handle } from './core.js';
 import GetManufacturersUsecase from './src/usecases/GetManufacturersUsecase.mjs';
 import GetModificationsUsecase from './src/usecases/GetModificationsUsecase.mjs';
@@ -12,29 +11,33 @@ import GetModelsUsecase from './src/usecases/GetModelsUsecase.mjs';
 import GetDrivesUsecase from './src/usecases/GetDrivesUsecase.mjs';
 import GetBodiesUsecase from './src/usecases/GetBodiesUsecase.mjs';
 import HeartbeatUsecases from './src/usecases/HeartbeatUsecases.mjs';
-import { onError, onNoMatch, queryParams, xforwardCheck } from './libs/middlewares.mjs';
+import {
+  expressPolyfills,
+  onError,
+  onNoMatch,
+  queryParams,
+  xforwardCheck
+} from './libs/middlewares.mjs';
 import Response from './src/responses/Response.mjs';
 import HeartbeatResponse from './src/responses/HeartbeatResponse.mjs';
-// import handlers from './src/stubs/server/index.mjs';
+import { rest } from 'msw';
+import { createMiddleware } from '@mswjs/http-middleware';
 
 const argv = yargs(hideBin(process.argv)).argv;
 const port = argv?.p || process.env.HTTP_PORT || 3000;
 const host = argv?.H || '127.0.0.1';
-import { rest } from 'msw';
 
-// console.log(JSON.stringify(handlers, null, ' '));
-
-// const server = setupServer(...handlers);
-const server = setupServer(
-  // NOT "/user", nothing to be relative to!
-  rest.get('/api/modifications', (req, res, ctx) => {
-    return res(ctx.json({ firstName: 'John' }));
-  })
-);
-// console.log(JSON.stringify(server, null, ' '));
 const handler = nc({ onError, onNoMatch, attachParams: true })
-  .use(xforwardCheck)
   .use(bodyParser.json())
+  .use(expressPolyfills)
+  .use(
+    createMiddleware(
+      rest.get('/autocatalogs/api/modifications', (req, res, ctx) => {
+        return res(ctx.json({ firstName: 'John' }));
+      })
+    )
+  )
+  .use(xforwardCheck)
   .use(queryParams)
   .get('/autocatalogs', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
@@ -49,5 +52,4 @@ const handler = nc({ onError, onNoMatch, attachParams: true })
   .get('/autocatalogs/api/transmissions', handle(GetTransmissionsUsecase, Response))
   .get('/autocatalogs/heartbeat', handle(HeartbeatUsecases, HeartbeatResponse));
 
-server.listen();
 http.createServer(handler).listen(port, host);
