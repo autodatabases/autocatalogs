@@ -1,4 +1,7 @@
 import CatalogAdapter from '../adapters/CatalogAdapter.mjs';
+import createDebug from 'debug';
+
+const debug = createDebug('autocatalogs');
 
 export default class CatalogProvider {
   constructor({ avitoCatalogsUrl, uriAccessorFactory }) {
@@ -11,6 +14,7 @@ export default class CatalogProvider {
    * @returns Object
    */
   async getData() {
+    debug(`Loading catalogs from ${this.url}`)
     const uriAccessor = this.uriAccessorFactory.getUriAccessor(this.url);
     const data = await uriAccessor.getContent();
     return await this.catalogsAdapter.convert(data);
