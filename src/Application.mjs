@@ -10,7 +10,7 @@ import {
 } from '@ilb/uriaccessorjs';
 
 const { asValue, asClass } = awilix;
-
+const avito_mock = 'file://' + process.env['apps.autocatalogs.stub.root'] + '/Autocatalog.xml';
 export default class Application {
   constructor() {
     this.container = null;
@@ -29,7 +29,7 @@ export default class Application {
     this.container = awilix.createContainer();
     const uriAgentMap = new Map();
 
-    const mocksEnabled = process.env['apps.autocatalogs.mocks_enabled'];
+    const mocksEnabled = process.env['apps.autocatalogs.avito.mocks_enabled'];
 
     const proxy = process.env['internet.proxy.https_apps'];
 
@@ -48,7 +48,7 @@ export default class Application {
       uriAgentMap: asValue(uriAgentMap),
       avitoCatalogsUrl: asValue(
         mocksEnabled && mocksEnabled !== 'false'
-          ? process.env['apps.autocatalogs.avitocatalogs_file']
+          ? avito_mock
           : process.env['apps.autocatalogs.avitocatalogs_url']
       )
     });

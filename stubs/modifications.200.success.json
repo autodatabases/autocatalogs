@@ -15,9 +15,6 @@
       "code": "MANUAL",
       "avitoCode": "MANUAL"
     },
-    "vehicleYears": [
-      0,
-      1995
-    ]
+    "vehicleYears": [0, 1995]
   }
 ]
