@@ -48,7 +48,7 @@
     "cyrillic-to-translit-js": "^3.2.1",
     "dotenv": "^16.0.3",
     "msw": "^1.2.3",
-    "msw-symlinked": "^1.1.4",
+    "msw-symlinked": "^1.1.5",
     "next-connect": "^0.13.0",
     "node-fetch": "^3.2.5",
     "yargs": "^17.6.2"

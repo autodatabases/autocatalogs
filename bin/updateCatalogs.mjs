@@ -2,6 +2,7 @@ import { notify } from '@ilb/mailer/src/errormailer.js';
 import { setupServer } from 'msw/node';
 
 import handlers from '../src/stubs/server/index.mjs';
+
 import UpdateCatalogs from '../src/usecases/UpdateCatalogs.mjs';
 import application from '../libs/application.mjs';
 
@@ -21,5 +22,6 @@ async function main() {
   }
 }
 const server = await setupServer(...handlers);
+
 server.listen({ onUnhandledRequest: 'bypass' });
 main().then();
