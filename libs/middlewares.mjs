@@ -2,11 +2,7 @@ import createDebug from 'debug';
 
 import { notify } from '@ilb/mailer/src/errormailer.js';
 
-import Errors from '../src/utils/Errors.mjs';
-
-const debug = createDebug('autocatalogs');
-const X_FORWARD_SECRET = process.env['X-FORWARD-SECRET'];
-const production = process.env.ILB_SYSID == 'PRODUCTION';
+import xforwardCheck from '../src/utils/xForwardCheck.mjs';
 
 /**
  * Express-like middleware for handling errors.
@@ -23,7 +19,7 @@ export const onError = (err, req, res, next) => {
   notify(err).catch(console.log);
   res.setHeader('Content-Type', 'application/json');
   res.writeHead(status);
-  res.end(JSON.stringify({ error: { type: type, description: description } }));
+  res.end(JSON.stringify({ error: { status, type, description } }));
 };
 
 /**
@@ -32,6 +28,7 @@ export const onError = (err, req, res, next) => {
  * @param res response
  */
 export const onNoMatch = (req, res) => {
+  xforwardCheck(req, res);
   res.writeHead(455);
   res.end();
 };
@@ -49,16 +46,18 @@ export const queryParams = (req, res, next) => {
   next();
 };
 
-export const xforwardCheck = (req, res, next) => {
-  if (
-    production &&
-    (req.headers['x-forward-secret'] == undefined ||
-      req.headers['x-forward-secret'] !== X_FORWARD_SECRET)
-  ) {
-    debug(
-      `X-FORWARD-SECRET rejected: header ${req.headers['x-forward-secret']}, env ${X_FORWARD_SECRET}`
-    );
-    throw Errors.forbidden('Rejected by x-forward-secret');
-  }
+export const xforwardMiddleware = (req, res, next) => {
+  xforwardCheck(req, res);
+  next();
+};
+
+export const expressPolyfills = (req, res, next) => {
+  req.protocol = req.connection.encrypted ? 'https' : 'http';
+  req.host = req.headers.host;
+  req.get = (header) => req.headers[header.toLowerCase()];
+  res.send = (buffer) => {
+    res.write(buffer);
+    res.end();
+  };
   next();
 };

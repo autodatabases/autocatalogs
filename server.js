@@ -2,8 +2,10 @@ import http from 'http';
 import nc from 'next-connect';
 import bodyParser from 'body-parser';
 import yargs from 'yargs/yargs';
+import { createMiddleware } from '@mswjs/http-middleware';
 import { hideBin } from 'yargs/helpers';
-import { handle } from './core.js';
+
+import handlers from './src/stubs/server/index.mjs';
 import GetManufacturersUsecase from './src/usecases/GetManufacturersUsecase.mjs';
 import GetModificationsUsecase from './src/usecases/GetModificationsUsecase.mjs';
 import GetTransmissionsUsecase from './src/usecases/GetTransmissionsUsecase.mjs';
@@ -11,17 +13,26 @@ import GetModelsUsecase from './src/usecases/GetModelsUsecase.mjs';
 import GetDrivesUsecase from './src/usecases/GetDrivesUsecase.mjs';
 import GetBodiesUsecase from './src/usecases/GetBodiesUsecase.mjs';
 import HeartbeatUsecases from './src/usecases/HeartbeatUsecases.mjs';
-import { onError, onNoMatch, queryParams, xforwardCheck } from './libs/middlewares.mjs';
-import Response from './src/responses/Response.mjs';
 import HeartbeatResponse from './src/responses/HeartbeatResponse.mjs';
+import Response from './src/responses/Response.mjs';
+import {
+  expressPolyfills,
+  onError,
+  onNoMatch,
+  queryParams,
+  xforwardMiddleware
+} from './libs/middlewares.mjs';
+import { handle } from './core.js';
 
 const argv = yargs(hideBin(process.argv)).argv;
 const port = argv?.p || process.env.HTTP_PORT || 3000;
 const host = argv?.H || '127.0.0.1';
 
 const handler = nc({ onError, onNoMatch, attachParams: true })
-  .use(xforwardCheck)
   .use(bodyParser.json())
+  .use(expressPolyfills)
+  .use(createMiddleware(...handlers))
+  .use(xforwardMiddleware)
   .use(queryParams)
   .get('/autocatalogs', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 343869,
+    "vehicleModelId": 329354,
+    "vehicleTransmissionId": 331254,
+    "vehicleBodyId": 331237,
+    "vehicleDriveId": 331251,
+    "vehicleEnginePower": 120,
+    "vehicleEngineCapacity": "1.6",
+    "name": "1.6 MT (120 л.с.)",
+    "code": "MANUAL__120__1_6",
+    "vehicleTransmission": {
+      "id": 331254,
+      "name": "механика",
+      "code": "MANUAL",
+      "avitoCode": "MANUAL"
+    },
+    "vehicleYears": [0, 1995]
+  }
+]

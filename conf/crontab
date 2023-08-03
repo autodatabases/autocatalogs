@@ -1,1 +1,1 @@
-# node --experimental-specifier-resolution=node ${HOME}/bin/updateCatalogs.mjs
+# node  -r dotenv/config --experimental-specifier-resolution=node ${HOME}/bin/updateCatalogs.mjs

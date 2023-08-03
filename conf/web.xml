@@ -50,15 +50,16 @@
     <resource-env-ref-type>java.lang.String</resource-env-ref-type>
   </resource-env-ref>
   <env-entry>
-    <description>Включение заглушек</description>
-    <env-entry-name>apps.autocatalogs.mocks_enabled</env-entry-name>
+    <description>Включение заглушек каталогов</description>
+    <env-entry-name>apps.autocatalogs.stub.catalogsEnabled</env-entry-name>
     <env-entry-type>java.lang.Boolean</env-entry-type>
     <env-entry-value>false</env-entry-value>
   </env-entry>
   <env-entry>
-    <description>Путь до тестового ответа Авито</description>
-    <env-entry-name>apps.autocatalogs.avitocatalogs_file</env-entry-name>
-    <env-entry-type>java.lang.String</env-entry-type>
+    <description>Включение заглушки авито</description>
+    <env-entry-name>apps.autocatalogs.stub.avitoEnabled=</env-entry-name>
+    <env-entry-type>java.lang.Boolean</env-entry-type>
+    <env-entry-value>false</env-entry-value>
   </env-entry>
 
 </web-app>
