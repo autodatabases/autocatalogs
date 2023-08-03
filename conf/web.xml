@@ -51,13 +51,13 @@
   </resource-env-ref>
   <env-entry>
     <description>Включение заглушек каталогов</description>
-    <env-entry-name>apps.autocatalogs.stub.autocatalogs.mocks_enabled</env-entry-name>
+    <env-entry-name>apps.autocatalogs.stub.catalogsEnabled</env-entry-name>
     <env-entry-type>java.lang.Boolean</env-entry-type>
     <env-entry-value>false</env-entry-value>
   </env-entry>
   <env-entry>
     <description>Включение заглушки авито</description>
-    <env-entry-name>apps.autocatalogs.avito.mocks_enabled</env-entry-name>
+    <env-entry-name>apps.autocatalogs.stub.avitoEnabled=</env-entry-name>
     <env-entry-type>java.lang.Boolean</env-entry-type>
     <env-entry-value>false</env-entry-value>
   </env-entry>

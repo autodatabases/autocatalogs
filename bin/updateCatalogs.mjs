@@ -1,6 +1,9 @@
+import { notify } from '@ilb/mailer/src/errormailer.js';
+import { setupServer } from 'msw/node';
+
+import handlers from '../src/stubs/server/index.mjs';
 import UpdateCatalogs from '../src/usecases/UpdateCatalogs.mjs';
 import application from '../libs/application.mjs';
-import { notify } from '@ilb/mailer/src/errormailer.js';
 
 async function update() {
   const scope = await application.createScope();
@@ -17,4 +20,6 @@ async function main() {
     notify(error).catch(console.log);
   }
 }
+const server = await setupServer(...handlers);
+server.listen({ onUnhandledRequest: 'bypass' });
 main().then();
