@@ -4,7 +4,12 @@
   xmlns="http://xmlns.jcp.org/xml/ns/javaee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-
+  <env-entry>
+    <description>Отключение проверки чексумм для бинарников prisma</description>
+    <env-entry-name>PRISMA_ENGINES_CHECKSUM_IGNORE_MISSING</env-entry-name>
+    <env-entry-type>java.lang.Boolean</env-entry-type>
+    <env-entry-value>true</env-entry-value>
+  </env-entry>
   <env-entry>
     <description>Настройка БД для prisma</description>
     <env-entry-name>DATABASE_URL</env-entry-name>
