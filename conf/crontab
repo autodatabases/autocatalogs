@@ -1,1 +1,7 @@
-# node  -r dotenv/config --experimental-specifier-resolution=node ${HOME}/bin/updateCatalogs.mjs
+# установка файла: sudo crontab -u autocatalogs /home/autocatalogs/conf/crontab
+
+HOME=/home/autocatalogs
+MAILTO="server-admin@bystrobank.ru,autocatalogs@bystrobank.ru"
+
+# Обновление справочников
+0 8 * * * npm run catalogs:update
