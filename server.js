@@ -2,10 +2,8 @@ import http from 'http';
 import nc from 'next-connect';
 import bodyParser from 'body-parser';
 import yargs from 'yargs/yargs';
-import { createMiddleware } from '@mswjs/http-middleware';
 import { hideBin } from 'yargs/helpers';
 
-import handlers from './src/stubs/server/index.mjs';
 import GetManufacturersUsecase from './src/usecases/GetManufacturersUsecase.mjs';
 import GetModificationsUsecase from './src/usecases/GetModificationsUsecase.mjs';
 import GetTransmissionsUsecase from './src/usecases/GetTransmissionsUsecase.mjs';
@@ -31,7 +29,6 @@ const host = argv?.H || '127.0.0.1';
 const handler = nc({ onError, onNoMatch, attachParams: true })
   .use(bodyParser.json())
   .use(expressPolyfills)
-  .use(createMiddleware(...handlers))
   .use(xforwardMiddleware)
   .use(queryParams)
   .get('/autocatalogs', (req, res) => {
